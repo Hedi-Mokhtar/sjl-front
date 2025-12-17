@@ -5,7 +5,7 @@
         
         <div class="overflow-x-auto shadow-lg rounded-lg">
             <table class="min-w-full bg-white">
-                <thead class="bg-blue-600 text-white">
+                <thead class="text-white" style="background-color: #E63946;">
                     <tr>
                         <th class="py-3 px-4 text-left font-semibold">Section / Équipe</th>
                         <th class="py-3 px-4 text-left font-semibold">Jours d'entraînement</th>
