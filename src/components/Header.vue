@@ -133,6 +133,10 @@
                     </li>
 
                     <li>
+                        <RouterLink to="/subscription" class="hover:underline">Inscriptions</RouterLink>
+                    </li>
+
+                    <li>
                         <RouterLink to="/contact" class="hover:underline">Contact</RouterLink>
                     </li>
 
