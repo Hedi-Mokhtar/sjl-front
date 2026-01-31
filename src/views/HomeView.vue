@@ -33,7 +33,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const images = [
@@ -44,13 +44,15 @@ const images = [
 const currentIndex = ref(0)
 const currentImage = ref(images[currentIndex.value])
 
-let interval = null
+let interval: ReturnType<typeof setInterval> | null = null
 
 onMounted(() => {
   interval = setInterval(nextImage, 5000)
 })
 onUnmounted(() => {
-  clearInterval(interval)
+  if (interval !== null) {
+    clearInterval(interval)
+  }
 })
 
 function nextImage() {

@@ -1,14 +1,14 @@
 <template>
   <div class="min-h-screen flex flex-col">
-    <Header />
+    <AppHeader />
     <main class="flex-1 p-6 bg-gray-100">
       <RouterView />
     </main>
-    <Footer />
+    <AppFooter />
   </div>
 </template>
 
-<script setup>
-import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
+<script setup lang="ts">
+import AppHeader from './components/AppHeader.vue'
+import AppFooter from './components/AppFooter.vue'
 </script>
