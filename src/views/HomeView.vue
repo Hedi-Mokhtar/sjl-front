@@ -36,10 +36,10 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 
-const images = [
-  '/src/assets/clubpic1.jpg',
-  '/src/assets/clubpic2.jpg'
-]
+import clubPic1 from '@/assets/clubpic1.jpg'
+import clubPic2 from '@/assets/clubpic2.jpg'
+
+const images = [clubPic1, clubPic2]
 
 const currentIndex = ref(0)
 const currentImage = ref(images[currentIndex.value])

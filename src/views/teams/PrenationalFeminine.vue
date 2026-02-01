@@ -8,7 +8,7 @@
 
     <!-- PHOTO D'ÉQUIPE -->
     <div class="w-full">
-      <img src="/src/assets/teams/teampic.jpg" alt="Photo équipe Pré-nationale Féminine"
+      <img :src="teamPic" alt="Photo équipe Pré-nationale Féminine"
         class="rounded-lg sm:rounded-xl shadow-lg w-full object-cover max-h-96 sm:max-h-[500px]" />
     </div>
 
@@ -71,7 +71,7 @@
       </h2>
 
       <div class="flex items-center gap-3 sm:gap-4 bg-white p-4 sm:p-6 rounded-lg shadow-md">
-        <img src="/src/assets/teams/teampnftrainer.jpg" alt="Photo entraîneur"
+        <img :src="trainerPic" alt="Photo entraîneur"
           class="w-14 h-14 sm:w-20 sm:h-20 rounded-full object-cover shadow-md flex-shrink-0" />
 
         <div>
@@ -88,8 +88,7 @@
       </h2>
 
       <div class="bg-white p-2 sm:p-4 rounded-lg shadow-md">
-        <img src="/src/assets/teams/calendrierpnf.png" alt="Calendrier FFVB PNF"
-          class="rounded-lg w-full object-contain" />
+        <img :src="calendarPic" alt="Calendrier FFVB PNF" class="rounded-lg w-full object-contain" />
       </div>
 
       <p class="text-xs sm:text-sm text-gray-500 text-center mt-2">
@@ -109,6 +108,11 @@
 </template>
 
 <script setup lang="ts">
+
+import teamPic from '@/assets/teams/teampic.jpg'
+import trainerPic from '@/assets/teams/teampnftrainer.jpg'
+import calendarPic from '@/assets/teams/calendrierpnf.png'
+
 // Composant Vue pour page d'équipe
 </script>
 
