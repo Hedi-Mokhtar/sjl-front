@@ -48,17 +48,17 @@
                       </RouterLink>
                     </li>
                     <li>
-                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/equipes/regional-masc">
+                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/teams/regional-masc">
                         Régionale Masculine
                       </RouterLink>
                     </li>
                     <li>
-                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/equipes/regional-fem">
+                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/teams/regional-fem">
                         Régionale Féminine
                       </RouterLink>
                     </li>
                     <li>
-                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/equipes/departemental-masc">
+                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/teams/departemental-masc">
                         Départementale Masculine
                       </RouterLink>
                     </li>
@@ -70,27 +70,27 @@
                   <h3 class="font-bold text-gray-700 text-sm mb-2">Jeunes</h3>
                   <ul class="space-y-1">
                     <li>
-                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/equipes/m21-fem">M21 Féminine
+                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/teams/m21-fem">M21 Féminine
                       </RouterLink>
                     </li>
                     <li>
-                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/equipes/m18-masc">M18 Masculin
+                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/teams/m18-masc">M18 Masculin
                       </RouterLink>
                     </li>
                     <li>
-                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/equipes/m18-fem">M18 Féminine
+                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/teams/m18-fem">M18 Féminine
                       </RouterLink>
                     </li>
                     <li>
-                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/equipes/m15-fem">M15 Féminine
+                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/teams/m15-fem">M15 Féminine
                       </RouterLink>
                     </li>
                     <li>
-                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/equipes/m15-masc">M15 Masculin
+                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/teams/m15-masc">M15 Masculin
                       </RouterLink>
                     </li>
                     <li>
-                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/equipes/m13-masc">M13 Masculin
+                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/teams/m13-masc">M13 Masculin
                       </RouterLink>
                     </li>
                   </ul>
@@ -101,19 +101,19 @@
                   <h3 class="font-bold text-gray-700 text-sm mb-2">Compet'lib</h3>
                   <ul class="space-y-1">
                     <li>
-                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/equipes/competlib-a">Compet'lib
+                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/teams/competlib-a">Compet'lib
                         A</RouterLink>
                     </li>
                     <li>
-                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/equipes/competlib-b">Compet'lib
+                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/teams/competlib-b">Compet'lib
                         B</RouterLink>
                     </li>
                     <li>
-                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/equipes/competlib-c">Compet'lib
+                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/teams/competlib-c">Compet'lib
                         C</RouterLink>
                     </li>
                     <li>
-                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/equipes/competlib-d">Compet'lib
+                      <RouterLink class="block px-3 py-2 hover:bg-gray-100 rounded" to="/teams/competlib-d">Compet'lib
                         D</RouterLink>
                     </li>
                   </ul>

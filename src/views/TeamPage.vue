@@ -1,14 +1,14 @@
 <template>
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 space-y-8 sm:space-y-12">
+  <div v-if="teamData" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 space-y-8 sm:space-y-12">
 
     <!-- TITRE -->
     <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-red-600">
-      Pré-Nationale Féminine
+      {{ teamData.title }}
     </h1>
 
     <!-- PHOTO D'ÉQUIPE -->
     <div class="w-full">
-      <img :src="teamPic" alt="Photo équipe Pré-nationale Féminine"
+      <img :src="teamData.teamPic" :alt="`Photo équipe ${teamData.title}`"
         class="rounded-lg sm:rounded-xl shadow-lg w-full object-cover max-h-96 sm:max-h-[500px]" />
     </div>
 
@@ -28,17 +28,12 @@
               <th class="px-4 py-3 text-left">Salle</th>
             </tr>
           </thead>
-
           <tbody>
-            <tr class="border-b hover:bg-gray-50 transition">
-              <td class="px-4 py-3 font-medium">Mardi</td>
-              <td class="px-4 py-3">20h00 – 22h00</td>
-              <td class="px-4 py-3">Salle Colysée</td>
-            </tr>
-            <tr class="hover:bg-gray-50 transition">
-              <td class="px-4 py-3 font-medium">Jeudi</td>
-              <td class="px-4 py-3">20h00 – 22h00</td>
-              <td class="px-4 py-3">Salle Colysée</td>
+            <tr v-for="(slot, index) in teamData.schedule" :key="index"
+              :class="{ 'border-b': index < teamData.schedule.length - 1 }" class="hover:bg-gray-50 transition">
+              <td class="px-4 py-3 font-medium">{{ slot.day }}</td>
+              <td class="px-4 py-3">{{ slot.time }}</td>
+              <td class="px-4 py-3">{{ slot.location }}</td>
             </tr>
           </tbody>
         </table>
@@ -46,20 +41,12 @@
 
       <!-- Version mobile : cartes -->
       <div class="sm:hidden space-y-3">
-        <div class="bg-white p-4 rounded-lg shadow-md">
+        <div v-for="(slot, index) in teamData.schedule" :key="index" class="bg-white p-4 rounded-lg shadow-md">
           <div class="flex justify-between items-center mb-2">
-            <span class="font-bold text-red-600">Mardi</span>
-            <span class="text-sm text-gray-600">20h00 – 22h00</span>
+            <span class="font-bold text-red-600">{{ slot.day }}</span>
+            <span class="text-sm text-gray-600">{{ slot.time }}</span>
           </div>
-          <p class="text-sm text-gray-700">📍 Salle Colysée</p>
-        </div>
-
-        <div class="bg-white p-4 rounded-lg shadow-md">
-          <div class="flex justify-between items-center mb-2">
-            <span class="font-bold text-red-600">Jeudi</span>
-            <span class="text-sm text-gray-600">20h00 – 22h00</span>
-          </div>
-          <p class="text-sm text-gray-700">📍 Salle Colysée</p>
+          <p class="text-sm text-gray-700">📍 {{ slot.location }}</p>
         </div>
       </div>
     </section>
@@ -69,13 +56,11 @@
       <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-gray-800">
         Entraîneur
       </h2>
-
       <div class="flex items-center gap-3 sm:gap-4 bg-white p-4 sm:p-6 rounded-lg shadow-md">
-        <img :src="trainerPic" alt="Photo entraîneur"
+        <img :src="teamData.trainerPic" alt="Photo entraîneur"
           class="w-14 h-14 sm:w-20 sm:h-20 rounded-full object-cover shadow-md flex-shrink-0" />
-
         <div>
-          <p class="text-base sm:text-lg font-bold text-gray-800">Wail Roudani</p>
+          <p class="text-base sm:text-lg font-bold text-gray-800">{{ teamData.trainerName }}</p>
           <p class="text-sm sm:text-base text-gray-600">Entraîneur principal</p>
         </div>
       </div>
@@ -86,11 +71,9 @@
       <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-gray-800">
         Calendrier des matchs
       </h2>
-
       <div class="bg-white p-2 sm:p-4 rounded-lg shadow-md">
-        <img :src="calendarPic" alt="Calendrier FFVB PNF" class="rounded-lg w-full object-contain" />
+        <img :src="teamData.calendarPic" alt="Calendrier FFVB" class="rounded-lg w-full object-contain" />
       </div>
-
       <p class="text-xs sm:text-sm text-gray-500 text-center mt-2">
         Cliquez sur l'image pour l'agrandir
       </p>
@@ -105,17 +88,22 @@
     </div>
 
   </div>
+
+  <!-- Message d'erreur si équipe introuvable -->
+  <div v-else class="max-w-6xl mx-auto px-4 py-20 text-center">
+    <h1 class="text-2xl font-bold text-gray-800 mb-4">Équipe introuvable</h1>
+    <RouterLink to="/" class="text-red-600 hover:underline">
+      Retour à l'accueil
+    </RouterLink>
+  </div>
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+import { teamsData } from '@/data/team'
 
-import teamPic from '@/assets/teams/teampic.jpg'
-import trainerPic from '@/assets/teams/teampnftrainer.jpg'
-import calendarPic from '@/assets/teams/calendrierpnf.png'
-
-// Composant Vue pour page d'équipe
+const route = useRoute()
+const teamId = computed(() => route.params.teamId as string)
+const teamData = computed(() => teamsData[teamId.value])
 </script>
-
-<style scoped>
-/* Styles optionnels */
-</style>
