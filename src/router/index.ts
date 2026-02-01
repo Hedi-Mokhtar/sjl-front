@@ -3,8 +3,9 @@ import ContactView from '../views/ContactView.vue'
 import HomeView from '../views/HomeView.vue'
 import ScheduleView from '../views/ScheduleView.vue'
 import TeamsView from '../views/TeamsView.vue'
-import PrenationalFeminine from '@/views/teams/PrenationalFeminine.vue'
 import SubscriptionView from '@/views/SubscriptionView.vue'
+import TeamPage from '@/views/TeamPage.vue'
+
 
 
 const router = createRouter({
@@ -15,7 +16,7 @@ const router = createRouter({
     { path: '/schedule', name: 'schedule', component: ScheduleView },
     { path: '/subscription', name: 'subscription', component: SubscriptionView },
     { path: '/contact', name: 'contact', component: ContactView },
-    { path: '/teams/prenational-fem', name: 'prenational-fem', component: PrenationalFeminine }
+    { path: '/teams/:teamId', name: 'Team', component: TeamPage }
   ],
 })
 
