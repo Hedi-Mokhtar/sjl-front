@@ -104,6 +104,8 @@
       </div>
     </section>
 
+    <LocationMap />
+
     <!-- Section supplémentaire (optionnelle) -->
     <section class="mt-8 sm:mt-12 md:mt-16 w-full max-w-7xl px-4 sm:px-6 lg:px-8 pb-12">
       <div
@@ -126,6 +128,8 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 import clubPic1 from '@/assets/clubpic1.jpg'
 import clubPic2 from '@/assets/clubpic2.jpg'
+
+import LocationMap from '@/components/LocationMap.vue'
 
 const images = [clubPic1, clubPic2]
 
