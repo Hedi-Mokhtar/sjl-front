@@ -212,9 +212,9 @@
         <!-- Équipe avec sous-menu mobile -->
         <li>
           <button @click="equipeOpen = !equipeOpen"
-            class="w-full py-2 px-4 rounded-md border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold flex justify-between items-center">
+            class="w-full py-2 px-4 rounded-md border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold flex justify-center items-center relative">
             <span>Équipe</span>
-            <svg class="w-4 h-4 transition-transform" :class="{ 'rotate-180': equipeOpen }" fill="none"
+            <svg class="w-4 h-4 transition-transform absolute right-4" :class="{ 'rotate-180': equipeOpen }" fill="none"
               stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -320,6 +320,13 @@
           <RouterLink to="/schedule" @click="menuOpen = false"
             class="block py-2 px-4 rounded-md border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold text-center">
             Horaires
+          </RouterLink>
+        </li>
+
+        <li>
+          <RouterLink to="/subscription" @click="menuOpen = false"
+            class="block py-2 px-4 rounded-md border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold text-center">
+            Inscriptions
           </RouterLink>
         </li>
 
