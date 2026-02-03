@@ -62,7 +62,7 @@
           <div class="bg-white rounded-xl shadow-lg overflow-hidden h-[400px] lg:h-auto">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10124.54410903276!2d3.0107581615448105!3d50.62458981427247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d56961b249ad%3A0xa7b5659aba5b3a29!2sSport%20Joie%20Lille!5e0!3m2!1sfr!2sfr!4v1770123576143!5m2!1sfr!2sfr"
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              width="600" height="450" style="border:0;" allowfullscreen="false" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
