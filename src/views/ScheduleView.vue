@@ -36,7 +36,7 @@
   <div class="flex flex-col items-center w-full py-6 sm:py-10 px-4 sm:px-6 bg-gray-50">
     <!-- Image centrée et responsive -->
     <div class="w-full max-w-5xl bg-white p-4 sm:p-6 rounded-lg shadow-lg">
-      <img src="/src/assets/schedule.png" alt="Horaires d'entraînement"
+      <img src="/src/assets/images/schedule.png" alt="Horaires d'entraînement"
         class="w-full h-auto object-contain rounded-md" />
     </div>
 

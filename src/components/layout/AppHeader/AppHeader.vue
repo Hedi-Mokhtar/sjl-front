@@ -5,7 +5,7 @@
 
         <!-- Logo -->
         <RouterLink to="/" class="flex items-center">
-          <img src="/src/assets/logo.png" alt="Logo Club" class="h-16 w-16 md:h-20 md:w-20 object-contain" />
+          <img src="/src/assets/images/logo.png" alt="Logo Club" class="h-16 w-16 md:h-20 md:w-20 object-contain" />
         </RouterLink>
 
         <!-- Titre -->

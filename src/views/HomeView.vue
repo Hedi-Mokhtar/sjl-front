@@ -126,10 +126,10 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 
-import clubPic1 from '@/assets/clubpic1.jpg'
-import clubPic2 from '@/assets/clubpic2.jpg'
+import clubPic1 from '@/assets/images/clubpic1.jpg'
+import clubPic2 from '@/assets/images/clubpic2.jpg'
 
-import LocationMap from '@/components/LocationMap.vue'
+import LocationMap from '@/components/common/LocationMap.vue'
 
 const images = [clubPic1, clubPic2]
 

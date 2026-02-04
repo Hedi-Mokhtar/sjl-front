@@ -53,7 +53,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { mainNavItems, teamCategories } from './navigationData'
+import { mainNavItems, teamCategories } from '../../../data/navigationData'
 
 interface Props {
   menuOpen: boolean
