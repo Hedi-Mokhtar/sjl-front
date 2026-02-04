@@ -30,5 +30,5 @@
 </template>
 
 <script setup lang="ts">
-import { teamCategories } from '../../../data/navigationData'
+import { teamCategories } from '@data/navigationData'
 </script>

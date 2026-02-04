@@ -26,6 +26,6 @@
 </template>
 
 <script setup lang="ts">
-import { mainNavItems } from '../../../data/navigationData'
+import { mainNavItems } from '@data/navigationData'
 import TeamDropdown from './TeamDropdown.vue'
 </script>
