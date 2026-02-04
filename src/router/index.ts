@@ -3,8 +3,8 @@ import ContactView from '@views/ContactView.vue'
 import HomeView from '@views/HomeView.vue'
 import ScheduleView from '@views/ScheduleView.vue'
 import TeamsView from '@views/TeamsView.vue'
-import SubscriptionView from '@/views/SubscriptionView.vue'
-import TeamPage from '@/views/TeamPage.vue'
+import SubscriptionView from '@views/SubscriptionView.vue'
+import TeamPage from '@views/TeamPage.vue'
 
 
 
