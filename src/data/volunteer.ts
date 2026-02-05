@@ -27,7 +27,7 @@ export const volunteers: Volunteer[] = [
     executiveDescription: 'Présidente',
     referee: false,
     coach: true,
-    coachDescription: 'Entraîneure de la Départementale Masculine',
+    coachDescription: 'Entraîneur de la Départementale Masculine',
     volunteerExtra: false
   },
   {
@@ -38,7 +38,7 @@ export const volunteers: Volunteer[] = [
     executiveDescription: 'Responsable Sportive',
     referee: false,
     coach: true,
-    coachDescription: 'Coach & Entraîneure de la Régionale Masculine',
+    coachDescription: 'Coach & Entraîneur de la Régionale Masculine',
     volunteerExtra: false
   },
   {

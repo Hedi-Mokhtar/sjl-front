@@ -142,7 +142,7 @@
 
     <!-- Message info hover desktop -->
     <div class="text-center mt-8 text-gray-500 text-sm hidden md:block">
-      💡 Survolez les logos pour découvrir les descriptions
+      <span aria-hidden="true">💡</span> Survolez les logos pour découvrir les descriptions
     </div>
   </div>
 </template>
@@ -183,17 +183,5 @@ import { partners } from '@/data/partner'
 
 .partner-card:nth-child(6) {
   animation-delay: 0.6s;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 </style>

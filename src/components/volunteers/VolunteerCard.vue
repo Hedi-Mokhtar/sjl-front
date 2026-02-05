@@ -129,16 +129,4 @@ withDefaults(defineProps<Props>(), {
 .volunteer-card:nth-child(10) {
   animation-delay: 0.5s;
 }
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 </style>
