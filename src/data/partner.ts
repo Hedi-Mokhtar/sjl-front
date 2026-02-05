@@ -1,6 +1,6 @@
 import allwaysportLogo from '@/assets/images/partners/allwaysport.jpg'
 import dahliapinnataLogo from '@/assets/images/partners/dahliapinnata.jpg'
-import affamesassoiffesLogo from '@/assets/images/partners/affameassoiffes.jpg'
+import affamesassoiffesLogo from '@/assets/images/partners/affamesassoiffes.jpg'
 
 export interface Partner {
   id: string
