@@ -66,7 +66,7 @@ export const volunteers: Volunteer[] = [
     name: 'Marion',
     picture: marionPicture,
     executive: true,
-    executiveDescription: 'Responsable Evenementielle',
+    executiveDescription: 'Responsable Événementielle',
     referee: false,
     coach: false,
     volunteerExtra: false
