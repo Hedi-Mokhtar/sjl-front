@@ -10,7 +10,7 @@
       </p>
     </section>
 
-    <!-- Partner's gril -->
+    <!-- Partner's grid -->
     <section class="mb-16">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
         <div v-for="(partner, index) in partners" :key="partner.id" :class="index % 2 === 1 ? 'md:mt-8' : ''"
