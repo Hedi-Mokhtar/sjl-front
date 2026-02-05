@@ -1,11 +1,9 @@
-// src/data/volunteers.ts
-
 import clairePicture from '@/assets/images/volunteers/claire.jpg'
 import frederiquePicture from '@/assets/images/volunteers/frederique.jpg'
 import francoisPicture from '@/assets/images/volunteers/francois.jpg'
-import YvonPicture from '@/assets/images/volunteers/yvon.jpg'
-import MarionPicture from '@/assets/images/volunteers/marion.jpg'
-import HediPicture from '@/assets/images/volunteers/hedi.jpg'
+import yvonPicture from '@/assets/images/volunteers/yvon.jpg'
+import marionPicture from '@/assets/images/volunteers/marion.jpg'
+import hediPicture from '@/assets/images/volunteers/hedi.jpg'
 
 export interface Volunteer {
   id: string
@@ -56,7 +54,7 @@ export const volunteers: Volunteer[] = [
   {
     id: '4',
     name: 'Yvon',
-    picture: YvonPicture,
+    picture: yvonPicture,
     executive: true,
     executiveDescription: 'Secrétaire',
     referee: false,
@@ -66,7 +64,7 @@ export const volunteers: Volunteer[] = [
   {
     id: '5',
     name: 'Marion',
-    picture: MarionPicture,
+    picture: marionPicture,
     executive: true,
     executiveDescription: 'Responsable Evenementielle',
     referee: false,
@@ -76,13 +74,13 @@ export const volunteers: Volunteer[] = [
   {
     id: '6',
     name: 'Hedi',
-    picture: HediPicture,
+    picture: hediPicture,
     executive: true,
     executiveDescription: 'Responsable Communication interne et bénévolat',
     referee: true,
     coach: true,
     coachDescription: 'Entraîneur M18 féminine',
     volunteerExtra: true,
-    volunteerExtraDescription: 'Développeur site web'  // ✅ Corrigé
+    volunteerExtraDescription: 'Développeur site web'
   }
 ]

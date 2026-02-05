@@ -32,7 +32,7 @@ export const partners: Partner[] = [
     id: '3',
     name: 'Affamés Assoiffés',
     logo: affamesassoiffesLogo,
-    description: 'Les midis "Affamés" sont réservés aux gourmands et gourmets, le soir "Assoiffés" se transforme en un bar animé. ',
+    description: 'Les midis "Affamés" sont réservés aux gourmands et gourmets, le soir "Assoiffés" se transforme en un bar animé.',
     website: 'https://affames-assoiffes.fr/',
     address: '1 Boulevard Bigo Danel, Lille, FR 59000'
   }

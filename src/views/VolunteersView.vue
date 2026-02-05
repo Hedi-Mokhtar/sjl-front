@@ -13,16 +13,7 @@
 
       <!-- Section Bureau -->
       <section class="mb-16 sm:mb-20">
-        <div class="text-center mb-8 sm:mb-12">
-          <div class="inline-flex items-center justify-center mb-4">
-            <div class="h-1 w-12 bg-red-600 mr-3"></div>
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">
-              Le Bureau
-            </h2>
-            <div class="h-1 w-12 bg-red-600 ml-3"></div>
-          </div>
-          <p class="text-gray-600">Les membres de notre bureau exécutif</p>
-        </div>
+        <SectionHeader title="Le Bureau" subtitle="Les membres de notre bureau exécutif" color="red" />
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           <VolunteerCard v-for="volunteer in executiveVolunteers" :key="volunteer.id" :volunteer="volunteer"
@@ -33,16 +24,8 @@
 
       <!-- Section Coachs et Entraîneurs -->
       <section class="mb-16 sm:mb-20">
-        <div class="text-center mb-8 sm:mb-12">
-          <div class="inline-flex items-center justify-center mb-4">
-            <div class="h-1 w-12 bg-blue-600 mr-3"></div>
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">
-              Coachs & Entraîneurs
-            </h2>
-            <div class="h-1 w-12 bg-blue-600 ml-3"></div>
-          </div>
-          <p class="text-gray-600">Ceux qui transmettent leur passion sur le terrain</p>
-        </div>
+        <SectionHeader title="Coachs & Entraîneurs" subtitle="Ceux qui transmettent leur passion sur le terrain"
+          color="blue" />
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
           <VolunteerCard v-for="volunteer in coachVolunteers" :key="volunteer.id" :volunteer="volunteer"
@@ -53,16 +36,8 @@
 
       <!-- Section Arbitres et Marqueurs -->
       <section class="mb-16 sm:mb-20">
-        <div class="text-center mb-8 sm:mb-12">
-          <div class="inline-flex items-center justify-center mb-4">
-            <div class="h-1 w-12 bg-green-600 mr-3"></div>
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">
-              Arbitres & Marqueurs
-            </h2>
-            <div class="h-1 w-12 bg-green-600 ml-3"></div>
-          </div>
-          <p class="text-gray-600">Ils assurent le bon déroulement des matchs</p>
-        </div>
+        <SectionHeader title="Arbitres & Marqueurs" subtitle="Ils assurent le bon déroulement des matchs"
+          color="green" />
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
           <VolunteerCard v-for="volunteer in refereeVolunteers" :key="volunteer.id" :volunteer="volunteer"
@@ -72,16 +47,7 @@
 
       <!-- Section Extras -->
       <section v-if="extraVolunteers.length > 0" class="mb-16">
-        <div class="text-center mb-8 sm:mb-12">
-          <div class="inline-flex items-center justify-center mb-4">
-            <div class="h-1 w-12 bg-purple-600 mr-3"></div>
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">
-              Talents Multiples
-            </h2>
-            <div class="h-1 w-12 bg-purple-600 ml-3"></div>
-          </div>
-          <p class="text-gray-600">Nos bénévoles aux compétences variées</p>
-        </div>
+        <SectionHeader title="Talents Multiples" subtitle="Nos bénévoles aux compétences variées" color="purple" />
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
           <VolunteerCard v-for="volunteer in extraVolunteers" :key="volunteer.id" :volunteer="volunteer"
@@ -120,8 +86,8 @@
 import { computed } from 'vue'
 import { volunteers } from '@/data/volunteer'
 import VolunteerCard from '@/components/volunteers/VolunteerCard.vue'
+import SectionHeader from '@/components/volunteers/SectionHeader.vue'
 
-// Filtrer les bénévoles par catégorie
 const executiveVolunteers = computed(() =>
   volunteers.filter(v => v.executive)
 )
