@@ -2,10 +2,10 @@
 
 import clairePicture from '@/assets/images/volunteers/claire.jpg'
 import frederiquePicture from '@/assets/images/volunteers/frederique.jpg'
-import francoisPicture from '@/assets/images/volunteers/Francois.jpg'
-import YvonPicture from '@/assets/images/volunteers/Yvon.jpg'
-import MarionPicture from '@/assets/images/volunteers/Marion.jpg'
-import HediPicture from '@/assets/images/volunteers/Hedi.jpg'
+import francoisPicture from '@/assets/images/volunteers/francois.jpg'
+import YvonPicture from '@/assets/images/volunteers/yvon.jpg'
+import MarionPicture from '@/assets/images/volunteers/marion.jpg'
+import HediPicture from '@/assets/images/volunteers/hedi.jpg'
 
 export interface Volunteer {
   id: string
