@@ -1,48 +1,43 @@
-# sjl-front
+# Sport Joie Lille - Frontend Website
 
-This template should help get you started developing with Vue 3 in Vite.
+Public-facing website for Sport Joie Lille volleyball club in Lille, France. This application presents club information including competitive teams (from youth to senior level), volunteer opportunities, partner organizations, training schedules, and membership registration.
 
-## Recommended IDE Setup
+## What This Application Does
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+The Sport Joie Lille frontend serves as the digital presence for the volleyball club, featuring:
 
-## Recommended Browser Setup
+- **Team Showcase**: Displays all club teams from youth categories (M13, M15, M18, M21) to senior competitive levels (Départementale, Régionale, Pré-Nationale), plus recreational Compet'lib groups
+- **Volunteer Portal**: Highlights volunteer contributors with profile cards and role descriptions
+- **Partner Directory**: Showcases sponsoring organizations and collaborators
+- **Schedule Browser**: Interactive calendar showing training times and venue locations for each team
+- **Subscription Interface**: Handles new member registration workflows
+- **Contact Information**: Provides club contact details and location mapping
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## Getting Started
 
-## Type Support for `.vue` Imports in TS
+**Required Software**: Node.js 20.19+ or 22.12+ with pnpm package manager
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-pnpm install
+**Quick Start Commands**:
+```bash
+pnpm install          # Install dependencies
+pnpm dev              # Launch development server (http://localhost:5173)
+pnpm build            # Create production bundle
+pnpm preview          # Test production build locally
+pnpm lint             # Check code quality with ESLint
+pnpm format           # Apply Prettier formatting
 ```
 
-### Compile and Hot-Reload for Development
+## Technical Foundation
 
-```sh
-pnpm dev
-```
+Built with Vue 3 Composition API, TypeScript for type safety, Vite for fast builds, Vue Router for navigation, and TailwindCSS for styling. The application uses pnpm workspaces and requires Node 20.19.0+ or 22.12.0+.
 
-### Type-Check, Compile and Minify for Production
+**Editor Recommendation**: VS Code with Vue Language Features (Volar) extension enabled
 
-```sh
-pnpm build
-```
+## Documentation Structure
 
-### Lint with [ESLint](https://eslint.org/)
+Further technical details are available in `/docs`:
+- Architecture decisions and component hierarchy
+- Folder organization and file naming conventions  
+- Development workflows and contribution guidelines
 
-```sh
-pnpm lint
-```
+See the docs folder for comprehensive technical documentation.
