@@ -257,5 +257,5 @@ export const volunteers: Volunteer[] = [
     coachDescription: 'Entraîneur M18 féminine',
     volunteerExtra: true,
     volunteerExtraDescription: 'Développeur site web'
-  },
+  }
 ]
