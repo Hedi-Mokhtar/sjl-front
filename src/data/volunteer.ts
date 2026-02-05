@@ -1,0 +1,88 @@
+// src/data/volunteers.ts
+
+import clairePicture from '@/assets/images/volunteers/claire.jpg'
+import frederiquePicture from '@/assets/images/volunteers/frederique.jpg'
+import francoisPicture from '@/assets/images/volunteers/Francois.jpg'
+import YvonPicture from '@/assets/images/volunteers/Yvon.jpg'
+import MarionPicture from '@/assets/images/volunteers/Marion.jpg'
+import HediPicture from '@/assets/images/volunteers/Hedi.jpg'
+
+export interface Volunteer {
+  id: string
+  name: string
+  picture: string
+  executive?: boolean
+  executiveDescription?: string
+  referee?: boolean
+  coach?: boolean
+  coachDescription?: string
+  volunteerExtra?: boolean
+  volunteerExtraDescription?: string
+}
+
+export const volunteers: Volunteer[] = [
+  {
+    id: '1',
+    name: 'Claire',
+    picture: clairePicture,
+    executive: true,
+    executiveDescription: 'Présidente',
+    referee: false,
+    coach: true,
+    coachDescription: 'Entraîneure de la Départementale Masculine',
+    volunteerExtra: false
+  },
+  {
+    id: '2',
+    name: 'Frederique',
+    picture: frederiquePicture,
+    executive: true,
+    executiveDescription: 'Responsable Sportive',
+    referee: false,
+    coach: true,
+    coachDescription: 'Coach & Entraîneure de la Régionale Masculine',
+    volunteerExtra: false
+  },
+  {
+    id: '3',
+    name: 'François',
+    picture: francoisPicture,
+    executive: true,
+    executiveDescription: 'Trésorier',
+    referee: true,
+    coach: false,
+    volunteerExtra: false
+  },
+  {
+    id: '4',
+    name: 'Yvon',
+    picture: YvonPicture,
+    executive: true,
+    executiveDescription: 'Secrétaire',
+    referee: false,
+    coach: false,
+    volunteerExtra: false
+  },
+  {
+    id: '5',
+    name: 'Marion',
+    picture: MarionPicture,
+    executive: true,
+    executiveDescription: 'Responsable Evenementielle',
+    referee: false,
+    coach: false,
+    volunteerExtra: false
+  },
+  {
+    id: '6',
+    name: 'Hedi',
+    picture: HediPicture,
+    executive: true,
+    executiveDescription: 'Responsable Communication interne et bénévolat',
+    referee: true,
+    coach: true,
+    coachDescription: 'Entraîneur M18 féminine',
+    volunteerExtra: true,
+    volunteerExtraDescription: 'Développeur site web'  // ✅ Corrigé
+  }
+]

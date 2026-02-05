@@ -13,6 +13,8 @@ export const mainNavItems: NavItem[] = [
   { label: 'Horaires', path: '/schedule' },
   { label: 'Inscriptions', path: '/subscription' },
   { label: 'Contact', path: '/contact' },
+  { label: 'Bénévoles', path: '/volunteers' },
+  { label: 'Partenaires', path: '/partners' },
 ]
 
 export const teamCategories: TeamCategory[] = [
