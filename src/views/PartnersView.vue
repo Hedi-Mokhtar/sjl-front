@@ -10,13 +10,13 @@
       </p>
     </section>
 
-    <!-- Grille des partenaires -->
+    <!-- Partner's gril -->
     <section class="mb-16">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
         <div v-for="(partner, index) in partners" :key="partner.id" :class="index % 2 === 1 ? 'md:mt-8' : ''"
-          class="partner-card group">
+          :style="getAnimationDelay(index)" class="partner-card animate-fadeInUp group">
 
-          <!-- Logo avec hover description -->
+          <!-- Logo and hover description -->
           <div class="relative mb-6">
             <!-- Logo -->
             <div
@@ -25,7 +25,7 @@
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
             </div>
 
-            <!-- Description en overlay (apparaît au hover) -->
+            <!-- Description overlay (appears on hover) -->
             <div
               class="absolute inset-0 w-48 h-48 mx-auto rounded-full bg-red-600 bg-opacity-95 flex items-center justify-center p-6 opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-2xl">
               <p class="text-white text-sm text-center leading-relaxed">
@@ -34,14 +34,14 @@
             </div>
           </div>
 
-          <!-- Informations partenaire -->
+          <!-- Partner information -->
           <div class="text-center space-y-3">
             <!-- Nom -->
             <h3 class="text-xl sm:text-2xl font-bold text-gray-800 group-hover:text-red-600 transition-colors">
               {{ partner.name }}
             </h3>
 
-            <!-- Site web -->
+            <!-- Website -->
             <a :href="partner.website" target="_blank" rel="noopener noreferrer"
               class="inline-flex items-center text-red-600 hover:text-red-700 font-semibold text-sm sm:text-base group/link">
               <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -55,7 +55,7 @@
               </svg>
             </a>
 
-            <!-- Adresse -->
+            <!-- Address -->
             <div class="flex items-start justify-center text-gray-600 text-sm">
               <svg class="w-4 h-4 mr-2 mt-0.5 flex-shrink-0 text-red-600" fill="none" stroke="currentColor"
                 viewBox="0 0 24 24">
@@ -71,7 +71,7 @@
       </div>
     </section>
 
-    <!-- Call to Action - Devenir partenaire -->
+    <!-- Call to Action - Become a Partner -->
     <section class="bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-8 md:p-12 text-white shadow-2xl">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
@@ -83,7 +83,7 @@
             Plusieurs formules de partenariat sont disponibles.
           </p>
 
-          <!-- Avantages partenaires -->
+          <!-- Partner benefits -->
           <div class="space-y-3 mb-6">
             <div class="flex items-start">
               <svg class="w-6 h-6 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -149,39 +149,7 @@
 
 <script setup lang="ts">
 import { partners } from '@/data/partner'
+import { useStaggeredAnimation } from '@/composables/useStaggeredAnimation'
+
+const { getAnimationDelay } = useStaggeredAnimation(0.1)
 </script>
-
-<style scoped>
-.partner-card {
-  @apply transition-all duration-300;
-}
-
-/* Animation subtile au chargement */
-.partner-card {
-  animation: fadeInUp 0.6s ease-out backwards;
-}
-
-.partner-card:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.partner-card:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.partner-card:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-.partner-card:nth-child(4) {
-  animation-delay: 0.4s;
-}
-
-.partner-card:nth-child(5) {
-  animation-delay: 0.5s;
-}
-
-.partner-card:nth-child(6) {
-  animation-delay: 0.6s;
-}
-</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="volunteer-card group relative">
+  <div class="volunteer-card animate-fadeInUp group relative">
     <!-- Carte -->
     <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden h-full">
 
@@ -83,50 +83,3 @@ withDefaults(defineProps<Props>(), {
   compact: false
 })
 </script>
-
-<style scoped>
-.volunteer-card {
-  animation: fadeInUp 0.6s ease-out backwards;
-}
-
-/* Animations décalées */
-.volunteer-card:nth-child(1) {
-  animation-delay: 0.05s;
-}
-
-.volunteer-card:nth-child(2) {
-  animation-delay: 0.1s;
-}
-
-.volunteer-card:nth-child(3) {
-  animation-delay: 0.15s;
-}
-
-.volunteer-card:nth-child(4) {
-  animation-delay: 0.2s;
-}
-
-.volunteer-card:nth-child(5) {
-  animation-delay: 0.25s;
-}
-
-.volunteer-card:nth-child(6) {
-  animation-delay: 0.3s;
-}
-
-.volunteer-card:nth-child(7) {
-  animation-delay: 0.35s;
-}
-
-.volunteer-card:nth-child(8) {
-  animation-delay: 0.4s;
-}
-
-.volunteer-card:nth-child(9) {
-  animation-delay: 0.45s;
-}
-
-.volunteer-card:nth-child(10) {
-  animation-delay: 0.5s;
-}
-</style>
