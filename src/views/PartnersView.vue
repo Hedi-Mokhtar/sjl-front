@@ -125,16 +125,16 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              <a href="mailto:partenariat@sportjoielille.fr"
-                class="text-red-600 hover:underline font-semibold break-all">
-                partenariat@sportjoielille.fr
+              <a href="mailto:secretariatsjl@gmail.com" class="text-red-600 hover:underline font-semibold break-all">
+                secretariatsjl@gmail.com
               </a>
             </div>
 
-            <RouterLink to="/contact"
+            <RouterLink :to="{ name: 'contact', query: { type: 'partenaire' } }"
               class="block w-full bg-red-600 text-white text-center px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-all mt-6">
               Formulaire de contact
             </RouterLink>
+
           </div>
         </div>
       </div>

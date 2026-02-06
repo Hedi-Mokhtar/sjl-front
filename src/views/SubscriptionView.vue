@@ -67,10 +67,12 @@
             </div>
           </div>
 
-          <a href="https://forms.example.com/loisir" target="_blank" rel="noopener noreferrer"
+          <RouterLink :to="{ name: 'contact', query: { type: 'loisir' } }"
             class="mt-auto block w-full bg-blue-600 text-white text-center py-3 sm:py-4 rounded-lg font-semibold shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-200">
             S'inscrire en Loisir →
-          </a>
+          </RouterLink>
+
+
         </div>
       </div>
 
@@ -125,11 +127,10 @@
               Esprit d'équipe
             </div>
           </div>
-
-          <a href="https://forms.example.com/competition" target="_blank" rel="noopener noreferrer"
+          <RouterLink :to="{ name: 'contact', query: { type: 'competition' } }"
             class="mt-auto block w-full bg-red-600 text-white text-center py-3 sm:py-4 rounded-lg font-semibold shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-200">
             Demander un essai →
-          </a>
+          </RouterLink>
         </div>
       </div>
 
@@ -185,10 +186,11 @@
             </div>
           </div>
 
-          <a href="https://forms.example.com/competlib" target="_blank" rel="noopener noreferrer"
+          <RouterLink :to="{ name: 'contact', query: { type: 'competlib' } }"
             class="mt-auto block w-full bg-orange-600 text-white text-center py-3 sm:py-4 rounded-lg font-semibold shadow-md hover:bg-orange-700 hover:shadow-lg transition-all duration-200">
             Demander un essai →
-          </a>
+          </RouterLink>
+
         </div>
       </div>
 
@@ -244,10 +246,11 @@
             </div>
           </div>
 
-          <a href="https://forms.example.com/jeunes" target="_blank" rel="noopener noreferrer"
+          <RouterLink :to="{ name: 'contact', query: { type: 'jeunes' } }"
             class="mt-auto block w-full bg-green-600 text-white text-center py-3 sm:py-4 rounded-lg font-semibold shadow-md hover:bg-green-700 hover:shadow-lg transition-all duration-200">
             Demander un essai →
-          </a>
+          </RouterLink>
+
         </div>
       </div>
 

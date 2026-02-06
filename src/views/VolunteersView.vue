@@ -67,11 +67,11 @@
           </p>
 
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <RouterLink to="/contact"
+            <RouterLink :to="{ name: 'contact', query: { type: 'benevole' } }"
               class="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl">
-              Nous contacter
+              Formulaire de contact
             </RouterLink>
-            <a href="mailto:benevoles@sportjoielille.fr"
+            <a href="mailto:secretariatsjl@gmail.com"
               class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all">
               Envoyer un email
             </a>

@@ -272,12 +272,8 @@
           <div class="bg-white rounded-xl shadow-lg p-6">
             <h3 class="text-xl font-bold text-gray-800 mb-4">Horaires d'ouverture</h3>
             <p class="text-gray-600 text-sm mb-3">
-              Le secrétariat répond aux emails du lundi au vendredi
+              Le bureau répond aux emails dès que possible.
             </p>
-            <div class="text-sm text-gray-700 space-y-1">
-              <p>📧 Réponse sous 48h</p>
-              <p>⏰ Délai moyen : 24h</p>
-            </div>
           </div>
 
           <!-- Liens rapides -->
@@ -290,9 +286,6 @@
               <RouterLink to="/schedule" class="block hover:underline">
                 → Horaires des entraînements
               </RouterLink>
-              <a href="https://www.ffvb.org/" target="_blank" class="block hover:underline">
-                → Site FFVB
-              </a>
             </div>
           </div>
 
