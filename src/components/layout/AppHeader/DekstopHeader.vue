@@ -33,5 +33,5 @@
 import { mainNavItems } from '@data/navigationData'
 import TeamDropdown from './TeamDropdown.vue'
 import VolunteersDropdown from '@/components/volunteers/VolunteerDropdown.vue'
-import PartnersDropdown from '@/components/partners/PartersDropdown.vue'
+import PartnersDropdown from '@/components/partners/PartnersDropdown.vue'
 </script>
