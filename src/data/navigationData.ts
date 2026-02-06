@@ -9,10 +9,14 @@ export interface TeamCategory {
 }
 
 export const mainNavItems: NavItem[] = [
-  { label: 'Accueil', path: '/' },
-  { label: 'Horaires', path: '/schedule' },
   { label: 'Inscriptions', path: '/subscription' },
   { label: 'Contact', path: '/contact' },
+]
+
+export const clubMenuItems: NavItem[] = [
+  { label: 'Accueil', path: '/' },
+  { label: 'Horaires et tarifs', path: '/schedule' },
+  { label: 'Boutique', path: '/shop' },
 ]
 
 export const teamCategories: TeamCategory[] = [

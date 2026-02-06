@@ -4,10 +4,22 @@
 
       <!-- Accueil -->
       <li>
-        <RouterLink to="/" @click="closeMenu"
-          class="block py-2 px-4 rounded-md border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold text-center">
-          Accueil
-        </RouterLink>
+        <button @click="clubOpen = !clubOpen"
+          class="w-full py-2 px-4 rounded-md border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold flex justify-center items-center relative">
+          <span>Club</span>
+          <svg class="w-4 h-4 transition-transform absolute right-4" :class="{ 'rotate-180': clubOpen }" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <!-- Sous-menu club -->
+        <div v-if="clubOpen" class="ml-4 mt-2 space-y-2">
+          <RouterLink v-for="item in clubMenuItems" :key="item.path" :to="item.path" @click="closeMenu"
+            class="block py-1 text-sm hover:text-red-600 text-gray-700">
+            {{ item.label }}
+          </RouterLink>
+        </div>
       </li>
 
       <!-- Équipe avec sous-menu mobile -->
@@ -78,7 +90,7 @@
       </li>
 
       <!-- Autres liens de navigation -->
-      <li v-for="item in mainNavItems.slice(1)" :key="item.path">
+      <li v-for="item in mainNavItems" :key="item.path">
         <RouterLink :to="item.path" @click="closeMenu"
           class="block py-2 px-4 rounded-md border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold text-center">
           {{ item.label }}
@@ -91,7 +103,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { mainNavItems, teamCategories, volunteersMenuItems, partnersMenuItems } from '@/data/navigationData'
+import { mainNavItems, clubMenuItems, teamCategories, volunteersMenuItems, partnersMenuItems } from '@/data/navigationData'
 
 interface Props {
   menuOpen: boolean
@@ -104,6 +116,7 @@ interface Emits {
 defineProps<Props>()
 const emit = defineEmits<Emits>()
 
+const clubOpen = ref(false)
 const equipeOpen = ref(false)
 const volunteersOpen = ref(false)
 const partnersOpen = ref(false)

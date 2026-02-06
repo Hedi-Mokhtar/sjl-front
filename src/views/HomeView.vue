@@ -1,43 +1,77 @@
 <template>
-  <div class="flex flex-col items-center w-full">
-    <!-- Carrousel d'images - Pleine largeur avec hauteur responsive -->
-    <div class="w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] relative overflow-hidden">
-      <img :src="currentImage" alt="Photo du club" class="w-full h-full object-cover transition-opacity duration-500" />
+  <!-- Carrousel d'images - PLEINE LARGEUR (en dehors du conteneur) -->
+  <div class="w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] relative overflow-hidden">
+    <img :src="currentImage" alt="Photo du club" class="w-full h-full object-cover transition-opacity duration-500" />
 
-      <!-- Boutons de navigation - Cachés sur mobile, visibles sur desktop -->
-      <button @click="prevImage"
-        class="hidden md:block absolute top-1/2 left-4 -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition-all hover:scale-110">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-        </svg>
+    <!-- Boutons de navigation - Cachés sur mobile, visibles sur desktop -->
+    <button @click="prevImage"
+      class="hidden md:block absolute top-1/2 left-4 -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition-all hover:scale-110">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+
+    <button @click="nextImage"
+      class="hidden md:block absolute top-1/2 right-4 -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition-all hover:scale-110">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+
+    <!-- Indicateurs de pagination (dots) -->
+    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+      <button v-for="(img, index) in images" :key="index" @click="goToImage(index)"
+        :class="currentIndex === index ? 'bg-white w-8' : 'bg-white/50 w-3'"
+        class="h-3 rounded-full transition-all duration-300 hover:bg-white">
       </button>
-
-      <button @click="nextImage"
-        class="hidden md:block absolute top-1/2 right-4 -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition-all hover:scale-110">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
-
-      <!-- Indicateurs de pagination (dots) -->
-      <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-        <button v-for="(img, index) in images" :key="index" @click="goToImage(index)"
-          :class="currentIndex === index ? 'bg-white w-8' : 'bg-white/50 w-3'"
-          class="h-3 rounded-full transition-all duration-300 hover:bg-white">
-        </button>
-      </div>
-
-      <!-- Overlay gradient pour meilleure lisibilité -->
-      <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
     </div>
 
+    <!-- Overlay gradient pour meilleure lisibilité -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
+  </div>
+
+  <!-- Conteneur pour le reste du contenu -->
+  <div class="flex flex-col items-center w-full">
+    <section class="-mt-16 w-full px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
+
+        <div class="bg-red-600 text-white py-4 px-6">
+          <h2 class="text-xl sm:text-2xl font-bold tracking-wide text-center">
+            Le club
+          </h2>
+        </div>
+
+        <div class="p-6 sm:p-8 md:p-10 text-center">
+          <div class="text-lg sm:text-xl text-gray-700 leading-relaxed space-y-4">
+            <p>
+              <strong class="text-red-600">Fondé en 1962</strong>, Sport Joie Lille est un club de volley-ball au sein
+              du
+              quartier <strong>Vauban–Esquermes</strong>.
+            </p>
+            <p>
+              Nous accueillons joueurs et joueuses de tous âges, du loisir à la compétition, dans une ambiance
+              conviviale et
+              formatrice.
+            </p>
+            <p>
+              Notre objectif : transmettre la passion du volley tout en valorisant
+              <strong class="text-red-600">l'esprit d'équipe</strong>, le respect et le plaisir du jeu.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
     <!-- Section des cartes - Responsive -->
-    <section class="mt-6 sm:mt-8 md:mt-12 w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section class="mt-8 sm:mt-12 md:mt-16 w-full max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
 
         <!-- Carte Résultats -->
-        <div
-          class="group p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+        <a href="https://scorenco.com/volley/clubs/sport-joie-lille-volley-2p3d" target="_blank"
+          rel="noopener noreferrer"
+          class="group p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer block">
           <div class="flex items-center mb-3">
             <div class="bg-red-100 p-3 rounded-full mr-3">
               <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -55,11 +89,12 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </div>
-        </div>
+        </a>
 
         <!-- Carte FFVB -->
-        <div
-          class="group p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+        <a href="https://www.ffvbbeach.org/ffvbapp/resu/planning_club.php?aff_semaine=&cnclub=0593506&x=12&y=16"
+          target="_blank" rel="noopener noreferrer"
+          class="group p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer block">
           <div class="flex items-center mb-3">
             <div class="bg-red-100 p-3 rounded-full mr-3">
               <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -77,11 +112,11 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </div>
-        </div>
+        </a>
 
         <!-- Carte Autres services -->
-        <div
-          class="group p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer sm:col-span-2 lg:col-span-1">
+        <RouterLink to="/subscription"
+          class="group p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer block sm:col-span-2 lg:col-span-1">
           <div class="flex items-center mb-3">
             <div class="bg-red-100 p-3 rounded-full mr-3">
               <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -89,9 +124,9 @@
                   d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
               </svg>
             </div>
-            <h3 class="font-bold text-xl text-gray-800 group-hover:text-red-600 transition-colors">Autres services</h3>
+            <h3 class="font-bold text-xl text-gray-800 group-hover:text-red-600 transition-colors">Inscriptions</h3>
           </div>
-          <p class="text-gray-600">Liens vers inscriptions, réservations ou informations diverses</p>
+          <p class="text-gray-600">Rejoignez notre club et inscrivez-vous dès maintenant</p>
           <div class="mt-4 flex items-center text-red-600 font-semibold">
             <span>Découvrir</span>
             <svg class="w-4 h-4 ml-1 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor"
@@ -99,14 +134,15 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </div>
-        </div>
+        </RouterLink>
 
       </div>
     </section>
 
+    <!-- Carte Google Maps -->
     <LocationMap />
 
-    <!-- Section supplémentaire (optionnelle) -->
+    <!-- Section Call to Action -->
     <section class="mt-8 sm:mt-12 md:mt-16 w-full max-w-7xl px-4 sm:px-6 lg:px-8 pb-12">
       <div
         class="bg-gradient-to-r from-red-600 to-red-700 rounded-xl p-6 sm:p-8 md:p-12 text-white text-center shadow-xl">
@@ -114,10 +150,10 @@
         <p class="text-base sm:text-lg mb-6 max-w-2xl mx-auto">
           Le Sport Joie Lille vous accueille pour pratiquer le volley-ball dans une ambiance conviviale et compétitive.
         </p>
-        <button
-          class="bg-white text-red-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all hover:scale-105 shadow-lg">
+        <RouterLink to="/subscription"
+          class="inline-block bg-white text-red-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all hover:scale-105 shadow-lg">
           Nous rejoindre
-        </button>
+        </RouterLink>
       </div>
     </section>
   </div>

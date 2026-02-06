@@ -8,6 +8,7 @@ import SubscriptionView from '@/views/SubscriptionView.vue'
 import TeamPage from '@/views/TeamPage.vue'
 import PartnersView from '@/views/PartnersView.vue'
 import VolunteersView from '@/views/VolunteersView.vue'
+import ShopView from '@/views/ShopView.vue'
 
 
 
@@ -17,6 +18,7 @@ const router = createRouter({
     { path: '/', name: 'home', component: HomeView },
     { path: '/teams', name: 'teams', component: TeamsView },
     { path: '/schedule', name: 'schedule', component: ScheduleView },
+    { path: '/shop', name: 'shop', component: ShopView },
     { path: '/subscription', name: 'subscription', component: SubscriptionView },
     { path: '/contact', name: 'contact', component: ContactView },
     { path: '/partners', name: 'partners', component: PartnersView },
