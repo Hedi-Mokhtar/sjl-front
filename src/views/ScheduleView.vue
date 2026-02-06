@@ -1,5 +1,7 @@
 <template>
   <div class="p-6">
+    <h2 class="text-3xl font-bold mb-2">Horaires & Entraînements</h2>
+    <p class="text-gray-600 mb-6">Retrouvez les créneaux de chaque équipe.</p>
     <div class="overflow-x-auto shadow-lg rounded-lg">
       <table class="min-w-full bg-white">
         <thead class="text-white" style="background-color: #e63946">

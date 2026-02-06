@@ -91,7 +91,7 @@
                   <span class="text-4xl font-bold text-red-600">25€</span>
                   <span class="text-lg text-gray-500 line-through">35€</span>
                   <span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-sm font-semibold">
-                    -22%
+                    -29%
                   </span>
                 </div>
                 <p class="text-sm text-gray-500 mt-2">
