@@ -57,7 +57,7 @@
       </section>
 
       <!-- Call to Action - Rejoindre les bénévoles -->
-      <section class="bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-8 md:p-12 text-white shadow-2xl">
+      <section id="join" class="bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-8 md:p-12 text-white shadow-2xl">
         <div class="text-center">
           <h2 class="text-3xl md:text-4xl font-bold mb-4">
             Vous souhaitez nous rejoindre ?

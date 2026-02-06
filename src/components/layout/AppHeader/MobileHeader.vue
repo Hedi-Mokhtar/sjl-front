@@ -21,7 +21,7 @@
           </svg>
         </button>
 
-        <!-- Sous-menu mobile -->
+        <!-- Sous-menu équipe -->
         <div v-if="equipeOpen" class="ml-4 mt-2 space-y-3">
           <div v-for="category in teamCategories" :key="category.title">
             <h3 class="font-bold text-sm mb-2 uppercase tracking-wide text-red-600">
@@ -39,6 +39,44 @@
         </div>
       </li>
 
+      <li>
+        <button @click="volunteersOpen = !volunteersOpen"
+          class="w-full py-2 px-4 rounded-md border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold flex justify-center items-center relative">
+          <span>Bénévoles</span>
+          <svg class="w-4 h-4 transition-transform absolute right-4" :class="{ 'rotate-180': volunteersOpen }"
+            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <!-- Sous-menu bénévoles -->
+        <div v-if="volunteersOpen" class="ml-4 mt-2 space-y-2">
+          <RouterLink v-for="item in volunteersMenuItems" :key="item.path" :to="item.path" @click="closeMenu"
+            class="block py-1 text-sm hover:text-red-600 text-gray-700">
+            {{ item.label }}
+          </RouterLink>
+        </div>
+      </li>
+
+      <li>
+        <button @click="partnersOpen = !partnersOpen"
+          class="w-full py-2 px-4 rounded-md border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold flex justify-center items-center relative">
+          <span>Partenaires</span>
+          <svg class="w-4 h-4 transition-transform absolute right-4" :class="{ 'rotate-180': partnersOpen }" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <!-- Sous-menu partenaires -->
+        <div v-if="partnersOpen" class="ml-4 mt-2 space-y-2">
+          <RouterLink v-for="item in partnersMenuItems" :key="item.path" :to="item.path" @click="closeMenu"
+            class="block py-1 text-sm hover:text-red-600 text-gray-700">
+            {{ item.label }}
+          </RouterLink>
+        </div>
+      </li>
+
       <!-- Autres liens de navigation -->
       <li v-for="item in mainNavItems.slice(1)" :key="item.path">
         <RouterLink :to="item.path" @click="closeMenu"
@@ -53,7 +91,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { mainNavItems, teamCategories } from '@data/navigationData'
+import { mainNavItems, teamCategories, volunteersMenuItems, partnersMenuItems } from '@/data/navigationData'
 
 interface Props {
   menuOpen: boolean
@@ -67,9 +105,13 @@ defineProps<Props>()
 const emit = defineEmits<Emits>()
 
 const equipeOpen = ref(false)
+const volunteersOpen = ref(false)
+const partnersOpen = ref(false)
 
 const closeMenu = () => {
   equipeOpen.value = false
+  volunteersOpen.value = false
+  partnersOpen.value = false
   emit('close')
 }
 </script>
