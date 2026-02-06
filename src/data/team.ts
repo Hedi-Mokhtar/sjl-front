@@ -44,8 +44,8 @@ export const teamsData: Record<string, TeamData> = {
     trainerName: 'Wail Roudani',
     calendarPic: pnfCalendarPic,
     schedule: [
-      { day: 'Mardi', time: '20h00 – 22h00', location: 'Salle Colysée' },
-      { day: 'Jeudi', time: '20h00 – 22h00', location: 'Salle Colysée' }
+      { day: 'Mardi', time: '20h00 – 22h00', location: 'Salle Pacome' },
+      { day: 'Jeudi', time: '20h00 – 22h00', location: 'Salle Pacome' }
     ]
   },
   'regional-masc': {

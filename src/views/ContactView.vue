@@ -259,7 +259,7 @@
                 <div>
                   <p class="font-semibold text-gray-800">Adresse</p>
                   <p class="text-gray-600 text-sm">
-                    Salle Colysée<br>
+                    Salle Pacome<br>
                     Quartier Vauban–Esquermes<br>
                     Lille, France
                   </p>
