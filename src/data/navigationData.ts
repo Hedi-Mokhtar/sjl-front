@@ -13,8 +13,6 @@ export const mainNavItems: NavItem[] = [
   { label: 'Horaires', path: '/schedule' },
   { label: 'Inscriptions', path: '/subscription' },
   { label: 'Contact', path: '/contact' },
-  { label: 'Bénévoles', path: '/volunteers' },
-  { label: 'Partenaires', path: '/partners' },
 ]
 
 export const teamCategories: TeamCategory[] = [
@@ -47,4 +45,14 @@ export const teamCategories: TeamCategory[] = [
       { label: "Compet'lib D", path: '/teams/competlib-d' },
     ],
   },
+]
+
+export const volunteersMenuItems: NavItem[] = [
+  { path: '/volunteers', label: 'Nos bénévoles' },
+  { path: '/volunteers#join', label: 'Devenir bénévole' }
+]
+
+export const partnersMenuItems: NavItem[] = [
+  { path: '/partners', label: 'Nos partenaires' },
+  { path: '/partners#become', label: 'Devenir partenaire' }
 ]

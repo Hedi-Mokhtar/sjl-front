@@ -72,7 +72,7 @@
     </section>
 
     <!-- Call to Action - Become a Partner -->
-    <section class="bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-8 md:p-12 text-white shadow-2xl">
+    <section id="become" class="bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-8 md:p-12 text-white shadow-2xl">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
           <h2 class="text-3xl md:text-4xl font-bold mb-4">

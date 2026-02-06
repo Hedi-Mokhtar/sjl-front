@@ -23,6 +23,23 @@ const router = createRouter({
     { path: '/volunteers', name: 'volunteers', component: VolunteersView },
     { path: '/teams/:teamId', name: 'Team', component: TeamPage }
   ],
+
+
+  scrollBehavior(to, _from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    }
+
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+        top: 100
+      }
+    }
+
+    return { top: 0 }
+  }
 })
 
 export default router
