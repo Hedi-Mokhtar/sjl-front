@@ -9,6 +9,15 @@ import pnfCalendarPic from '@/assets/images/teams/pnf/calendar.png'
 // Pour l'instant, on utilise les images de PNF comme placeholder
 
 import r1mTrainerPic from '@/assets/images/teams/r1m/trainer.jpg'
+import dmTrainerPic from '@/assets/images/teams/dm/trainer.jpg'
+import m13fTrainerPic from '@/assets/images/teams/m13f/trainer.jpg'
+import m13mTrainerPic from '@/assets/images/teams/m13m/trainer.jpg'
+import m15fTrainerPic from '@/assets/images/teams/m15f/trainer.jpg'
+import m15mTrainerPic from '@/assets/images/teams/m15m/trainer.jpg'
+import m18fTrainerPic from '@/assets/images/teams/m18f/trainer.jpg'
+import m18mTrainerPic from '@/assets/images/teams/m18m/trainer.jpg'
+import m21fTrainerPic from '@/assets/images/teams/m21f/trainer.jpg'
+import r1fTrainerPic from '@/assets/images/teams/r1f/trainer.jpg'
 
 export interface TeamSchedule {
   day: string
@@ -35,8 +44,8 @@ export const teamsData: Record<string, TeamData> = {
     trainerName: 'Wail Roudani',
     calendarPic: pnfCalendarPic,
     schedule: [
-      { day: 'Mardi', time: '20h00 – 22h00', location: 'Salle Colysée' },
-      { day: 'Jeudi', time: '20h00 – 22h00', location: 'Salle Colysée' }
+      { day: 'Mardi', time: '20h00 – 22h00', location: 'Salle Pacome' },
+      { day: 'Jeudi', time: '20h00 – 22h00', location: 'Salle Pacome' }
     ]
   },
   'regional-masc': {
@@ -54,8 +63,8 @@ export const teamsData: Record<string, TeamData> = {
     id: 'regional-fem',
     title: 'Régionale Féminine',
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
-    trainerPic: pnfTrainerPic, // TODO: Remplacer par la vraie image
-    trainerName: 'Nom Entraîneur', // À remplacer
+    trainerPic: r1fTrainerPic, // TODO: Remplacer par la vraie image
+    trainerName: 'Elodie', // À remplacer
     calendarPic: pnfCalendarPic, // TODO: Remplacer par la vraie image
     schedule: [
       { day: 'Mercredi', time: '20h00 – 22h00', location: 'Salle XXX' }
@@ -65,8 +74,8 @@ export const teamsData: Record<string, TeamData> = {
     id: 'departemental-masc',
     title: 'Départementale Masculine',
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
-    trainerPic: pnfTrainerPic, // TODO: Remplacer par la vraie image
-    trainerName: 'Nom Entraîneur', // À remplacer
+    trainerPic: dmTrainerPic, // TODO: Remplacer par la vraie image
+    trainerName: 'Claire', // À remplacer
     calendarPic: pnfCalendarPic, // TODO: Remplacer par la vraie image
     schedule: [
       { day: 'Vendredi', time: '20h00 – 22h00', location: 'Salle XXX' }
@@ -76,8 +85,8 @@ export const teamsData: Record<string, TeamData> = {
     id: 'm21-fem',
     title: 'M21 Féminine',
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
-    trainerPic: pnfTrainerPic, // TODO: Remplacer par la vraie image
-    trainerName: 'Nom Entraîneur', // À remplacer
+    trainerPic: m21fTrainerPic, // TODO: Remplacer par la vraie image
+    trainerName: 'Aude', // À remplacer
     calendarPic: pnfCalendarPic, // TODO: Remplacer par la vraie image
     schedule: [
       { day: 'Samedi', time: '14h00 – 16h00', location: 'Salle XXX' }
@@ -87,8 +96,8 @@ export const teamsData: Record<string, TeamData> = {
     id: 'm18-masc',
     title: 'M18 Masculin',
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
-    trainerPic: pnfTrainerPic, // TODO: Remplacer par la vraie image
-    trainerName: 'Nom Entraîneur', // À remplacer
+    trainerPic: m18mTrainerPic, // TODO: Remplacer par la vraie image
+    trainerName: 'Aymeric', // À remplacer
     calendarPic: pnfCalendarPic, // TODO: Remplacer par la vraie image
     schedule: [
       { day: 'Samedi', time: '16h00 – 18h00', location: 'Salle XXX' }
@@ -98,8 +107,8 @@ export const teamsData: Record<string, TeamData> = {
     id: 'm18-fem',
     title: 'M18 Féminine',
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
-    trainerPic: pnfTrainerPic, // TODO: Remplacer par la vraie image
-    trainerName: 'Nom Entraîneur', // À remplacer
+    trainerPic: m18fTrainerPic, // TODO: Remplacer par la vraie image
+    trainerName: 'Aude', // À remplacer
     calendarPic: pnfCalendarPic, // TODO: Remplacer par la vraie image
     schedule: [
       { day: 'Mercredi', time: '18h00 – 20h00', location: 'Salle XXX' }
@@ -109,8 +118,8 @@ export const teamsData: Record<string, TeamData> = {
     id: 'm15-fem',
     title: 'M15 Féminine',
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
-    trainerPic: pnfTrainerPic, // TODO: Remplacer par la vraie image
-    trainerName: 'Nom Entraîneur', // À remplacer
+    trainerPic: m15fTrainerPic, // TODO: Remplacer par la vraie image
+    trainerName: 'Marion', // À remplacer
     calendarPic: pnfCalendarPic, // TODO: Remplacer par la vraie image
     schedule: [
       { day: 'Lundi', time: '17h00 – 19h00', location: 'Salle XXX' }
@@ -120,8 +129,8 @@ export const teamsData: Record<string, TeamData> = {
     id: 'm15-masc',
     title: 'M15 Masculin',
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
-    trainerPic: pnfTrainerPic, // TODO: Remplacer par la vraie image
-    trainerName: 'Nom Entraîneur', // À remplacer
+    trainerPic: m15mTrainerPic, // TODO: Remplacer par la vraie image
+    trainerName: 'Aymeric', // À remplacer
     calendarPic: pnfCalendarPic, // TODO: Remplacer par la vraie image
     schedule: [
       { day: 'Mardi', time: '17h00 – 19h00', location: 'Salle XXX' }
@@ -131,8 +140,19 @@ export const teamsData: Record<string, TeamData> = {
     id: 'm13-masc',
     title: 'M13 Masculin',
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
-    trainerPic: pnfTrainerPic, // TODO: Remplacer par la vraie image
-    trainerName: 'Nom Entraîneur', // À remplacer
+    trainerPic: m13mTrainerPic, // TODO: Remplacer par la vraie image
+    trainerName: 'Aymeric', // À remplacer
+    calendarPic: pnfCalendarPic, // TODO: Remplacer par la vraie image
+    schedule: [
+      { day: 'Jeudi', time: '17h00 – 19h00', location: 'Salle XXX' }
+    ]
+  },
+  'm13-fem': {
+    id: 'm13-fem',
+    title: 'M13 Féminine',
+    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
+    trainerPic: m13fTrainerPic, // TODO: Remplacer par la vraie image
+    trainerName: 'Marion', // À remplacer
     calendarPic: pnfCalendarPic, // TODO: Remplacer par la vraie image
     schedule: [
       { day: 'Jeudi', time: '17h00 – 19h00', location: 'Salle XXX' }

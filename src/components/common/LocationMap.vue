@@ -50,9 +50,10 @@
             <p class="mb-4 text-red-50">
               N'hésitez pas à venir assister à un entraînement pour découvrir le club !
             </p>
-            <button class="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all">
+            <RouterLink :to="{ name: 'contact' }"
+              class="inline-block bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all">
               Nous contacter
-            </button>
+            </RouterLink>
           </div>
 
         </div>

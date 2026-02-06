@@ -148,7 +148,7 @@
         class="bg-gradient-to-r from-red-600 to-red-700 rounded-xl p-6 sm:p-8 md:p-12 text-white text-center shadow-xl">
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Rejoignez-nous !</h2>
         <p class="text-base sm:text-lg mb-6 max-w-2xl mx-auto">
-          Le Sport Joie Lille vous accueille pour pratiquer le volley-ball dans une ambiance conviviale et compétitive.
+          Sport Joie Lille vous accueille pour pratiquer le volley-ball dans une ambiance conviviale et compétitive.
         </p>
         <RouterLink to="/subscription"
           class="inline-block bg-white text-red-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all hover:scale-105 shadow-lg">
