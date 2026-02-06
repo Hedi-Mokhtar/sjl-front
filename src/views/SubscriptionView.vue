@@ -265,8 +265,8 @@
           </h2>
           <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
             Pour toute question concernant les inscriptions, n'hésitez pas à nous contacter
-            par email à <a href="mailto:contact@sportjoielille.fr"
-              class="text-red-600 hover:underline font-semibold">contact@sportjoielille.fr</a>
+            par email à <a href="mailto:secretariatsjl@gmail.com"
+              class="text-red-600 hover:underline font-semibold">secretariatsjl@gmail.com</a>
           </p>
         </div>
 
