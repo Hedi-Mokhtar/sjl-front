@@ -9,17 +9,11 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
 import AppHeader from './components/layout/AppHeader/AppHeader.vue'
 import AppFooter from './components/layout/AppFooter/AppFooter.vue'
+import { useDarkMode } from './composables/useDarkMode'
 
 // Initialize dark mode on app mount
-onMounted(() => {
-  const savedMode = localStorage.getItem('darkMode')
-  if (savedMode === 'true') {
-    document.documentElement.classList.add('dark')
-  } else if (savedMode === null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.documentElement.classList.add('dark')
-  }
-})
+const { initializeDarkMode } = useDarkMode()
+initializeDarkMode()
 </script>

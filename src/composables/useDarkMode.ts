@@ -1,5 +1,6 @@
 import { ref, onMounted } from 'vue'
 
+// Global dark mode state - singleton pattern for app-wide theme
 const isDark = ref(false)
 
 export function useDarkMode() {
@@ -36,5 +37,6 @@ export function useDarkMode() {
   return {
     isDark,
     toggleDarkMode,
+    initializeDarkMode,
   }
 }
