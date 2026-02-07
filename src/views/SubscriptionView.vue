@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center w-full min-h-screen bg-gray-50">
+  <div class="flex flex-col items-center w-full min-h-screen bg-gray-50 dark:bg-gray-900">
 
     <!-- BANNIÈRE TITRE -->
     <div class="w-full bg-red-900 text-white py-12 sm:py-16 text-center">
@@ -17,7 +17,7 @@
 
       <!-- LOISIR -->
       <div
-        class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group flex flex-col">
+        class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group flex flex-col dark:bg-gray-800">
         <div class="bg-gradient-to-r from-blue-500 to-blue-600 p-6 sm:p-8">
           <h2 class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
             🏐 Loisir
@@ -26,7 +26,7 @@
         </div>
 
         <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col">
-          <p class="text-gray-700 leading-relaxed">
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
             Vous souhaitez jouer au volley dans une <strong>ambiance conviviale et décontractée</strong> ?
             Participez à des cours encadrés par nos bénévoles <strong>sans la pression de la compétition</strong>.
           </p>
@@ -46,7 +46,7 @@
             </div>
           </div>
 
-          <div class="space-y-2 text-sm text-gray-600">
+          <div class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
             <div class="flex items-center">
               <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
@@ -78,7 +78,7 @@
 
       <!-- COMPÉTITIONS -->
       <div
-        class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group flex flex-col">
+        class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group flex flex-col dark:bg-gray-800">
         <div class="bg-gradient-to-r from-red-600 to-red-700 p-6 sm:p-8">
           <h2 class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
             🏆 Compétition
@@ -87,7 +87,7 @@
         </div>
 
         <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col">
-          <p class="text-gray-700 leading-relaxed">
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
             Envie de vous challenger et de participer à des <strong>championnats officiels</strong> ?
             Rejoignez nos équipes compétitives et représentez le club en championnat FFVB !
           </p>
@@ -107,7 +107,7 @@
             </div>
           </div>
 
-          <div class="space-y-2 text-sm text-gray-600">
+          <div class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
             <div class="flex items-center">
               <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
@@ -136,7 +136,7 @@
 
       <!-- COMPET'LIB -->
       <div
-        class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group flex flex-col">
+        class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group flex flex-col dark:bg-gray-800">
         <div class="bg-gradient-to-r from-orange-500 to-orange-600 p-6 sm:p-8">
           <h2 class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
             ⚡ Compet'lib
@@ -145,7 +145,7 @@
         </div>
 
         <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col">
-          <p class="text-gray-700 leading-relaxed">
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
             Le meilleur des deux mondes ! Compet'lib combine <strong>esprit compétitif et liberté</strong>.
             Jouez en matchs <strong>sans contrainte d'engagement strict</strong> le week-end.
           </p>
@@ -165,7 +165,7 @@
             </div>
           </div>
 
-          <div class="space-y-2 text-sm text-gray-600">
+          <div class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
             <div class="flex items-center">
               <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
@@ -196,7 +196,7 @@
 
       <!-- JEUNES -->
       <div
-        class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group flex flex-col">
+        class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group flex flex-col dark:bg-gray-800">
         <div class="bg-gradient-to-r from-green-500 to-green-600 p-6 sm:p-8">
           <h2 class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
             👦👧 Jeunes
@@ -205,7 +205,7 @@
         </div>
 
         <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col">
-          <p class="text-gray-700 leading-relaxed">
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
             Catégories M13, M15, M18 et M21 ! Nous formons les <strong>champions de demain</strong> dans un cadre
             éducatif et sportif. Initiation, perfectionnement et compétition adaptés à chaque âge.
           </p>
@@ -225,7 +225,7 @@
             </div>
           </div>
 
-          <div class="space-y-2 text-sm text-gray-600">
+          <div class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
             <div class="flex items-center">
               <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
@@ -257,13 +257,13 @@
     </section>
 
     <!-- INFORMATIONS COMPLÉMENTAIRES -->
-    <section class="w-full bg-white py-12 px-4 sm:px-6 border-t border-gray-200">
+    <section class="w-full bg-white py-12 px-4 sm:px-6 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700">
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-8">
-          <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">
+          <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-gray-200 mb-4">
             Besoin d'aide ?
           </h2>
-          <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
+          <p class="text-gray-700 text-base sm:text-lg leading-relaxed dark:text-gray-300">
             Pour toute question concernant les inscriptions, n'hésitez pas à nous contacter
             par email à <a href="mailto:secretariatsjl@gmail.com"
               class="text-red-600 hover:underline font-semibold">secretariatsjl@gmail.com</a>
@@ -272,7 +272,7 @@
 
         <!-- Infos importantes -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+          <div class="bg-blue-50 p-4 rounded-lg border border-blue-200 dark:bg-gray-700 dark:border-gray-600">
             <div class="flex items-start">
               <svg class="w-5 h-5 text-blue-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
                 viewBox="0 0 24 24">
@@ -280,13 +280,13 @@
                   d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
               <div>
-                <h3 class="font-semibold text-blue-900 mb-1">Certificat médical</h3>
-                <p class="text-sm text-blue-800">Obligatoire et datant de moins de 3 mois</p>
+                <h3 class="font-semibold text-blue-900 mb-1 dark:text-blue-300">Certificat médical</h3>
+                <p class="text-sm text-blue-800 dark:text-blue-400">Obligatoire et datant de moins de 3 mois</p>
               </div>
             </div>
           </div>
 
-          <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+          <div class="bg-green-50 p-4 rounded-lg border border-green-200 dark:bg-gray-700 dark:border-gray-600">
             <div class="flex items-start">
               <svg class="w-5 h-5 text-green-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
                 viewBox="0 0 24 24">
@@ -294,8 +294,8 @@
                   d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <div>
-                <h3 class="font-semibold text-green-900 mb-1">Délai de réponse</h3>
-                <p class="text-sm text-green-800">Nous traiterons votre demande sous 48h</p>
+                <h3 class="font-semibold text-green-900 mb-1 dark:text-green-300">Délai de réponse</h3>
+                <p class="text-sm text-green-800 dark:text-green-400">Nous traiterons votre demande sous 48h</p>
               </div>
             </div>
           </div>

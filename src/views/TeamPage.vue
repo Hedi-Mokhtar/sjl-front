@@ -14,13 +14,13 @@
 
     <!-- HORAIRES D'ENTRAÎNEMENT -->
     <section>
-      <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-gray-800">
+      <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-gray-800 dark:text-gray-200">
         Horaires d'entraînement
       </h2>
 
       <!-- Version desktop : tableau -->
       <div class="hidden sm:block overflow-x-auto">
-        <table class="w-full bg-white shadow-md rounded-lg overflow-hidden">
+        <table class="w-full bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden">
           <thead class="bg-red-600 text-white">
             <tr>
               <th class="px-4 py-3 text-left">Jour</th>
@@ -30,10 +30,10 @@
           </thead>
           <tbody>
             <tr v-for="(slot, index) in teamData.schedule" :key="index"
-              :class="{ 'border-b': index < teamData.schedule.length - 1 }" class="hover:bg-gray-50 transition">
-              <td class="px-4 py-3 font-medium">{{ slot.day }}</td>
-              <td class="px-4 py-3">{{ slot.time }}</td>
-              <td class="px-4 py-3">{{ slot.location }}</td>
+              :class="{ 'border-b': index < teamData.schedule.length - 1 }" class="hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+              <td class="px-4 py-3 font-medium dark:text-gray-200">{{ slot.day }}</td>
+              <td class="px-4 py-3 dark:text-gray-200">{{ slot.time }}</td>
+              <td class="px-4 py-3 dark:text-gray-200">{{ slot.location }}</td>
             </tr>
           </tbody>
         </table>
@@ -41,40 +41,40 @@
 
       <!-- Version mobile : cartes -->
       <div class="sm:hidden space-y-3">
-        <div v-for="(slot, index) in teamData.schedule" :key="index" class="bg-white p-4 rounded-lg shadow-md">
+        <div v-for="(slot, index) in teamData.schedule" :key="index" class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
           <div class="flex justify-between items-center mb-2">
             <span class="font-bold text-red-600">{{ slot.day }}</span>
-            <span class="text-sm text-gray-600">{{ slot.time }}</span>
+            <span class="text-sm text-gray-600 dark:text-gray-400">{{ slot.time }}</span>
           </div>
-          <p class="text-sm text-gray-700">📍 {{ slot.location }}</p>
+          <p class="text-sm text-gray-700 dark:text-gray-300">📍 {{ slot.location }}</p>
         </div>
       </div>
     </section>
 
     <!-- ENTRAÎNEUR -->
     <section>
-      <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-gray-800">
+      <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-gray-800 dark:text-gray-200">
         Entraîneur
       </h2>
-      <div class="flex items-center gap-3 sm:gap-4 bg-white p-4 sm:p-6 rounded-lg shadow-md">
+      <div class="flex items-center gap-3 sm:gap-4 bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-lg shadow-md">
         <img :src="teamData.trainerPic" alt="Photo entraîneur"
           class="w-14 h-14 sm:w-20 sm:h-20 rounded-full object-cover shadow-md flex-shrink-0" />
         <div>
-          <p class="text-base sm:text-lg font-bold text-gray-800">{{ teamData.trainerName }}</p>
-          <p class="text-sm sm:text-base text-gray-600">Entraîneur principal</p>
+          <p class="text-base sm:text-lg font-bold text-gray-800 dark:text-gray-200">{{ teamData.trainerName }}</p>
+          <p class="text-sm sm:text-base text-gray-600 dark:text-gray-400">Entraîneur principal</p>
         </div>
       </div>
     </section>
 
     <!-- CALENDRIER DES MATCHS -->
     <section>
-      <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-gray-800">
+      <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-gray-800 dark:text-gray-200">
         Calendrier des matchs
       </h2>
-      <div class="bg-white p-2 sm:p-4 rounded-lg shadow-md">
+      <div class="bg-white dark:bg-gray-800 p-2 sm:p-4 rounded-lg shadow-md">
         <img :src="teamData.calendarPic" alt="Calendrier FFVB" class="rounded-lg w-full object-contain" />
       </div>
-      <p class="text-xs sm:text-sm text-gray-500 text-center mt-2">
+      <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 text-center mt-2">
         Cliquez sur l'image pour l'agrandir
       </p>
     </section>
@@ -91,7 +91,7 @@
 
   <!-- Message d'erreur si équipe introuvable -->
   <div v-else class="max-w-6xl mx-auto px-4 py-20 text-center">
-    <h1 class="text-2xl font-bold text-gray-800 mb-4">Équipe introuvable</h1>
+    <h1 class="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">Équipe introuvable</h1>
     <RouterLink to="/" class="text-red-600 hover:underline">
       Retour à l'accueil
     </RouterLink>

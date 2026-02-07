@@ -3,10 +3,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <!-- Hero Section -->
       <section class="text-center mb-12 sm:mb-16">
-        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 mb-4">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 dark:text-gray-200 mb-4">
           Nos bénévoles
         </h1>
-        <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+        <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
           L'équipe dévouée qui fait vivre Sport Joie Lille au quotidien
         </p>
       </section>

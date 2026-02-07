@@ -2,10 +2,10 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <!-- Hero Section -->
     <section class="text-center mb-12 sm:mb-16">
-      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 mb-4">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 dark:text-gray-200 mb-4">
         Nos partenaires
       </h1>
-      <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+      <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
         Ils nous font confiance et soutiennent Sport Joie Lille
       </p>
     </section>
@@ -20,7 +20,7 @@
           <div class="relative mb-6">
             <!-- Logo -->
             <div
-              class="w-48 h-48 mx-auto rounded-full overflow-hidden shadow-xl ring-4 ring-gray-100 group-hover:ring-red-200 transition-all duration-300">
+              class="w-48 h-48 mx-auto rounded-full overflow-hidden shadow-xl ring-4 ring-gray-100 dark:ring-gray-700 group-hover:ring-red-200 transition-all duration-300">
               <img :src="partner.logo" :alt="`Logo ${partner.name}`"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
             </div>
@@ -37,7 +37,7 @@
           <!-- Partner information -->
           <div class="text-center space-y-3">
             <!-- Nom -->
-            <h3 class="text-xl sm:text-2xl font-bold text-gray-800 group-hover:text-red-600 transition-colors">
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-800 dark:text-gray-200 group-hover:text-red-600 transition-colors">
               {{ partner.name }}
             </h3>
 
@@ -56,7 +56,7 @@
             </a>
 
             <!-- Address -->
-            <div class="flex items-start justify-center text-gray-600 text-sm">
+            <div class="flex items-start justify-center text-gray-600 dark:text-gray-400 text-sm">
               <svg class="w-4 h-4 mr-2 mt-0.5 flex-shrink-0 text-red-600" fill="none" stroke="currentColor"
                 viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -72,7 +72,7 @@
     </section>
 
     <!-- Message info hover desktop -->
-    <div class="text-center mb-16 text-gray-500 text-sm hidden md:block">
+    <div class="text-center mb-16 text-gray-500 dark:text-gray-400 text-sm hidden md:block">
       <span aria-hidden="true">💡</span> Survolez les logos pour découvrir les descriptions
     </div>
 
@@ -118,9 +118,9 @@
           </div>
         </div>
 
-        <div class="bg-white text-gray-800 rounded-xl p-6 sm:p-8">
-          <h3 class="text-2xl font-bold mb-4">Contactez-nous</h3>
-          <p class="text-gray-600 mb-6">
+        <div class="bg-white text-gray-800 dark:bg-gray-800 dark:text-gray-200 rounded-xl p-6 sm:p-8">
+          <h3 class="text-2xl font-bold mb-4 dark:text-gray-200">Contactez-nous</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-6">
             Échangeons sur les opportunités de partenariat adaptées à vos besoins.
           </p>
 
@@ -147,7 +147,7 @@
 
     <!-- ✅ SECTION BROCHURE avec couleurs rouge adaptées -->
     <section>
-      <div class="bg-white rounded-2xl p-8 md:p-12 shadow-2xl border-2 border-red-200">
+      <div class="bg-white rounded-2xl p-8 md:p-12 shadow-2xl border-2 border-red-200 dark:bg-gray-800 dark:border-gray-600">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
           <!-- Colonne gauche : Texte -->
@@ -161,10 +161,10 @@
               <span>Brochure officielle</span>
             </div>
 
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-gray-200 mb-4">
               Découvrez notre brochure partenaires
             </h2>
-            <p class="text-gray-600 mb-6 leading-relaxed">
+            <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
               Téléchargez notre brochure complète pour découvrir toutes les opportunités de partenariat avec le Sport
               Joie Lille.
               Vous y trouverez nos offres, notre vision et les avantages pour nos partenaires.
@@ -172,13 +172,13 @@
 
             <!-- Stats -->
             <div class="grid grid-cols-2 gap-4 mb-6">
-              <div class="bg-red-50 rounded-lg p-4 shadow-sm border border-red-100">
+              <div class="bg-red-50 rounded-lg p-4 shadow-sm border border-red-100 dark:bg-gray-700 dark:border-gray-600">
                 <div class="text-2xl font-bold text-red-600">14 +</div>
-                <div class="text-sm text-gray-600">Équipes</div>
+                <div class="text-sm text-gray-600 dark:text-gray-400">Équipes</div>
               </div>
               <div class="bg-red-50 rounded-lg p-4 shadow-sm border border-red-100">
                 <div class="text-2xl font-bold text-red-600">250+</div>
-                <div class="text-sm text-gray-600">Licenciés</div>
+                <div class="text-sm text-gray-600 dark:text-gray-400">Licenciés</div>
               </div>
             </div>
           </div>
@@ -197,7 +197,7 @@
 
               <!-- Image -->
               <div
-                class="relative bg-white rounded-xl shadow-2xl p-4 border-2 border-gray-200 group-hover/pdf:shadow-3xl transition-all transform group-hover/pdf:-translate-y-2">
+                class="relative bg-white rounded-xl shadow-2xl p-4 border-2 border-gray-200 dark:bg-gray-700 dark:border-gray-600 group-hover/pdf:shadow-3xl transition-all transform group-hover/pdf:-translate-y-2">
                 <img :src="brochurePreview" alt="Aperçu brochure partenaires Sport Joie Lille"
                   class="w-full h-auto rounded-lg" />
 
@@ -223,7 +223,7 @@
               </svg>
             </a>
 
-            <p class="text-xs text-gray-500 text-center mt-4">
+            <p class="text-xs text-gray-500 dark:text-gray-400 text-center mt-4">
               Format PDF • Gratuit
             </p>
           </div>
