@@ -1,7 +1,7 @@
 <template>
   <li class="relative group">
     <span
-      class="cursor-pointer px-4 py-2 rounded-md border-2 border-red-600 text-red-600 dark:text-red-400 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold inline-flex items-center gap-1">
+      class="cursor-pointer px-4 py-2 rounded-md border-2 border-red-600 dark:border-red-400 text-red-600 dark:text-red-400 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold inline-flex items-center gap-1">
       <span>Équipe</span>
       <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor"
         viewBox="0 0 24 24">
@@ -11,7 +11,7 @@
 
     <!-- DROPDOWN -->
     <ul class="absolute right-0 pt-2 hidden group-hover:block hover:block z-50">
-      <div class="bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 shadow-2xl rounded-lg overflow-hidden w-72 border-2 border-red-600">
+      <div class="bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 shadow-2xl rounded-lg overflow-hidden w-72 border-2 border-red-600 dark:border-red-400">
 
         <li v-for="(category) in teamCategories" :key="category.title" class="py-2">
 
