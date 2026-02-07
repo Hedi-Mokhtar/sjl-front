@@ -1,12 +1,12 @@
 <template>
   <header class="bg-white text-red-600 shadow-xl border-b-4 border-red-600">
-    <div class="p-4">
+    <div class="px-4">
       <div class="flex items-center justify-between">
 
         <!-- Logo -->
         <RouterLink to="/" class="flex items-center flex-shrink-0">
           <img src="/src/assets/images/logo.png" alt="Logo Club"
-            class="h-24 w-24 md:h-32 md:w-32 lg:h-36 lg:w-36 object-contain drop-shadow-2xl hover:scale-105 transition-transform" />
+            class="h-20 w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 object-contain drop-shadow-2xl hover:scale-105 transition-transform" />
         </RouterLink>
 
         <!-- Titre -->
