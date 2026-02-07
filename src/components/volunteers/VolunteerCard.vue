@@ -1,7 +1,7 @@
 <template>
   <div class="volunteer-card animate-fadeInUp group relative">
     <!-- Carte -->
-    <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden h-full">
+    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden h-full">
 
       <!-- Gradient background au hover -->
       <div
@@ -14,7 +14,7 @@
         <div class="relative mb-4">
           <!-- Photo ronde -->
           <div :class="compact ? 'w-24 h-24 sm:w-28 sm:h-28' : 'w-32 h-32 sm:w-36 sm:h-36'"
-            class="rounded-full overflow-hidden shadow-xl ring-4 ring-white group-hover:ring-gray-100 transition-all duration-500 transform group-hover:scale-110">
+            class="rounded-full overflow-hidden shadow-xl ring-4 ring-white dark:ring-gray-800 group-hover:ring-gray-100 dark:group-hover:ring-gray-700 transition-all duration-500 transform group-hover:scale-110">
             <img :src="volunteer.picture" :alt="volunteer.name" class="w-full h-full object-cover" />
           </div>
 
@@ -27,12 +27,12 @@
 
         <!-- Nom -->
         <h3 :class="compact ? 'text-base sm:text-lg' : 'text-xl sm:text-2xl'"
-          class="font-bold text-gray-800 mb-2 text-center mt-2">
+          class="font-bold text-gray-800 dark:text-gray-200 mb-2 text-center mt-2">
           {{ volunteer.name }}
         </h3>
 
         <!-- Description (seulement si pas compact OU si hover sur mobile) -->
-        <p v-if="description && !compact" class="text-gray-600 text-sm text-center leading-relaxed">
+        <p v-if="description && !compact" class="text-gray-600 dark:text-gray-400 text-sm text-center leading-relaxed">
           {{ description }}
         </p>
 
@@ -46,19 +46,19 @@
         <!-- Badges multiples (si la personne a plusieurs rôles) -->
         <div v-if="!compact" class="flex flex-wrap gap-2 mt-4 justify-center">
           <span v-if="volunteer.executive && badgeText !== 'Bureau'"
-            class="bg-red-100 text-red-600 text-xs font-semibold px-2 py-1 rounded-full">
+            class="bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs font-semibold px-2 py-1 rounded-full">
             Bureau
           </span>
           <span v-if="volunteer.coach && badgeText !== 'Coach'"
-            class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-1 rounded-full">
+            class="bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-semibold px-2 py-1 rounded-full">
             Coach
           </span>
           <span v-if="volunteer.referee && badgeText !== 'Arbitre'"
-            class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-1 rounded-full">
+            class="bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs font-semibold px-2 py-1 rounded-full">
             Arbitre
           </span>
           <span v-if="volunteer.volunteerExtra && badgeText !== 'Extra'"
-            class="bg-purple-100 text-purple-600 text-xs font-semibold px-2 py-1 rounded-full">
+            class="bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs font-semibold px-2 py-1 rounded-full">
             Extra
           </span>
         </div>
