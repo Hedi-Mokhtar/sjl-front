@@ -33,7 +33,7 @@
   <!-- Conteneur pour le reste du contenu -->
   <div class="flex flex-col items-center w-full">
     <section class="-mt-16 w-full px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
+      <div class="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-xl overflow-hidden">
 
         <div class="bg-red-600 text-white py-4 px-6">
           <h2 class="text-xl sm:text-2xl font-bold tracking-wide text-center">
@@ -42,7 +42,7 @@
         </div>
 
         <div class="p-6 sm:p-8 md:p-10 text-center">
-          <div class="text-lg sm:text-xl text-gray-700 leading-relaxed space-y-4">
+          <div class="text-lg sm:text-xl text-gray-700 dark:text-gray-300 leading-relaxed space-y-4">
             <p>
               <strong class="text-red-600">Fondé en 1962</strong>, Sport Joie Lille est un club de volley-ball au sein
               du
@@ -71,7 +71,7 @@
         <!-- Carte Résultats -->
         <a href="https://scorenco.com/volley/clubs/sport-joie-lille-volley-2p3d" target="_blank"
           rel="noopener noreferrer"
-          class="group p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer block">
+          class="group p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer block">
           <div class="flex items-center mb-3">
             <div class="bg-red-100 p-3 rounded-full mr-3">
               <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -79,9 +79,9 @@
                   d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
               </svg>
             </div>
-            <h3 class="font-bold text-xl text-gray-800 group-hover:text-red-600 transition-colors">Résultats</h3>
+            <h3 class="font-bold text-xl text-gray-800 dark:text-gray-200 group-hover:text-red-600 transition-colors">Résultats</h3>
           </div>
-          <p class="text-gray-600">Consultez les résultats des équipes du club</p>
+          <p class="text-gray-600 dark:text-gray-400">Consultez les résultats des équipes du club</p>
           <div class="mt-4 flex items-center text-red-600 font-semibold">
             <span>Voir plus</span>
             <svg class="w-4 h-4 ml-1 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor"
@@ -94,7 +94,7 @@
         <!-- Carte FFVB -->
         <a href="https://www.ffvbbeach.org/ffvbapp/resu/planning_club.php?aff_semaine=&cnclub=0593506&x=12&y=16"
           target="_blank" rel="noopener noreferrer"
-          class="group p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer block">
+          class="group p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer block">
           <div class="flex items-center mb-3">
             <div class="bg-red-100 p-3 rounded-full mr-3">
               <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -102,9 +102,9 @@
                   d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
               </svg>
             </div>
-            <h3 class="font-bold text-xl text-gray-800 group-hover:text-red-600 transition-colors">FFVB</h3>
+            <h3 class="font-bold text-xl text-gray-800 dark:text-gray-200 group-hover:text-red-600 transition-colors">FFVB</h3>
           </div>
-          <p class="text-gray-600">Lien vers le site officiel de la Fédération Française de Volley</p>
+          <p class="text-gray-600 dark:text-gray-400">Lien vers le site officiel de la Fédération Française de Volley</p>
           <div class="mt-4 flex items-center text-red-600 font-semibold">
             <span>Accéder</span>
             <svg class="w-4 h-4 ml-1 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor"
@@ -116,7 +116,7 @@
 
         <!-- Carte Autres services -->
         <RouterLink to="/subscription"
-          class="group p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer block sm:col-span-2 lg:col-span-1">
+          class="group p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer block sm:col-span-2 lg:col-span-1">
           <div class="flex items-center mb-3">
             <div class="bg-red-100 p-3 rounded-full mr-3">
               <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -124,9 +124,9 @@
                   d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
               </svg>
             </div>
-            <h3 class="font-bold text-xl text-gray-800 group-hover:text-red-600 transition-colors">Inscriptions</h3>
+            <h3 class="font-bold text-xl text-gray-800 dark:text-gray-200 group-hover:text-red-600 transition-colors">Inscriptions</h3>
           </div>
-          <p class="text-gray-600">Rejoignez notre club et inscrivez-vous dès maintenant</p>
+          <p class="text-gray-600 dark:text-gray-400">Rejoignez notre club et inscrivez-vous dès maintenant</p>
           <div class="mt-4 flex items-center text-red-600 font-semibold">
             <span>Découvrir</span>
             <svg class="w-4 h-4 ml-1 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor"

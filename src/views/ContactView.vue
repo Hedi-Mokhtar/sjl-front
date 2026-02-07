@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center w-full min-h-screen bg-gray-50">
+  <div class="flex flex-col items-center w-full min-h-screen bg-gray-50 dark:bg-gray-900">
 
     <!-- BANNIÈRE TITRE -->
     <div class="w-full bg-red-900 text-white py-12 sm:py-16 text-center">
@@ -15,14 +15,14 @@
 
         <!-- FORMULAIRE DE CONTACT -->
         <div class="lg:col-span-2">
-          <div class="bg-white rounded-xl shadow-lg p-6 sm:p-8">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6">Envoyez-nous un message</h2>
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 sm:p-8">
+            <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-6">Envoyez-nous un message</h2>
 
             <form @submit.prevent="handleSubmit" class="space-y-6">
 
               <!-- Type de demande -->
               <div>
-                <label for="requestType" class="block text-sm font-semibold text-gray-700 mb-2">
+                <label for="requestType" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                   Type de demande <span class="text-red-600">*</span>
                 </label>
                 <select id="requestType" v-model="formData.requestType" required
@@ -41,7 +41,7 @@
               <!-- Informations personnelles -->
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label for="firstName" class="block text-sm font-semibold text-gray-700 mb-2">
+                  <label for="firstName" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                     Prénom <span class="text-red-600">*</span>
                   </label>
                   <input type="text" id="firstName" v-model="formData.firstName" required
@@ -49,7 +49,7 @@
                 </div>
 
                 <div>
-                  <label for="lastName" class="block text-sm font-semibold text-gray-700 mb-2">
+                  <label for="lastName" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                     Nom <span class="text-red-600">*</span>
                   </label>
                   <input type="text" id="lastName" v-model="formData.lastName" required
@@ -58,7 +58,7 @@
               </div>
 
               <div>
-                <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
+                <label for="email" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                   Email <span class="text-red-600">*</span>
                 </label>
                 <input type="email" id="email" v-model="formData.email" required
@@ -66,7 +66,7 @@
               </div>
 
               <div>
-                <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">
+                <label for="phone" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                   Téléphone
                 </label>
                 <input type="tel" id="phone" v-model="formData.phone"
@@ -81,7 +81,7 @@
                 <h3 class="font-semibold text-blue-900 mb-3">📋 Informations sportives</h3>
 
                 <div>
-                  <label for="experience" class="block text-sm font-semibold text-gray-700 mb-2">
+                  <label for="experience" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                     Combien d'années avez-vous joué au volley ? <span class="text-red-600">*</span>
                   </label>
                   <input type="number" id="experience" v-model="formData.experience" required min="0"
@@ -89,7 +89,7 @@
                 </div>
 
                 <div>
-                  <label for="level" class="block text-sm font-semibold text-gray-700 mb-2">
+                  <label for="level" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                     À quel niveau ? <span class="text-red-600">*</span>
                   </label>
                   <select id="level" v-model="formData.level" required
@@ -104,7 +104,7 @@
                 </div>
 
                 <div>
-                  <label for="position" class="block text-sm font-semibold text-gray-700 mb-2">
+                  <label for="position" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                     Quel(s) poste(s) ? <span class="text-red-600">*</span>
                   </label>
                   <input type="text" id="position" v-model="formData.position" required
@@ -113,7 +113,7 @@
                 </div>
 
                 <div v-if="formData.requestType === 'jeunes'">
-                  <label for="birthYear" class="block text-sm font-semibold text-gray-700 mb-2">
+                  <label for="birthYear" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                     Année de naissance <span class="text-red-600">*</span>
                   </label>
                   <input type="number" id="birthYear" v-model="formData.birthYear" required min="2000"
@@ -128,7 +128,7 @@
                 <h3 class="font-semibold text-purple-900 mb-3">🤝 Informations bénévolat</h3>
 
                 <div>
-                  <label for="availability" class="block text-sm font-semibold text-gray-700 mb-2">
+                  <label for="availability" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                     Disponibilités <span class="text-red-600">*</span>
                   </label>
                   <textarea id="availability" v-model="formData.availability" required rows="3"
@@ -137,7 +137,7 @@
                 </div>
 
                 <div>
-                  <label for="skills" class="block text-sm font-semibold text-gray-700 mb-2">
+                  <label for="skills" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                     Compétences / Motivations
                   </label>
                   <textarea id="skills" v-model="formData.skills" rows="3"
@@ -152,7 +152,7 @@
                 <h3 class="font-semibold text-amber-900 mb-3">🤝 Informations entreprise</h3>
 
                 <div>
-                  <label for="companyName" class="block text-sm font-semibold text-gray-700 mb-2">
+                  <label for="companyName" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                     Nom de l'entreprise <span class="text-red-600">*</span>
                   </label>
                   <input type="text" id="companyName" v-model="formData.companyName" required
@@ -160,7 +160,7 @@
                 </div>
 
                 <div>
-                  <label for="companyWebsite" class="block text-sm font-semibold text-gray-700 mb-2">
+                  <label for="companyWebsite" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                     Site web de l'entreprise
                   </label>
                   <input type="url" id="companyWebsite" v-model="formData.companyWebsite" placeholder="https://..."
@@ -170,7 +170,7 @@
 
               <!-- Message -->
               <div>
-                <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">
+                <label for="message" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                   Message <span class="text-red-600">*</span>
                 </label>
                 <textarea id="message" v-model="formData.message" required rows="5"
@@ -230,8 +230,8 @@
         <div class="space-y-6">
 
           <!-- Coordonnées -->
-          <div class="bg-white rounded-xl shadow-lg p-6">
-            <h3 class="text-xl font-bold text-gray-800 mb-4">Nos coordonnées</h3>
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">Nos coordonnées</h3>
 
             <div class="space-y-4">
               <div class="flex items-start">
@@ -241,7 +241,7 @@
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 <div>
-                  <p class="font-semibold text-gray-800">Email</p>
+                  <p class="font-semibold text-gray-800 dark:text-gray-200">Email</p>
                   <a href="mailto:secretariatsjl@gmail.com" class="text-red-600 hover:underline">
                     secretariatsjl@gmail.com
                   </a>
@@ -257,8 +257,8 @@
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
                 <div>
-                  <p class="font-semibold text-gray-800">Adresse</p>
-                  <p class="text-gray-600 text-sm">
+                  <p class="font-semibold text-gray-800 dark:text-gray-200">Adresse</p>
+                  <p class="text-gray-600 dark:text-gray-400 text-sm">
                     Salle Pacome<br>
                     Quartier Vauban–Esquermes<br>
                     Lille, France
@@ -269,9 +269,9 @@
           </div>
 
           <!-- Horaires -->
-          <div class="bg-white rounded-xl shadow-lg p-6">
-            <h3 class="text-xl font-bold text-gray-800 mb-4">Horaires d'ouverture</h3>
-            <p class="text-gray-600 text-sm mb-3">
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">Horaires d'ouverture</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mb-3">
               Le bureau répond aux emails dès que possible.
             </p>
           </div>

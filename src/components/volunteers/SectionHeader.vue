@@ -2,12 +2,12 @@
   <div class="text-center mb-8 sm:mb-12">
     <div class="inline-flex items-center justify-center mb-4">
       <div class="h-1 w-12" :class="lineColor"></div>
-      <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mx-3">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-gray-200 mx-3">
         {{ title }}
       </h2>
       <div class="h-1 w-12" :class="lineColor"></div>
     </div>
-    <p v-if="subtitle" class="text-gray-600">{{ subtitle }}</p>
+    <p v-if="subtitle" class="text-gray-600 dark:text-gray-400">{{ subtitle }}</p>
   </div>
 </template>
 

@@ -4,17 +4,17 @@
 
       <!-- Hero Section -->
       <section class="text-center mb-12 sm:mb-16">
-        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 mb-4">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 dark:text-gray-200 mb-4">
           Boutique officielle
         </h1>
-        <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+        <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
           Soutenez le club en achetant nos produits officiels
         </p>
       </section>
 
       <!-- Produit principal : Sweat -->
       <section class="max-w-6xl mx-auto">
-        <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <div class="bg-white rounded-2xl shadow-2xl overflow-hidden dark:bg-gray-800">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
 
             <!-- Colonne gauche : Image -->
@@ -43,12 +43,12 @@
             <div class="p-8 lg:p-12 flex flex-col justify-center">
 
               <!-- Titre -->
-              <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
+              <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-gray-200 mb-4">
                 Sweat Sport Joie Lille
               </h2>
 
               <!-- Description -->
-              <p class="text-gray-600 mb-6 leading-relaxed">
+              <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                 Arborez fièrement les couleurs du Sport Joie Lille avec ce sweat de qualité premium.
                 Confortable et élégant, parfait pour les entraînements ou le quotidien.
               </p>
@@ -60,28 +60,28 @@
                     viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span class="text-gray-700">100% coton de qualité premium</span>
+                  <span class="text-gray-700 dark:text-gray-300">100% coton de qualité premium</span>
                 </div>
                 <div class="flex items-start gap-3">
                   <svg class="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor"
                     viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span class="text-gray-700">Logo du club</span>
+                  <span class="text-gray-700 dark:text-gray-300">Logo du club</span>
                 </div>
                 <div class="flex items-start gap-3">
                   <svg class="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor"
                     viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span class="text-gray-700">Disponible en plusieurs tailles</span>
+                  <span class="text-gray-700 dark:text-gray-300">Disponible en plusieurs tailles</span>
                 </div>
                 <div class="flex items-start gap-3">
                   <svg class="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor"
                     viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span class="text-gray-700">Soutenez votre club favori ❤️</span>
+                  <span class="text-gray-700 dark:text-gray-300">Soutenez votre club favori ❤️</span>
                 </div>
               </div>
 
@@ -94,7 +94,7 @@
                     -29%
                   </span>
                 </div>
-                <p class="text-sm text-gray-500 mt-2">
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
                   Prix de lancement • Livraison offerte dès 2 articles
                 </p>
               </div>
@@ -124,7 +124,7 @@
                 </a>
 
                 <!-- Note sécurité -->
-                <div class="flex items-center justify-center gap-2 text-sm text-gray-500">
+                <div class="flex items-center justify-center gap-2 text-sm text-gray-500 dark:text-gray-400">
                   <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -142,43 +142,43 @@
       <section class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
 
         <!-- Info 1 -->
-        <div class="bg-white rounded-xl p-6 shadow-lg text-center">
+        <div class="bg-white rounded-xl p-6 shadow-lg text-center dark:bg-gray-800">
           <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
             </svg>
           </div>
-          <h3 class="font-bold text-gray-800 mb-2">Retrait au club</h3>
-          <p class="text-sm text-gray-600">
+          <h3 class="font-bold text-gray-800 dark:text-gray-200 mb-2">Retrait au club</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">
             Récupérez votre commande lors des entraînements
           </p>
         </div>
 
         <!-- Info 2 -->
-        <div class="bg-white rounded-xl p-6 shadow-lg text-center">
+        <div class="bg-white rounded-xl p-6 shadow-lg text-center dark:bg-gray-800">
           <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
             </svg>
           </div>
-          <h3 class="font-bold text-gray-800 mb-2">Soutenez le club</h3>
-          <p class="text-sm text-gray-600">
+          <h3 class="font-bold text-gray-800 dark:text-gray-200 mb-2">Soutenez le club</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">
             100% des bénéfices pour le développement du club
           </p>
         </div>
 
         <!-- Info 3 -->
-        <div class="bg-white rounded-xl p-6 shadow-lg text-center">
+        <div class="bg-white rounded-xl p-6 shadow-lg text-center dark:bg-gray-800">
           <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
             </svg>
           </div>
-          <h3 class="font-bold text-gray-800 mb-2">Besoin d'aide ?</h3>
-          <p class="text-sm text-gray-600">
+          <h3 class="font-bold text-gray-800 dark:text-gray-200 mb-2">Besoin d'aide ?</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">
             <RouterLink to="/contact" class="text-red-600 hover:underline font-semibold">
               Contactez-nous
             </RouterLink>
