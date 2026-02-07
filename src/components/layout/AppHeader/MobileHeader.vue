@@ -2,7 +2,7 @@
   <nav v-if="menuOpen" class="md:hidden bg-gray-50 rounded-b-lg p-4 shadow-inner border-t border-red-200">
     <ul class="space-y-3">
 
-      <!-- Accueil -->
+      <!-- Club avec sous-menu mobile -->
       <li>
         <button @click="clubOpen = !clubOpen"
           class="w-full py-2 px-4 rounded-md border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold flex justify-center items-center relative">
@@ -14,10 +14,11 @@
         </button>
 
         <!-- Sous-menu club -->
-        <div v-if="clubOpen" class="ml-4 mt-2 space-y-2">
+        <div v-if="clubOpen" class="mt-2 space-y-1 bg-white rounded-lg p-3 border-2 border-gray-200">
           <RouterLink v-for="item in clubMenuItems" :key="item.path" :to="item.path" @click="closeMenu"
-            class="block py-1 text-sm hover:text-red-600 text-gray-700">
-            {{ item.label }}
+            class="flex items-center gap-2 px-3 py-2.5 rounded-md text-sm text-gray-700 bg-gray-50 hover:bg-red-50 hover:text-red-600 hover:border-l-4 hover:border-red-600 transition-all">
+            <div class="w-1.5 h-1.5 rounded-full bg-red-600"></div>
+            <span class="font-medium">{{ item.label }}</span>
           </RouterLink>
         </div>
       </li>
@@ -34,23 +35,30 @@
         </button>
 
         <!-- Sous-menu équipe -->
-        <div v-if="equipeOpen" class="ml-4 mt-2 space-y-3">
-          <div v-for="category in teamCategories" :key="category.title">
-            <h3 class="font-bold text-sm mb-2 uppercase tracking-wide text-red-600">
-              {{ category.title }}
-            </h3>
-            <ul class="space-y-2 ml-2">
-              <li v-for="team in category.teams" :key="team.path">
-                <RouterLink @click="closeMenu" class="block py-1 text-sm hover:text-red-600 text-gray-700"
-                  :to="team.path">
-                  {{ team.label }}
-                </RouterLink>
-              </li>
-            </ul>
+        <div v-if="equipeOpen" class="mt-2 space-y-2 bg-white rounded-lg p-3 border-2 border-gray-200">
+          <div v-for="category in teamCategories" :key="category.title" class="space-y-1">
+
+            <!-- Titre catégorie avec bordure gauche -->
+            <div class="px-3 py-2 bg-red-50 rounded-md border-l-4 border-red-600">
+              <h3 class="text-xs font-bold text-red-600 uppercase tracking-wider">
+                {{ category.title }}
+              </h3>
+            </div>
+
+            <!-- Équipes de la catégorie -->
+            <div class="space-y-1 pl-1">
+              <RouterLink v-for="team in category.teams" :key="team.path" :to="team.path" @click="closeMenu"
+                class="flex items-center gap-2 px-3 py-2.5 rounded-md text-sm text-gray-700 bg-gray-50 hover:bg-red-50 hover:text-red-600 hover:border-l-4 hover:border-red-600 transition-all">
+                <div class="w-1.5 h-1.5 rounded-full bg-red-600"></div>
+                <span class="font-medium">{{ team.label }}</span>
+              </RouterLink>
+            </div>
+
           </div>
         </div>
       </li>
 
+      <!-- Bénévoles avec sous-menu mobile -->
       <li>
         <button @click="volunteersOpen = !volunteersOpen"
           class="w-full py-2 px-4 rounded-md border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold flex justify-center items-center relative">
@@ -62,14 +70,16 @@
         </button>
 
         <!-- Sous-menu bénévoles -->
-        <div v-if="volunteersOpen" class="ml-4 mt-2 space-y-2">
+        <div v-if="volunteersOpen" class="mt-2 space-y-1 bg-white rounded-lg p-3 border-2 border-gray-200">
           <RouterLink v-for="item in volunteersMenuItems" :key="item.path" :to="item.path" @click="closeMenu"
-            class="block py-1 text-sm hover:text-red-600 text-gray-700">
-            {{ item.label }}
+            class="flex items-center gap-2 px-3 py-2.5 rounded-md text-sm text-gray-700 bg-gray-50 hover:bg-red-50 hover:text-red-600 hover:border-l-4 hover:border-red-600 transition-all">
+            <div class="w-1.5 h-1.5 rounded-full bg-red-600"></div>
+            <span class="font-medium">{{ item.label }}</span>
           </RouterLink>
         </div>
       </li>
 
+      <!-- Partenaires avec sous-menu mobile -->
       <li>
         <button @click="partnersOpen = !partnersOpen"
           class="w-full py-2 px-4 rounded-md border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold flex justify-center items-center relative">
@@ -81,15 +91,16 @@
         </button>
 
         <!-- Sous-menu partenaires -->
-        <div v-if="partnersOpen" class="ml-4 mt-2 space-y-2">
+        <div v-if="partnersOpen" class="mt-2 space-y-1 bg-white rounded-lg p-3 border-2 border-gray-200">
           <RouterLink v-for="item in partnersMenuItems" :key="item.path" :to="item.path" @click="closeMenu"
-            class="block py-1 text-sm hover:text-red-600 text-gray-700">
-            {{ item.label }}
+            class="flex items-center gap-2 px-3 py-2.5 rounded-md text-sm text-gray-700 bg-gray-50 hover:bg-red-50 hover:text-red-600 hover:border-l-4 hover:border-red-600 transition-all">
+            <div class="w-1.5 h-1.5 rounded-full bg-red-600"></div>
+            <span class="font-medium">{{ item.label }}</span>
           </RouterLink>
         </div>
       </li>
 
-      <!-- Autres liens de navigation -->
+      <!-- Autres liens de navigation (Accueil, Horaires, Inscriptions, Contact) -->
       <li v-for="item in mainNavItems" :key="item.path">
         <RouterLink :to="item.path" @click="closeMenu"
           class="block py-2 px-4 rounded-md border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold text-center">
@@ -122,6 +133,7 @@ const volunteersOpen = ref(false)
 const partnersOpen = ref(false)
 
 const closeMenu = () => {
+  clubOpen.value = false
   equipeOpen.value = false
   volunteersOpen.value = false
   partnersOpen.value = false
