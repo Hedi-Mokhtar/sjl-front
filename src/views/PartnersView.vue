@@ -176,7 +176,7 @@
                 <div class="text-2xl font-bold text-red-600">14 +</div>
                 <div class="text-sm text-gray-600 dark:text-gray-400">Équipes</div>
               </div>
-              <div class="bg-red-50 rounded-lg p-4 shadow-sm border border-red-100">
+              <div class="bg-red-50 rounded-lg p-4 shadow-sm border border-red-100 dark:bg-gray-700 dark:border-gray-600">
                 <div class="text-2xl font-bold text-red-600">250+</div>
                 <div class="text-sm text-gray-600 dark:text-gray-400">Licenciés</div>
               </div>
