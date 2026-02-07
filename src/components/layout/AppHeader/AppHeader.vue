@@ -1,17 +1,19 @@
 <template>
   <header class="bg-white text-red-600 shadow-xl border-b-4 border-red-600">
-    <div class="p-4">
+    <div class="px-4">
       <div class="flex items-center justify-between">
 
         <!-- Logo -->
-        <RouterLink to="/" class="flex items-center">
-          <img src="/src/assets/images/logo.png" alt="Logo Club" class="h-16 w-16 md:h-20 md:w-20 object-contain" />
+        <RouterLink to="/" class="flex items-center flex-shrink-0">
+          <img src="/src/assets/images/logo.png" alt="Logo Club"
+            class="h-20 w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 object-contain drop-shadow-2xl hover:scale-105 transition-transform" />
         </RouterLink>
 
         <!-- Titre -->
-        <h1 class="text-3xl md:text-5xl lg:text-6xl text-center flex-1 mx-4 tracking-wider font-extrabold text-red-600"
-          style="font-family: 'Bebas Neue', sans-serif; text-shadow: 2px 2px 4px rgba(220, 38, 38, 0.2); letter-spacing: 0.1em;">
-          SPORT JOIE LILLE
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-red-600 leading-tight"
+          style="font-family: 'Bebas Neue', sans-serif; text-shadow: 2px 2px 8px rgba(220, 38, 38, 0.2); letter-spacing: 0.08em;">
+          SPORT JOIE
+          <span class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-gray-700">LILLE</span>
         </h1>
 
         <!-- Burger Menu (Mobile) -->
