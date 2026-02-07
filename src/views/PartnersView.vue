@@ -71,8 +71,14 @@
       </div>
     </section>
 
+    <!-- Message info hover desktop -->
+    <div class="text-center mb-16 text-gray-500 text-sm hidden md:block">
+      <span aria-hidden="true">💡</span> Survolez les logos pour découvrir les descriptions
+    </div>
+
     <!-- Call to Action - Become a Partner -->
-    <section id="become" class="bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-8 md:p-12 text-white shadow-2xl">
+    <section id="become"
+      class="bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-8 md:p-12 text-white shadow-2xl scroll-mt-24 mb-16">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
           <h2 class="text-3xl md:text-4xl font-bold mb-4">
@@ -134,22 +140,106 @@
               class="block w-full bg-red-600 text-white text-center px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-all mt-6">
               Formulaire de contact
             </RouterLink>
-
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Message info hover desktop -->
-    <div class="text-center mt-8 text-gray-500 text-sm hidden md:block">
-      <span aria-hidden="true">💡</span> Survolez les logos pour découvrir les descriptions
-    </div>
+    <!-- ✅ SECTION BROCHURE avec couleurs rouge adaptées -->
+    <section>
+      <div class="bg-white rounded-2xl p-8 md:p-12 shadow-2xl border-2 border-red-200">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+          <!-- Colonne gauche : Texte -->
+          <div>
+            <div
+              class="inline-flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+              <span>Brochure officielle</span>
+            </div>
+
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              Découvrez notre brochure partenaires
+            </h2>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Téléchargez notre brochure complète pour découvrir toutes les opportunités de partenariat avec le Sport
+              Joie Lille.
+              Vous y trouverez nos offres, notre vision et les avantages pour nos partenaires.
+            </p>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-2 gap-4 mb-6">
+              <div class="bg-red-50 rounded-lg p-4 shadow-sm border border-red-100">
+                <div class="text-2xl font-bold text-red-600">14 +</div>
+                <div class="text-sm text-gray-600">Équipes</div>
+              </div>
+              <div class="bg-red-50 rounded-lg p-4 shadow-sm border border-red-100">
+                <div class="text-2xl font-bold text-red-600">250+</div>
+                <div class="text-sm text-gray-600">Licenciés</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Colonne droite : Image preview + Bouton -->
+          <div class="flex flex-col items-center">
+            <!-- Image de prévisualisation -->
+            <div class="relative group/pdf mb-6 w-full max-w-sm">
+              <!-- Effet de profondeur -->
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-red-600 to-red-700 rounded-xl transform rotate-3 opacity-20 group-hover/pdf:rotate-6 transition-transform">
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-red-600 to-red-700 rounded-xl transform rotate-1 opacity-30 group-hover/pdf:rotate-3 transition-transform">
+              </div>
+
+              <!-- Image -->
+              <div
+                class="relative bg-white rounded-xl shadow-2xl p-4 border-2 border-gray-200 group-hover/pdf:shadow-3xl transition-all transform group-hover/pdf:-translate-y-2">
+                <img :src="brochurePreview" alt="Aperçu brochure partenaires Sport Joie Lille"
+                  class="w-full h-auto rounded-lg" />
+
+                <!-- Badge PDF -->
+                <div
+                  class="absolute top-6 right-6 bg-red-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                  PDF
+                </div>
+              </div>
+            </div>
+
+            <!-- Bouton téléchargement -->
+            <a :href="brochurePDF" download="Brochure_Partenaires_Sport_Joie_Lille.pdf"
+              class="group inline-flex items-center gap-3 bg-gradient-to-r from-red-600 to-red-700 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-red-700 hover:to-red-800 transition-all shadow-lg hover:shadow-2xl transform hover:-translate-y-1">
+              <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <span>Télécharger la brochure</span>
+              <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+
+            <p class="text-xs text-gray-500 text-center mt-4">
+              Format PDF • Gratuit
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </div>
 </template>
 
 <script setup lang="ts">
 import { partners } from '@/data/partner'
 import { useStaggeredAnimation } from '@/composables/useStaggeredAnimation'
+import brochurePDF from '@/assets/images/partners/BrochureSJL.pdf'
+import brochurePreview from '@/assets/images/partners/brochurepreview.png'
 
 const { getAnimationDelay } = useStaggeredAnimation(0.1)
 </script>
