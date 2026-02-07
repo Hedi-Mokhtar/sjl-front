@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-gray-800 text-white text-center p-4 mt-6">
+  <footer class="bg-gray-800 dark:bg-gray-950 text-white text-center p-4 mt-6">
     &copy; 2026 Club de Volley SJL
   </footer>
 </template>

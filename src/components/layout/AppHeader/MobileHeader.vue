@@ -1,11 +1,11 @@
 <template>
-  <nav v-if="menuOpen" class="md:hidden bg-gray-50 rounded-b-lg p-4 shadow-inner border-t border-red-200">
+  <nav v-if="menuOpen" class="md:hidden bg-gray-50 dark:bg-gray-800 rounded-b-lg p-4 shadow-inner border-t border-red-200 dark:border-gray-600">
     <ul class="space-y-3">
 
       <!-- Club avec sous-menu mobile -->
       <li>
         <button @click="clubOpen = !clubOpen"
-          class="w-full py-2 px-4 rounded-md border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold flex justify-center items-center relative">
+          class="w-full py-2 px-4 rounded-md border-2 border-red-600 dark:border-red-400 text-red-600 dark:text-red-400 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold flex justify-center items-center relative">
           <span>Club</span>
           <svg class="w-4 h-4 transition-transform absolute right-4" :class="{ 'rotate-180': clubOpen }" fill="none"
             stroke="currentColor" viewBox="0 0 24 24">
@@ -14,9 +14,9 @@
         </button>
 
         <!-- Sous-menu club -->
-        <div v-if="clubOpen" class="mt-2 space-y-1 bg-white rounded-lg p-3 border-2 border-gray-200">
+        <div v-if="clubOpen" class="mt-2 space-y-1 bg-white dark:bg-gray-800 rounded-lg p-3 border-2 border-gray-200 dark:border-gray-600">
           <RouterLink v-for="item in clubMenuItems" :key="item.path" :to="item.path" @click="closeMenu"
-            class="flex items-center gap-2 px-3 py-2.5 rounded-md text-sm text-gray-700 bg-gray-50 hover:bg-red-50 hover:text-red-600 hover:border-l-4 hover:border-red-600 transition-all">
+            class="flex items-center gap-2 px-3 py-2.5 rounded-md text-sm text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700 hover:bg-red-50 dark:hover:bg-gray-700 hover:text-red-600 dark:hover:text-red-400 hover:border-l-4 hover:border-red-600 dark:hover:border-red-400 transition-all">
             <div class="w-1.5 h-1.5 rounded-full bg-red-600"></div>
             <span class="font-medium">{{ item.label }}</span>
           </RouterLink>
@@ -26,7 +26,7 @@
       <!-- Équipe avec sous-menu mobile -->
       <li>
         <button @click="equipeOpen = !equipeOpen"
-          class="w-full py-2 px-4 rounded-md border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold flex justify-center items-center relative">
+          class="w-full py-2 px-4 rounded-md border-2 border-red-600 dark:border-red-400 text-red-600 dark:text-red-400 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold flex justify-center items-center relative">
           <span>Équipe</span>
           <svg class="w-4 h-4 transition-transform absolute right-4" :class="{ 'rotate-180': equipeOpen }" fill="none"
             stroke="currentColor" viewBox="0 0 24 24">
@@ -35,12 +35,12 @@
         </button>
 
         <!-- Sous-menu équipe -->
-        <div v-if="equipeOpen" class="mt-2 space-y-2 bg-white rounded-lg p-3 border-2 border-gray-200">
+        <div v-if="equipeOpen" class="mt-2 space-y-2 bg-white dark:bg-gray-800 rounded-lg p-3 border-2 border-gray-200 dark:border-gray-600">
           <div v-for="category in teamCategories" :key="category.title" class="space-y-1">
 
             <!-- Titre catégorie avec bordure gauche -->
-            <div class="px-3 py-2 bg-red-50 rounded-md border-l-4 border-red-600">
-              <h3 class="text-xs font-bold text-red-600 uppercase tracking-wider">
+            <div class="px-3 py-2 bg-red-50 dark:bg-gray-700 rounded-md border-l-4 border-red-600 dark:border-red-400">
+              <h3 class="text-xs font-bold text-red-600 dark:text-red-400 uppercase tracking-wider">
                 {{ category.title }}
               </h3>
             </div>
@@ -48,7 +48,7 @@
             <!-- Équipes de la catégorie -->
             <div class="space-y-1 pl-1">
               <RouterLink v-for="team in category.teams" :key="team.path" :to="team.path" @click="closeMenu"
-                class="flex items-center gap-2 px-3 py-2.5 rounded-md text-sm text-gray-700 bg-gray-50 hover:bg-red-50 hover:text-red-600 hover:border-l-4 hover:border-red-600 transition-all">
+                class="flex items-center gap-2 px-3 py-2.5 rounded-md text-sm text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700 hover:bg-red-50 dark:hover:bg-gray-700 hover:text-red-600 dark:hover:text-red-400 hover:border-l-4 hover:border-red-600 dark:hover:border-red-400 transition-all">
                 <div class="w-1.5 h-1.5 rounded-full bg-red-600"></div>
                 <span class="font-medium">{{ team.label }}</span>
               </RouterLink>
@@ -61,7 +61,7 @@
       <!-- Bénévoles avec sous-menu mobile -->
       <li>
         <button @click="volunteersOpen = !volunteersOpen"
-          class="w-full py-2 px-4 rounded-md border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold flex justify-center items-center relative">
+          class="w-full py-2 px-4 rounded-md border-2 border-red-600 dark:border-red-400 text-red-600 dark:text-red-400 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold flex justify-center items-center relative">
           <span>Bénévoles</span>
           <svg class="w-4 h-4 transition-transform absolute right-4" :class="{ 'rotate-180': volunteersOpen }"
             fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -70,9 +70,9 @@
         </button>
 
         <!-- Sous-menu bénévoles -->
-        <div v-if="volunteersOpen" class="mt-2 space-y-1 bg-white rounded-lg p-3 border-2 border-gray-200">
+        <div v-if="volunteersOpen" class="mt-2 space-y-1 bg-white dark:bg-gray-800 rounded-lg p-3 border-2 border-gray-200 dark:border-gray-600">
           <RouterLink v-for="item in volunteersMenuItems" :key="item.path" :to="item.path" @click="closeMenu"
-            class="flex items-center gap-2 px-3 py-2.5 rounded-md text-sm text-gray-700 bg-gray-50 hover:bg-red-50 hover:text-red-600 hover:border-l-4 hover:border-red-600 transition-all">
+            class="flex items-center gap-2 px-3 py-2.5 rounded-md text-sm text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700 hover:bg-red-50 dark:hover:bg-gray-700 hover:text-red-600 dark:hover:text-red-400 hover:border-l-4 hover:border-red-600 dark:hover:border-red-400 transition-all">
             <div class="w-1.5 h-1.5 rounded-full bg-red-600"></div>
             <span class="font-medium">{{ item.label }}</span>
           </RouterLink>
@@ -82,7 +82,7 @@
       <!-- Partenaires avec sous-menu mobile -->
       <li>
         <button @click="partnersOpen = !partnersOpen"
-          class="w-full py-2 px-4 rounded-md border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold flex justify-center items-center relative">
+          class="w-full py-2 px-4 rounded-md border-2 border-red-600 dark:border-red-400 text-red-600 dark:text-red-400 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold flex justify-center items-center relative">
           <span>Partenaires</span>
           <svg class="w-4 h-4 transition-transform absolute right-4" :class="{ 'rotate-180': partnersOpen }" fill="none"
             stroke="currentColor" viewBox="0 0 24 24">
@@ -91,9 +91,9 @@
         </button>
 
         <!-- Sous-menu partenaires -->
-        <div v-if="partnersOpen" class="mt-2 space-y-1 bg-white rounded-lg p-3 border-2 border-gray-200">
+        <div v-if="partnersOpen" class="mt-2 space-y-1 bg-white dark:bg-gray-800 rounded-lg p-3 border-2 border-gray-200 dark:border-gray-600">
           <RouterLink v-for="item in partnersMenuItems" :key="item.path" :to="item.path" @click="closeMenu"
-            class="flex items-center gap-2 px-3 py-2.5 rounded-md text-sm text-gray-700 bg-gray-50 hover:bg-red-50 hover:text-red-600 hover:border-l-4 hover:border-red-600 transition-all">
+            class="flex items-center gap-2 px-3 py-2.5 rounded-md text-sm text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700 hover:bg-red-50 dark:hover:bg-gray-700 hover:text-red-600 dark:hover:text-red-400 hover:border-l-4 hover:border-red-600 dark:hover:border-red-400 transition-all">
             <div class="w-1.5 h-1.5 rounded-full bg-red-600"></div>
             <span class="font-medium">{{ item.label }}</span>
           </RouterLink>
@@ -103,7 +103,7 @@
       <!-- Autres liens de navigation (Accueil, Horaires, Inscriptions, Contact) -->
       <li v-for="item in mainNavItems" :key="item.path">
         <RouterLink :to="item.path" @click="closeMenu"
-          class="block py-2 px-4 rounded-md border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold text-center">
+          class="block py-2 px-4 rounded-md border-2 border-red-600 dark:border-red-400 text-red-600 dark:text-red-400 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold text-center">
           {{ item.label }}
         </RouterLink>
       </li>
