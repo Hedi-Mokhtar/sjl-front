@@ -13,46 +13,134 @@
 
       <!-- Section Bureau -->
       <section class="mb-16 sm:mb-20">
-        <SectionHeader title="Le Bureau" subtitle="Les membres de notre bureau exécutif" color="red" />
+        <div class="flex items-center justify-between mb-8 sm:mb-12">
+          <div class="flex-1">
+            <SectionHeader title="Le Bureau" subtitle="Les membres de notre bureau exécutif" color="red" />
+          </div>
+          <button
+            @click="isExecutiveExpanded = !isExecutiveExpanded"
+            class="ml-4 p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            :aria-label="isExecutiveExpanded ? 'Réduire la section Bureau' : 'Développer la section Bureau'"
+          >
+            <svg 
+              class="w-6 h-6 text-gray-600 transition-transform duration-300"
+              :class="{ 'rotate-180': !isExecutiveExpanded }"
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+        </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div
+          v-show="isExecutiveExpanded"
+          class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6 transition-all duration-300"
+        >
           <VolunteerCard v-for="volunteer in executiveVolunteers" :key="volunteer.id" :volunteer="volunteer"
             :description="volunteer.executiveDescription" badge-color="bg-gradient-to-r from-red-600 to-red-700"
-            badge-text="Bureau" />
+            badge-text="Bureau" :compact="true" />
         </div>
       </section>
 
       <!-- Section Coachs et Entraîneurs -->
       <section class="mb-16 sm:mb-20">
-        <SectionHeader title="Coachs & Entraîneurs" subtitle="Ceux qui transmettent leur passion sur le terrain"
-          color="blue" />
+        <div class="flex items-center justify-between mb-8 sm:mb-12">
+          <div class="flex-1">
+            <SectionHeader title="Coachs & Entraîneurs" subtitle="Ceux qui transmettent leur passion sur le terrain"
+              color="blue" />
+          </div>
+          <button
+            @click="isCoachExpanded = !isCoachExpanded"
+            class="ml-4 p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            :aria-label="isCoachExpanded ? 'Réduire la section Coachs' : 'Développer la section Coachs'"
+          >
+            <svg 
+              class="w-6 h-6 text-gray-600 transition-transform duration-300"
+              :class="{ 'rotate-180': !isCoachExpanded }"
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+        </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+        <div
+          v-show="isCoachExpanded"
+          class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6 transition-all duration-300"
+        >
           <VolunteerCard v-for="volunteer in coachVolunteers" :key="volunteer.id" :volunteer="volunteer"
             :description="volunteer.coachDescription" badge-color="bg-gradient-to-r from-blue-600 to-blue-700"
-            badge-text="Coach" />
+            badge-text="Coach" :compact="true" />
         </div>
       </section>
 
       <!-- Section Arbitres et Marqueurs -->
       <section class="mb-16 sm:mb-20">
-        <SectionHeader title="Arbitres & Marqueurs" subtitle="Ils assurent le bon déroulement des matchs"
-          color="green" />
+        <div class="flex items-center justify-between mb-8 sm:mb-12">
+          <div class="flex-1">
+            <SectionHeader title="Arbitres & Marqueurs" subtitle="Ils assurent le bon déroulement des matchs"
+              color="green" />
+          </div>
+          <button
+            @click="isRefereeExpanded = !isRefereeExpanded"
+            class="ml-4 p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            :aria-label="isRefereeExpanded ? 'Réduire la section Arbitres' : 'Développer la section Arbitres'"
+          >
+            <svg 
+              class="w-6 h-6 text-gray-600 transition-transform duration-300"
+              :class="{ 'rotate-180': !isRefereeExpanded }"
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+        </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+        <div
+          v-show="isRefereeExpanded"
+          class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6 transition-all duration-300"
+        >
           <VolunteerCard v-for="volunteer in refereeVolunteers" :key="volunteer.id" :volunteer="volunteer"
-            badge-color="bg-gradient-to-r from-green-600 to-green-700" badge-text="Arbitre" />
+            badge-color="bg-gradient-to-r from-green-600 to-green-700" badge-text="Arbitre" :compact="true" />
         </div>
       </section>
 
       <!-- Section Extras -->
       <section v-if="extraVolunteers.length > 0" class="mb-16">
-        <SectionHeader title="Talents Multiples" subtitle="Nos bénévoles aux compétences variées" color="purple" />
+        <div class="flex items-center justify-between mb-8 sm:mb-12">
+          <div class="flex-1">
+            <SectionHeader title="Talents Multiples" subtitle="Nos bénévoles aux compétences variées" color="purple" />
+          </div>
+          <button
+            @click="isExtraExpanded = !isExtraExpanded"
+            class="ml-4 p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            :aria-label="isExtraExpanded ? 'Réduire la section Extras' : 'Développer la section Extras'"
+          >
+            <svg 
+              class="w-6 h-6 text-gray-600 transition-transform duration-300"
+              :class="{ 'rotate-180': !isExtraExpanded }"
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+        </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+        <div
+          v-show="isExtraExpanded"
+          class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6 transition-all duration-300"
+        >
           <VolunteerCard v-for="volunteer in extraVolunteers" :key="volunteer.id" :volunteer="volunteer"
             :description="volunteer.volunteerExtraDescription"
-            badge-color="bg-gradient-to-r from-purple-600 to-purple-700" badge-text="Extra" />
+            badge-color="bg-gradient-to-r from-purple-600 to-purple-700" badge-text="Extra" :compact="true" />
         </div>
       </section>
 
@@ -83,7 +171,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { volunteers } from '@/data/volunteer'
 import VolunteerCard from '@/components/volunteers/VolunteerCard.vue'
 import SectionHeader from '@/components/volunteers/SectionHeader.vue'
@@ -103,4 +191,10 @@ const refereeVolunteers = computed(() =>
 const extraVolunteers = computed(() =>
   volunteers.filter(v => v.volunteerExtra)
 )
+
+// State for collapsible sections
+const isExecutiveExpanded = ref(true)
+const isCoachExpanded = ref(true)
+const isRefereeExpanded = ref(true)
+const isExtraExpanded = ref(true)
 </script>
