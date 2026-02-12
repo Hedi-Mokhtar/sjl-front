@@ -1,8 +1,7 @@
 <template>
-  <nav class="hidden md:block">
+  <nav class="hidden md:flex md:items-center md:gap-4">
+    <!-- Navigation principale -->
     <ul class="flex items-center space-x-3 lg:space-x-4">
-
-      <!-- Accueil -->
 
       <ClubDropdown />
 
@@ -22,13 +21,20 @@
       </li>
 
     </ul>
+
+    <!-- Séparateur vertical -->
+    <div class="h-8 w-px bg-gray-300 mx-2"></div>
+
+    <!-- Réseaux sociaux -->
+    <SocialMediaLinks />
   </nav>
 </template>
 
 <script setup lang="ts">
 import { mainNavItems } from '@data/navigationData'
-import TeamDropdown from './TeamDropdown.vue'
+import TeamDropdown from '@/components/team/TeamDropdown.vue'
 import VolunteersDropdown from '@/components/volunteers/VolunteerDropdown.vue'
 import PartnersDropdown from '@/components/partners/PartnersDropdown.vue'
-import ClubDropdown from '@/components/club/ClubDropdown.vue';
+import ClubDropdown from '@/components/club/ClubDropdown.vue'
+import SocialMediaLinks from './SocialMediaLinks.vue'
 </script>
