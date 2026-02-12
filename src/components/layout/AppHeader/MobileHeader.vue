@@ -1,5 +1,13 @@
 <template>
   <nav v-if="menuOpen" class="md:hidden bg-gray-50 rounded-b-lg p-4 shadow-inner border-t border-red-200">
+
+    <!-- Réseaux sociaux en haut du menu mobile (visible uniquement sur très petit mobile) -->
+    <div class="sm:hidden mb-4 pb-4 border-b border-gray-300">
+      <div class="flex justify-center">
+        <SocialMediaLinks />
+      </div>
+    </div>
+
     <ul class="space-y-3">
 
       <!-- Club avec sous-menu mobile -->
@@ -115,6 +123,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { mainNavItems, clubMenuItems, teamCategories, volunteersMenuItems, partnersMenuItems } from '@/data/navigationData'
+import SocialMediaLinks from './SocialMediaLinks.vue'
 
 interface Props {
   menuOpen: boolean
