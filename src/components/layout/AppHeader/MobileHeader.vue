@@ -1,6 +1,6 @@
 <template>
-  <nav v-if="menuOpen" class="md:hidden bg-gray-50 rounded-b-lg p-4 shadow-inner border-t border-red-200">
-
+  <nav v-if="menuOpen"
+    class="md:hidden bg-gray-50 rounded-b-lg p-4 shadow-inner border-t border-red-200 overflow-y-auto max-h-[80vh]">
     <!-- Réseaux sociaux en haut du menu mobile (visible uniquement sur très petit mobile) -->
     <div class="sm:hidden mb-4 pb-4 border-b border-gray-300">
       <div class="flex justify-center">
@@ -121,7 +121,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch, onUnmounted } from 'vue'
 import { mainNavItems, clubMenuItems, teamCategories, volunteersMenuItems, partnersMenuItems } from '@/data/navigationData'
 import SocialMediaLinks from './SocialMediaLinks.vue'
 
@@ -140,6 +140,14 @@ const clubOpen = ref(false)
 const equipeOpen = ref(false)
 const volunteersOpen = ref(false)
 const partnersOpen = ref(false)
+
+watch(equipeOpen, (isOpen) => {
+  document.body.style.overflow = isOpen ? 'hidden' : ''
+})
+
+onUnmounted(() => {
+  document.body.style.overflow = ''
+})
 
 const closeMenu = () => {
   clubOpen.value = false
