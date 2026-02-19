@@ -133,7 +133,7 @@ interface Emits {
   (e: 'close'): void
 }
 
-defineProps<Props>()
+const props = defineProps<Props>()
 const emit = defineEmits<Emits>()
 
 const clubOpen = ref(false)
@@ -141,8 +141,16 @@ const equipeOpen = ref(false)
 const volunteersOpen = ref(false)
 const partnersOpen = ref(false)
 
-watch(equipeOpen, (isOpen) => {
-  document.body.style.overflow = isOpen ? 'hidden' : ''
+
+
+watch(() => props.menuOpen, (isOpen) => {
+  if (!isOpen) {
+    clubOpen.value = false
+    equipeOpen.value = false
+    volunteersOpen.value = false
+    partnersOpen.value = false
+    document.body.style.overflow = ''
+  }
 })
 
 onUnmounted(() => {
