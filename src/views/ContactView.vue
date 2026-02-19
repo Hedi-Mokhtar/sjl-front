@@ -367,7 +367,14 @@ async function handleSubmit() {
   try {
     const token = await getRecaptchaToken()
 
-    const response = await fetch(import.meta.env.VITE_FORMSPREE_URL, {
+    const formspreeUrl = import.meta.env.VITE_FORMSPREE_URL
+    if (!formspreeUrl) {
+      console.error('Formspree URL is not configured')
+      submitStatus.value = 'error'
+      return
+    }
+
+    const response = await fetch(formspreeUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
