@@ -342,8 +342,12 @@ onMounted(() => {
 async function getRecaptchaToken(): Promise<string> {
   const siteKey = import.meta.env.VITE_RECAPTCHA_KEY
 
-  if (!siteKey || !window.grecaptcha) {
-    return ''
+  if (!siteKey) {
+    throw new Error('VITE_RECAPTCHA_KEY is not configured')
+  }
+
+  if (!window.grecaptcha) {
+    throw new Error('reCAPTCHA script unavailable (blocked by adblock or network)')
   }
 
   return new Promise<string>((resolve, reject) => {
