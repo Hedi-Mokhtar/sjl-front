@@ -1,5 +1,3 @@
-// src/data/teams.ts
-
 // TeamPics
 import pnfTeamPic from '@/assets/images/teams/pnf/teampic.jpg'
 import r1fTeamPic from '@/assets/images/teams/r1f/teampic.jpg'
