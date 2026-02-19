@@ -2,15 +2,14 @@
 
 // Imports des images - Pré-Nationale Féminine (images existantes)
 import pnfTeamPic from '@/assets/images/teams/pnf/teampic.jpg'
+import r1fTeamPic from '@/assets/images/teams/r1f/teampic.jpg'
 import pnfTrainerPic from '@/assets/images/teams/pnf/trainer.jpg'
-import pnfCalendarPic from '@/assets/images/teams/pnf/calendar.png'
 
 // TODO: Remplacer par les vraies images quand elles seront disponibles
 // Pour l'instant, on utilise les images de PNF comme placeholder
 
 import r1mTrainerPic from '@/assets/images/teams/r1m/trainer.jpg'
 import dmTrainerPic from '@/assets/images/teams/dm/trainer.jpg'
-import m13fTrainerPic from '@/assets/images/teams/m13f/trainer.jpg'
 import m13mTrainerPic from '@/assets/images/teams/m13m/trainer.jpg'
 import m15fTrainerPic from '@/assets/images/teams/m15f/trainer.jpg'
 import m15mTrainerPic from '@/assets/images/teams/m15m/trainer.jpg'
@@ -31,8 +30,10 @@ export interface TeamData {
   teamPic: string
   trainerPic: string
   trainerName: string
-  calendarPic: string
   schedule: TeamSchedule[]
+  widgetVersion?: 'modern' | 'legacy'
+  widgetId?: string
+  clubUrl?: string
 }
 
 export const teamsData: Record<string, TeamData> = {
@@ -41,45 +42,56 @@ export const teamsData: Record<string, TeamData> = {
     title: 'Pré-Nationale Féminine',
     teamPic: pnfTeamPic,
     trainerPic: pnfTrainerPic,
-    trainerName: 'Wail Roudani',
-    calendarPic: pnfCalendarPic,
+    trainerName: 'Wail',
     schedule: [
       { day: 'Mardi', time: '20h00 – 22h00', location: 'Salle Pacome' },
       { day: 'Jeudi', time: '20h00 – 22h00', location: 'Salle Pacome' }
-    ]
+    ],
+    widgetId: '5dcdb79ed0bf830a19fa30f7',
+    widgetVersion: 'legacy',
+    clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/'
   },
   'regional-masc': {
     id: 'regional-masc',
     title: 'Régionale Masculine',
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
-    trainerPic: r1mTrainerPic, // TODO: Remplacer par la vraie image
-    trainerName: 'Nom Entraîneur', // À remplacer
-    calendarPic: pnfCalendarPic, // TODO: Remplacer par la vraie image
+    trainerPic: r1mTrainerPic,
+    trainerName: 'Fred',
     schedule: [
-      { day: 'Lundi', time: '19h00 – 21h00', location: 'Salle XXX' }
-    ]
+      { day: 'Mardi', time: '20h45 – 22h30', location: 'Salle Pacome' },
+      { day: 'Jeudi', time: '20h45 – 22h30', location: 'Salle Pacome' }
+    ],
+    widgetId: '5dcdb6a0aa8a1a0a1dc40b5d',
+    widgetVersion: 'legacy',
+    clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/'
   },
   'regional-fem': {
     id: 'regional-fem',
     title: 'Régionale Féminine',
-    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
-    trainerPic: r1fTrainerPic, // TODO: Remplacer par la vraie image
-    trainerName: 'Elodie', // À remplacer
-    calendarPic: pnfCalendarPic, // TODO: Remplacer par la vraie image
+    teamPic: r1fTeamPic,
+    trainerPic: r1fTrainerPic,
+    trainerName: 'Elodie',
     schedule: [
-      { day: 'Mercredi', time: '20h00 – 22h00', location: 'Salle XXX' }
-    ]
+      { day: 'Mardi', time: '19h00 – 20h45', location: 'Salle Pacome' },
+      { day: 'Jeudi', time: '19h00 – 20h45', location: 'Salle Pacome' }
+    ],
+    widgetId: '80634',
+    widgetVersion: 'modern',
+    clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/'
   },
   'departemental-masc': {
     id: 'departemental-masc',
     title: 'Départementale Masculine',
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
-    trainerPic: dmTrainerPic, // TODO: Remplacer par la vraie image
-    trainerName: 'Claire', // À remplacer
-    calendarPic: pnfCalendarPic, // TODO: Remplacer par la vraie image
+    trainerPic: dmTrainerPic,
+    trainerName: 'Claire',
     schedule: [
-      { day: 'Vendredi', time: '20h00 – 22h00', location: 'Salle XXX' }
-    ]
+      { day: 'Mardi', time: '19h00 – 20h45', location: 'Salle Pacome' },
+      { day: 'Jeudi', time: '19h00 – 20h45', location: 'Salle Pacome' }
+    ],
+    widgetId: '5dce969e5841e10a2a76aea0',
+    widgetVersion: 'legacy',
+    clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/'
   },
   'm21-fem': {
     id: 'm21-fem',
@@ -87,10 +99,11 @@ export const teamsData: Record<string, TeamData> = {
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
     trainerPic: m21fTrainerPic, // TODO: Remplacer par la vraie image
     trainerName: 'Aude', // À remplacer
-    calendarPic: pnfCalendarPic, // TODO: Remplacer par la vraie image
     schedule: [
       { day: 'Samedi', time: '14h00 – 16h00', location: 'Salle XXX' }
-    ]
+    ],
+    widgetId: '5dcdb79ed0bf830a19fa30f7',
+    clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/'
   },
   'm18-masc': {
     id: 'm18-masc',
@@ -98,10 +111,11 @@ export const teamsData: Record<string, TeamData> = {
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
     trainerPic: m18mTrainerPic, // TODO: Remplacer par la vraie image
     trainerName: 'Aymeric', // À remplacer
-    calendarPic: pnfCalendarPic, // TODO: Remplacer par la vraie image
     schedule: [
       { day: 'Samedi', time: '16h00 – 18h00', location: 'Salle XXX' }
-    ]
+    ],
+    widgetId: '5dcdb79ed0bf830a19fa30f7',
+    clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/'
   },
   'm18-fem': {
     id: 'm18-fem',
@@ -109,10 +123,11 @@ export const teamsData: Record<string, TeamData> = {
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
     trainerPic: m18fTrainerPic, // TODO: Remplacer par la vraie image
     trainerName: 'Aude', // À remplacer
-    calendarPic: pnfCalendarPic, // TODO: Remplacer par la vraie image
     schedule: [
       { day: 'Mercredi', time: '18h00 – 20h00', location: 'Salle XXX' }
-    ]
+    ],
+    widgetId: '5dcdb79ed0bf830a19fa30f7',
+    clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/'
   },
   'm15-fem': {
     id: 'm15-fem',
@@ -120,10 +135,11 @@ export const teamsData: Record<string, TeamData> = {
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
     trainerPic: m15fTrainerPic, // TODO: Remplacer par la vraie image
     trainerName: 'Marion', // À remplacer
-    calendarPic: pnfCalendarPic, // TODO: Remplacer par la vraie image
     schedule: [
       { day: 'Lundi', time: '17h00 – 19h00', location: 'Salle XXX' }
-    ]
+    ],
+    widgetId: '5dcdb79ed0bf830a19fa30f7',
+    clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/'
   },
   'm15-masc': {
     id: 'm15-masc',
@@ -131,32 +147,23 @@ export const teamsData: Record<string, TeamData> = {
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
     trainerPic: m15mTrainerPic, // TODO: Remplacer par la vraie image
     trainerName: 'Aymeric', // À remplacer
-    calendarPic: pnfCalendarPic, // TODO: Remplacer par la vraie image
     schedule: [
       { day: 'Mardi', time: '17h00 – 19h00', location: 'Salle XXX' }
-    ]
+    ],
+    widgetId: '5dcdb79ed0bf830a19fa30f7',
+    clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/'
   },
   'm13-masc': {
     id: 'm13-masc',
     title: 'M13 Masculin',
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
     trainerPic: m13mTrainerPic, // TODO: Remplacer par la vraie image
-    trainerName: 'Aymeric', // À remplacer
-    calendarPic: pnfCalendarPic, // TODO: Remplacer par la vraie image
+    trainerName: 'Aymeric',
     schedule: [
       { day: 'Jeudi', time: '17h00 – 19h00', location: 'Salle XXX' }
-    ]
-  },
-  'm13-fem': {
-    id: 'm13-fem',
-    title: 'M13 Féminine',
-    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
-    trainerPic: m13fTrainerPic, // TODO: Remplacer par la vraie image
-    trainerName: 'Marion', // À remplacer
-    calendarPic: pnfCalendarPic, // TODO: Remplacer par la vraie image
-    schedule: [
-      { day: 'Jeudi', time: '17h00 – 19h00', location: 'Salle XXX' }
-    ]
+    ],
+    widgetId: '5dcdb79ed0bf830a19fa30f7',
+    clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/'
   },
   'competlib-a': {
     id: 'competlib-a',
@@ -164,10 +171,13 @@ export const teamsData: Record<string, TeamData> = {
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
     trainerPic: pnfTrainerPic, // TODO: Remplacer par la vraie image
     trainerName: 'Nom Entraîneur', // À remplacer
-    calendarPic: pnfCalendarPic, // TODO: Remplacer par la vraie image
     schedule: [
-      { day: 'Samedi', time: '10h00 – 12h00', location: 'Salle XXX' }
-    ]
+      { day: 'Lundi', time: '20h00 – 22h00', location: 'Salle Pacome' },
+      { day: 'Jeudi', time: '20h45 – 22h30', location: 'Salle Pacome' }
+    ],
+    widgetId: '5dce96e6e3f1b20a1c1b92dd',
+    widgetVersion: 'legacy',
+    clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/'
   },
   'competlib-b': {
     id: 'competlib-b',
@@ -175,10 +185,13 @@ export const teamsData: Record<string, TeamData> = {
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
     trainerPic: pnfTrainerPic, // TODO: Remplacer par la vraie image
     trainerName: 'Nom Entraîneur', // À remplacer
-    calendarPic: pnfCalendarPic, // TODO: Remplacer par la vraie image
     schedule: [
-      { day: 'Samedi', time: '12h00 – 14h00', location: 'Salle XXX' }
-    ]
+      { day: 'Lundi', time: '20h00 – 22h00', location: 'Salle Pacome' },
+      { day: 'Jeudi', time: '20h45 – 22h30', location: 'Salle Pacome' }
+    ],
+    widgetId: '107173',
+    widgetVersion: 'modern',
+    clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/'
   },
   'competlib-c': {
     id: 'competlib-c',
@@ -186,10 +199,13 @@ export const teamsData: Record<string, TeamData> = {
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
     trainerPic: pnfTrainerPic, // TODO: Remplacer par la vraie image
     trainerName: 'Nom Entraîneur', // À remplacer
-    calendarPic: pnfCalendarPic, // TODO: Remplacer par la vraie image
     schedule: [
-      { day: 'Dimanche', time: '10h00 – 12h00', location: 'Salle XXX' }
-    ]
+      { day: 'Lundi', time: '20h00 – 22h00', location: 'Salle Pacome' },
+      { day: 'Jeudi', time: '20h45 – 22h30', location: 'Salle Pacome' }
+    ],
+    widgetId: '107172',
+    widgetVersion: 'modern',
+    clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/'
   },
   'competlib-d': {
     id: 'competlib-d',
@@ -197,9 +213,12 @@ export const teamsData: Record<string, TeamData> = {
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
     trainerPic: pnfTrainerPic, // TODO: Remplacer par la vraie image
     trainerName: 'Nom Entraîneur', // À remplacer
-    calendarPic: pnfCalendarPic, // TODO: Remplacer par la vraie image
     schedule: [
-      { day: 'Dimanche', time: '12h00 – 14h00', location: 'Salle XXX' }
-    ]
+      { day: 'Lundi', time: '20h00 – 22h00', location: 'Salle Pacome' },
+      { day: 'Jeudi', time: '20h45 – 22h30', location: 'Salle Pacome' }
+    ],
+    widgetId: '6361553f9d5e1509ceb57fcd',
+    widgetVersion: 'legacy',
+    clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/'
   }
 }
