@@ -3,11 +3,14 @@
 // Imports des images - Pré-Nationale Féminine (images existantes)
 import pnfTeamPic from '@/assets/images/teams/pnf/teampic.jpg'
 import r1fTeamPic from '@/assets/images/teams/r1f/teampic.jpg'
-import pnfTrainerPic from '@/assets/images/teams/pnf/trainer.jpg'
+import dmfTeamPic from '@/assets/images/teams/dm/teampic.jpg'
+import m13mTeamPic from '@/assets/images/teams/m13m/teampic.jpg'
+import m18mTeamPic from '@/assets/images/teams/m18m/teampic.jpg'
 
 // TODO: Remplacer par les vraies images quand elles seront disponibles
 // Pour l'instant, on utilise les images de PNF comme placeholder
 
+import pnfTrainerPic from '@/assets/images/teams/pnf/trainer.jpg'
 import r1mTrainerPic from '@/assets/images/teams/r1m/trainer.jpg'
 import dmTrainerPic from '@/assets/images/teams/dm/trainer.jpg'
 import m13mTrainerPic from '@/assets/images/teams/m13m/trainer.jpg'
@@ -82,7 +85,7 @@ export const teamsData: Record<string, TeamData> = {
   'departemental-masc': {
     id: 'departemental-masc',
     title: 'Départementale Masculine',
-    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
+    teamPic: dmfTeamPic,
     trainerPic: dmTrainerPic,
     trainerName: 'Claire',
     schedule: [
@@ -108,11 +111,12 @@ export const teamsData: Record<string, TeamData> = {
   'm18-masc': {
     id: 'm18-masc',
     title: 'M18 Masculin',
-    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
-    trainerPic: m18mTrainerPic, // TODO: Remplacer par la vraie image
-    trainerName: 'Aymeric', // À remplacer
+    teamPic: m18mTeamPic,
+    trainerPic: m18mTrainerPic,
+    trainerName: 'Aymeric',
     schedule: [
-      { day: 'Samedi', time: '16h00 – 18h00', location: 'Salle XXX' }
+      { day: 'Mardi', time: '19h00 – 20h45', location: 'Salle Pacome' },
+      { day: 'Jeudi', time: '19h15 – 20h45', location: 'Salle Pacome' }
     ],
     widgetId: '5dcdb79ed0bf830a19fa30f7',
     clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/'
@@ -156,11 +160,12 @@ export const teamsData: Record<string, TeamData> = {
   'm13-masc': {
     id: 'm13-masc',
     title: 'M13 Masculin',
-    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
-    trainerPic: m13mTrainerPic, // TODO: Remplacer par la vraie image
+    teamPic: m13mTeamPic, // TODO: Remplacer par la vraie image
+    trainerPic: m13mTrainerPic,
     trainerName: 'Aymeric',
     schedule: [
-      { day: 'Jeudi', time: '17h00 – 19h00', location: 'Salle XXX' }
+      { day: 'Mercredi', time: '18h00 – 19h00', location: 'Salle Pacome' },
+      { day: 'Jeudi', time: '18h00 – 19h15', location: 'Salle Pacome' }
     ],
     widgetId: '5dcdb79ed0bf830a19fa30f7',
     clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/'
