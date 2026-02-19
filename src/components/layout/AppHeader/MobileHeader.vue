@@ -141,20 +141,46 @@ const equipeOpen = ref(false)
 const volunteersOpen = ref(false)
 const partnersOpen = ref(false)
 
+<<<<<<< feat-activate-mail
 
 
 watch(() => props.menuOpen, (isOpen) => {
   if (!isOpen) {
+=======
+const originalBodyOverflow = ref<string | null>(null)
+
+watch(() => props.menuOpen, (isOpen) => {
+  if (isOpen) {
+    if (originalBodyOverflow.value === null) {
+      originalBodyOverflow.value = document.body.style.overflow
+    }
+    document.body.style.overflow = 'hidden'
+  } else {
+>>>>>>> main
     clubOpen.value = false
     equipeOpen.value = false
     volunteersOpen.value = false
     partnersOpen.value = false
+<<<<<<< feat-activate-mail
     document.body.style.overflow = ''
+=======
+    if (originalBodyOverflow.value !== null) {
+      document.body.style.overflow = originalBodyOverflow.value
+      originalBodyOverflow.value = null
+    }
+>>>>>>> main
   }
 })
 
 onUnmounted(() => {
+<<<<<<< feat-activate-mail
   document.body.style.overflow = ''
+=======
+  if (originalBodyOverflow.value !== null) {
+    document.body.style.overflow = originalBodyOverflow.value
+    originalBodyOverflow.value = null
+  }
+>>>>>>> main
 })
 
 const closeMenu = () => {
