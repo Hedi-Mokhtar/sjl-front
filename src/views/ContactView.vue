@@ -357,15 +357,13 @@ async function handleSubmit() {
     const token = await new Promise<string>((resolve, reject) => {
       window.grecaptcha.ready(() => {
         window.grecaptcha
-          .execute('6LfNC3EsAAAAADT8yBmHRzsRICXyAqWmb4M7-O7f', { action: 'contact' })
+          .execute(import.meta.env.VITE_RECAPTCHA_KEY, { action: 'contact' })
           .then(resolve)
           .catch(reject)
       })
     })
 
-    const formspreeUrl = 'https://formspree.io/f/mkovzdpq'
-
-    const response = await fetch(formspreeUrl, {
+    const response = await fetch(import.meta.env.VITE_FORMSPREE_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -375,7 +373,7 @@ async function handleSubmit() {
         'g-recaptcha-response': token,
         _subject: `[SJL] Nouvelle demande: ${getRequestTypeLabel(formData.value.requestType)}`,
         _replyto: formData.value.email,
-        _cc: 'secretariatsjl@gmail.com'
+        _cc: import.meta.env.VITE_CONTACT_EMAIL
       })
     })
 
