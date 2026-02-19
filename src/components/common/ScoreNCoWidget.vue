@@ -52,7 +52,7 @@ function loadModernScript(): Promise<void> {
 
 function loadLegacyScript(): Promise<void> {
   return new Promise((resolve, reject) => {
-    if ((window as any).iFrameResize) {
+    if (window.iFrameResize) {
       resolve()
       return
     }
@@ -70,8 +70,8 @@ onMounted(async () => {
     scriptReady.value = true
   } else {
     await loadLegacyScript()
-    if (iframeRef.value && (window as any).iFrameResize) {
-      ; (window as any).iFrameResize({ checkOrigin: false, interval: 100 }, iframeRef.value)
+    if (iframeRef.value && window.iFrameResize) {
+      ; window.iFrameResize({ checkOrigin: false, interval: 100 }, iframeRef.value)
     }
   }
 })
