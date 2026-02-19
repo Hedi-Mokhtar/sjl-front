@@ -296,7 +296,6 @@
 
   </div>
 </template>
-
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
@@ -310,32 +309,29 @@ interface FormData {
   email: string
   phone: string
   message: string
-  // Champs spécifiques compétition
   experience?: number
   level?: string
   position?: string
   birthYear?: number
-  // Champs spécifiques bénévole
   availability?: string
   skills?: string
-  // Champs spécifiques partenaire
   companyName?: string
   companyWebsite?: string
 }
 
-const formData = ref<FormData>({
+const emptyForm: FormData = {
   requestType: '',
   firstName: '',
   lastName: '',
   email: '',
   phone: '',
   message: ''
-})
+}
 
+const formData = ref<FormData>({ ...emptyForm })
 const isSubmitting = ref(false)
 const submitStatus = ref<'idle' | 'success' | 'error'>('idle')
 
-// Pré-remplir le type de demande si passé dans l'URL
 onMounted(() => {
   const type = route.query.type as string
   if (type && ['loisir', 'competition', 'competlib', 'jeunes', 'benevole', 'partenaire'].includes(type)) {
@@ -343,42 +339,57 @@ onMounted(() => {
   }
 })
 
+async function getRecaptchaToken(): Promise<string> {
+  const siteKey = import.meta.env.VITE_RECAPTCHA_KEY
+
+  if (!siteKey) {
+    throw new Error('VITE_RECAPTCHA_KEY is not configured')
+  }
+
+  if (!window.grecaptcha) {
+    throw new Error('reCAPTCHA script unavailable (blocked by adblock or network)')
+  }
+
+  return new Promise<string>((resolve, reject) => {
+    window.grecaptcha.ready(() => {
+      window.grecaptcha
+        .execute(siteKey, { action: 'contact' })
+        .then(resolve)
+        .catch(reject)
+    })
+  })
+}
+
 async function handleSubmit() {
   isSubmitting.value = true
   submitStatus.value = 'idle'
 
   try {
-    // OPTION 1: Utiliser Formspree (gratuit, facile)
-    // 1. Inscris-toi sur https://formspree.io/
-    // 2. Crée un formulaire et récupère l'URL
-    // 3. Remplace l'URL ci-dessous
+    const token = await getRecaptchaToken()
 
-    const formspreeUrl = 'https://formspree.io/f/YOUR_FORM_ID' // ← À remplacer
+    const formspreeUrl = import.meta.env.VITE_FORMSPREE_URL
+    if (!formspreeUrl) {
+      console.error('Formspree URL is not configured')
+      submitStatus.value = 'error'
+      return
+    }
 
     const response = await fetch(formspreeUrl, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         ...formData.value,
+        'g-recaptcha-response': token,
+        ...(import.meta.env.VITE_CONTACT_EMAIL && { _cc: import.meta.env.VITE_CONTACT_EMAIL }),
+
         _subject: `[SJL] Nouvelle demande: ${getRequestTypeLabel(formData.value.requestType)}`,
         _replyto: formData.value.email,
-        _cc: 'secretariatsjl@gmail.com'
       })
     })
 
     if (response.ok) {
       submitStatus.value = 'success'
-      // Réinitialiser le formulaire
-      formData.value = {
-        requestType: '',
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        message: ''
-      }
+      formData.value = { ...emptyForm }
     } else {
       submitStatus.value = 'error'
     }
@@ -394,12 +405,12 @@ function getRequestTypeLabel(type: string): string {
   const labels: Record<string, string> = {
     loisir: 'Inscription Loisir',
     competition: 'Inscription Compétition',
-    competlib: 'Inscription Compet\'lib',
+    competlib: "Inscription Compet'lib",
     jeunes: 'Inscription Jeunes',
     benevole: 'Devenir bénévole',
     partenaire: 'Devenir partenaire',
     autre: 'Autre demande'
   }
-  return labels[type] || 'Demande de contact'
+  return labels[type] ?? 'Demande de contact'
 }
 </script>
