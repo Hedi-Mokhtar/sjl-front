@@ -2,55 +2,40 @@
   <div class="scorenco-widget-wrapper">
 
     <!-- Nouveau widget (data-*) -->
-    <div v-if="widgetVersion === 'modern'" ref="modernWidgetRef" class="scorenco-widget" data-widget-type="team"
+    <div v-if="widgetVersion === 'modern' && scriptReady" class="scorenco-widget" data-widget-type="team"
       :data-widget-id="widgetId"
-      style="background: #F2F5F9; min-height: 500px; display: flex; align-items: center; justify-content: center; flex-direction: column; text-transform: uppercase; font-family: sans-serif; font-weight: bolder; gap: 9px; color:#1E457B;">
-    </div>
+      style="background: #F2F5F9; min-height: 500px; display: flex; align-items: center; justify-content: center; flex-direction: column; text-transform: uppercase; font-family: sans-serif; font-weight: bolder; gap: 9px; color:#1E457B;" />
 
     <!-- Ancien widget (iframe) -->
     <template v-else-if="widgetVersion === 'legacy'">
-      <iframe ref="iframeRef" :id="String(widgetId)" :src="iframeUrl" class="scorenco-iframe"></iframe>
-      <template v-if="clubUrl && clubName">
-
-        class="scorenco-link"
-        :href="clubUrl"
-        target="_blank"
-        rel="noopener noreferrer"
-        >
+      <iframe ref="iframeRef" :id="widgetId" :src="iframeUrl" class="scorenco-iframe" />
+      <a v-if="clubUrl && clubName" class="scorenco-link" :href="clubUrl" target="_blank" rel="noopener noreferrer">
         {{ clubName }} sur Score'n'co
-        `` </template>
+      </a>
     </template>
 
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, nextTick } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 
 const props = defineProps<{
-  widgetId: string | number
+  widgetId: string
   widgetVersion: 'modern' | 'legacy'
   clubUrl?: string
   clubName?: string
 }>()
 
 const iframeRef = ref<HTMLIFrameElement | null>(null)
-const modernWidgetRef = ref<HTMLDivElement | null>(null)
+const scriptReady = ref(false)
 
 const iframeUrl = computed(
   () => `https://scorenco.com/widget/${props.widgetId}/?auto_height=true`
 )
 
-declare global {
-  interface Window {
-    iFrameResize?: (options: object, target: HTMLElement) => void
-    ScoreNCoWidgets?: { init: () => void }
-  }
-}
-
 function loadModernScript(): Promise<void> {
-  return new Promise((resolve) => {
-    // Script déjà chargé
+  return new Promise((resolve, reject) => {
     if (document.querySelector('script[src="https://widgets.scorenco.com/host/widgets.js"]')) {
       resolve()
       return
@@ -60,46 +45,33 @@ function loadModernScript(): Promise<void> {
     script.async = true
     script.defer = true
     script.onload = () => resolve()
+    script.onerror = () => reject(new Error('Failed to load widgets.js'))
     document.body.appendChild(script)
   })
 }
 
 function loadLegacyScript(): Promise<void> {
-  return new Promise((resolve) => {
-    if (window.iFrameResize) {
+  return new Promise((resolve, reject) => {
+    if ((window as any).iFrameResize) {
       resolve()
       return
     }
     const script = document.createElement('script')
     script.src = 'https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.5/iframeResizer.min.js'
     script.onload = () => resolve()
+    script.onerror = () => reject(new Error('Failed to load iframeResizer.js'))
     document.body.appendChild(script)
   })
 }
 
 onMounted(async () => {
-  await nextTick() // ← s'assure que le div est bien dans le DOM
-
   if (props.widgetVersion === 'modern') {
     await loadModernScript()
-
-    // Le script est chargé mais le div existait déjà avant lui,
-    // on recrée le div pour forcer la détection
-    if (modernWidgetRef.value) {
-      const container = modernWidgetRef.value.parentElement
-      if (container) {
-        const newDiv = document.createElement('div')
-        newDiv.className = 'scorenco-widget'
-        newDiv.setAttribute('data-widget-type', 'team')
-        newDiv.setAttribute('data-widget-id', String(props.widgetId))
-        newDiv.style.cssText = modernWidgetRef.value.style.cssText
-        modernWidgetRef.value.replaceWith(newDiv)
-      }
-    }
+    scriptReady.value = true
   } else {
     await loadLegacyScript()
-    if (iframeRef.value && window.iFrameResize) {
-      window.iFrameResize({ checkOrigin: false, interval: 100 }, iframeRef.value)
+    if (iframeRef.value && (window as any).iFrameResize) {
+      ; (window as any).iFrameResize({ checkOrigin: false, interval: 100 }, iframeRef.value)
     }
   }
 })
