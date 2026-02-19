@@ -1,14 +1,13 @@
 // src/data/teams.ts
 
-// Imports des images - Pré-Nationale Féminine (images existantes)
+// TeamPics
 import pnfTeamPic from '@/assets/images/teams/pnf/teampic.jpg'
 import r1fTeamPic from '@/assets/images/teams/r1f/teampic.jpg'
-import dmfTeamPic from '@/assets/images/teams/dm/teampic.jpg'
+import dmTeamPic from '@/assets/images/teams/dm/teampic.jpg'
 import m13mTeamPic from '@/assets/images/teams/m13m/teampic.jpg'
 import m18mTeamPic from '@/assets/images/teams/m18m/teampic.jpg'
 
-// TODO: Remplacer par les vraies images quand elles seront disponibles
-// Pour l'instant, on utilise les images de PNF comme placeholder
+// TrainerPics
 
 import pnfTrainerPic from '@/assets/images/teams/pnf/trainer.jpg'
 import r1mTrainerPic from '@/assets/images/teams/r1m/trainer.jpg'
@@ -85,7 +84,7 @@ export const teamsData: Record<string, TeamData> = {
   'departemental-masc': {
     id: 'departemental-masc',
     title: 'Départementale Masculine',
-    teamPic: dmfTeamPic,
+    teamPic: dmTeamPic,
     trainerPic: dmTrainerPic,
     trainerName: 'Claire',
     schedule: [

@@ -353,7 +353,17 @@ async function handleSubmit() {
     // 2. Crée un formulaire et récupère l'URL
     // 3. Remplace l'URL ci-dessous
 
-    const formspreeUrl = 'https://formspree.io/f/YOUR_FORM_ID' // ← À remplacer
+
+    const token = await new Promise<string>((resolve, reject) => {
+      window.grecaptcha.ready(() => {
+        window.grecaptcha
+          .execute('6LfNC3EsAAAAADT8yBmHRzsRICXyAqWmb4M7-O7f', { action: 'contact' })
+          .then(resolve)
+          .catch(reject)
+      })
+    })
+
+    const formspreeUrl = 'https://formspree.io/f/mkovzdpq'
 
     const response = await fetch(formspreeUrl, {
       method: 'POST',
@@ -362,6 +372,7 @@ async function handleSubmit() {
       },
       body: JSON.stringify({
         ...formData.value,
+        'g-recaptcha-response': token,
         _subject: `[SJL] Nouvelle demande: ${getRequestTypeLabel(formData.value.requestType)}`,
         _replyto: formData.value.email,
         _cc: 'secretariatsjl@gmail.com'
