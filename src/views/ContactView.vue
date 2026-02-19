@@ -380,9 +380,10 @@ async function handleSubmit() {
       body: JSON.stringify({
         ...formData.value,
         ...(token && { 'g-recaptcha-response': token }),
+        ...(import.meta.env.VITE_CONTACT_EMAIL && { _cc: import.meta.env.VITE_CONTACT_EMAIL }),
+
         _subject: `[SJL] Nouvelle demande: ${getRequestTypeLabel(formData.value.requestType)}`,
         _replyto: formData.value.email,
-        _cc: import.meta.env.VITE_CONTACT_EMAIL
       })
     })
 
