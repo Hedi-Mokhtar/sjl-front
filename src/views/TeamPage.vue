@@ -17,8 +17,6 @@
       <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-gray-800">
         Horaires d'entraînement
       </h2>
-
-      <!-- Version desktop : tableau -->
       <div class="hidden sm:block overflow-x-auto">
         <table class="w-full bg-white shadow-md rounded-lg overflow-hidden">
           <thead class="bg-red-600 text-white">
@@ -38,8 +36,6 @@
           </tbody>
         </table>
       </div>
-
-      <!-- Version mobile : cartes -->
       <div class="sm:hidden space-y-3">
         <div v-for="(slot, index) in teamData.schedule" :key="index" class="bg-white p-4 rounded-lg shadow-md">
           <div class="flex justify-between items-center mb-2">
@@ -66,17 +62,15 @@
       </div>
     </section>
 
-    <!-- CALENDRIER DES MATCHS -->
-    <section>
+    <!-- RÉSULTATS SCORE'N'CO -->
+    <section v-if="teamData.widgetId && teamData.widgetVersion">
       <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-gray-800">
-        Calendrier des matchs
+        Résultats & Classement
       </h2>
       <div class="bg-white p-2 sm:p-4 rounded-lg shadow-md">
-        <img :src="teamData.calendarPic" alt="Calendrier FFVB" class="rounded-lg w-full object-contain" />
+        <ScoreNCoWidget :widget-id="teamData.widgetId" :widget-version="teamData.widgetVersion"
+          :club-url="teamData.clubUrl" :club-name="teamData.title" />
       </div>
-      <p class="text-xs sm:text-sm text-gray-500 text-center mt-2">
-        Cliquez sur l'image pour l'agrandir
-      </p>
     </section>
 
     <!-- LIEN VERS FFVB -->
@@ -102,6 +96,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { teamsData } from '@/data/team'
+import ScoreNCoWidget from '@/components/common/ScoreNCoWidget.vue'
 
 const route = useRoute()
 const teamId = computed(() => route.params.teamId as string)
