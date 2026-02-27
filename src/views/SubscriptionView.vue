@@ -281,7 +281,7 @@
               </svg>
               <div>
                 <h3 class="font-semibold text-blue-900 mb-1">Certificat médical</h3>
-                <p class="text-sm text-blue-800">Obligatoire et datant de moins de 3 mois</p>
+                <p class="text-sm text-blue-800">Obligatoire pour la section jeune</p>
               </div>
             </div>
           </div>
@@ -295,7 +295,7 @@
               </svg>
               <div>
                 <h3 class="font-semibold text-green-900 mb-1">Délai de réponse</h3>
-                <p class="text-sm text-green-800">Nous traiterons votre demande sous 48h</p>
+                <p class="text-sm text-green-800">Notre équipe traitera votre demande au plus vite</p>
               </div>
             </div>
           </div>
