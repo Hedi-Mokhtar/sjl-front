@@ -296,6 +296,7 @@
 
   </div>
 </template>
+
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
@@ -339,62 +340,70 @@ onMounted(() => {
   }
 })
 
-async function getRecaptchaToken(): Promise<string> {
-  const siteKey = import.meta.env.VITE_RECAPTCHA_KEY
-
-  if (!siteKey) {
-    throw new Error('VITE_RECAPTCHA_KEY is not configured')
-  }
-
-  if (!window.grecaptcha) {
-    throw new Error('reCAPTCHA script unavailable (blocked by adblock or network)')
-  }
-
-  return new Promise<string>((resolve, reject) => {
-    window.grecaptcha.ready(() => {
-      window.grecaptcha
-        .execute(siteKey, { action: 'contact' })
-        .then(resolve)
-        .catch(reject)
+async function submitToWeb3Forms(payload: object): Promise<boolean> {
+  const response = await fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      access_key: import.meta.env.VITE_WEB3FORMS_KEY,
+      subject: `[SJL] Nouvelle demande: ${getRequestTypeLabel(formData.value.requestType)}`,
+      from_name: `${formData.value.firstName} ${formData.value.lastName}`,
+      replyto: formData.value.email,
+      to: import.meta.env.VITE_CONTACT_EMAIL,
+      ...payload,
     })
   })
+
+  if (!response.ok) return false
+  const data = await response.json()
+  return data.success === true
+}
+
+async function submitToFormspree(payload: object): Promise<boolean> {
+  const formspreeUrl = import.meta.env.VITE_FORMSPREE_URL
+  if (!formspreeUrl) return false
+
+  const response = await fetch(formspreeUrl, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      ...payload,
+      _subject: `[SJL] Nouvelle demande: ${getRequestTypeLabel(formData.value.requestType)}`,
+      _replyto: formData.value.email,
+    })
+  })
+
+  return response.ok
 }
 
 async function handleSubmit() {
   isSubmitting.value = true
   submitStatus.value = 'idle'
 
-  try {
-    const token = await getRecaptchaToken()
+  const payload = { ...formData.value }
 
-    const formspreeUrl = import.meta.env.VITE_FORMSPREE_URL
-    if (!formspreeUrl) {
-      console.error('Formspree URL is not configured')
-      submitStatus.value = 'error'
-      return
+  try {
+    let success = false
+
+    // Main attempt : Web3Forms
+    if (import.meta.env.VITE_WEB3FORMS_KEY) {
+      success = await submitToWeb3Forms(payload)
     }
 
-    const response = await fetch(formspreeUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        ...formData.value,
-        'g-recaptcha-response': token,
-        ...(import.meta.env.VITE_CONTACT_EMAIL && { _cc: import.meta.env.VITE_CONTACT_EMAIL }),
+    // Fallback : Formspree if Web3Forms fails or is not configured
+    if (!success) {
+      console.warn('[Contact] Web3Forms failed or is not configured, attempting Formspree...')
+      success = await submitToFormspree(payload)
+    }
 
-        _subject: `[SJL] Nouvelle demande: ${getRequestTypeLabel(formData.value.requestType)}`,
-        _replyto: formData.value.email,
-      })
-    })
-
-    if (response.ok) {
+    if (success) {
       submitStatus.value = 'success'
       formData.value = { ...emptyForm }
     } else {
       submitStatus.value = 'error'
     }
   } catch (error) {
-    console.error('Erreur lors de l\'envoi:', error)
+    console.error('[Contact] Error during submission:', error)
     submitStatus.value = 'error'
   } finally {
     isSubmitting.value = false
