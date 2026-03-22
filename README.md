@@ -58,8 +58,7 @@ Environment variables must be configured in the Vercel dashboard.
 
 Copy `.env.example` to `.env.local` and fill in the values:
 
-| Variable             | Description                         |
-| -------------------- | ----------------------------------- |
-| `VITE_RECAPTCHA_KEY` | Google reCAPTCHA v3 public site key |
-| `VITE_FORMSPREE_URL` | Formspree form endpoint URL         |
-| `VITE_CONTACT_EMAIL` | Club contact email for CC           |
+| Variable             | Description                 |
+| -------------------- | --------------------------- |
+| `VITE_FORMSPREE_URL` | Formspree form endpoint URL |
+| `VITE_CONTACT_EMAIL` | Club contact email for CC   |
