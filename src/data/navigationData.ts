@@ -36,7 +36,6 @@ export const teamCategories: TeamCategory[] = [
       { label: 'M18 Masculin', path: '/teams/m18-masc' },
       { label: 'M18 Féminine', path: '/teams/m18-fem' },
       { label: 'M15 Féminine', path: '/teams/m15-fem' },
-      { label: 'M15 Masculin', path: '/teams/m15-masc' },
       { label: 'M13 Masculin', path: '/teams/m13-masc' },
     ],
   },
@@ -47,6 +46,12 @@ export const teamCategories: TeamCategory[] = [
       { label: "Compet'lib B", path: '/teams/competlib-b' },
       { label: "Compet'lib C", path: '/teams/competlib-c' },
       { label: "Compet'lib D", path: '/teams/competlib-d' },
+    ],
+  },
+  {
+    title: "Loisir",
+    teams: [
+      { label: "Loisir", path: '/teams/loisir' },
     ],
   },
 ]

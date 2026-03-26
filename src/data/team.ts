@@ -12,7 +12,6 @@ import r1mTrainerPic from '@/assets/images/teams/r1m/trainer.jpg'
 import dmTrainerPic from '@/assets/images/teams/dm/trainer.jpg'
 import m13mTrainerPic from '@/assets/images/teams/m13m/trainer.jpg'
 import m15fTrainerPic from '@/assets/images/teams/m15f/trainer.jpg'
-import m15mTrainerPic from '@/assets/images/teams/m15m/trainer.jpg'
 import m18fTrainerPic from '@/assets/images/teams/m18f/trainer.jpg'
 import m18mTrainerPic from '@/assets/images/teams/m18m/trainer.jpg'
 import m21fTrainerPic from '@/assets/images/teams/m21f/trainer.jpg'
@@ -145,19 +144,6 @@ export const teamsData: Record<string, TeamData> = {
     widgetId: '5dcdb79ed0bf830a19fa30f7',
     clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/'
   },
-  'm15-masc': {
-    id: 'm15-masc',
-    title: 'M15 Masculin',
-    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
-    trainerPic: m15mTrainerPic, // TODO: Remplacer par la vraie image
-    trainerName: 'Aymeric',
-    schedule: [
-      { day: 'Mercredi', time: '18h00 – 19H00', location: 'Salle Pacome' },
-      { day: 'Jeudi', time: '18h00 – 19h15', location: 'Salle Pacome' }
-    ],
-    widgetId: '5dcdb79ed0bf830a19fa30f7',
-    clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/'
-  },
   'm13-masc': {
     id: 'm13-masc',
     title: 'M13 Masculin',
@@ -226,5 +212,17 @@ export const teamsData: Record<string, TeamData> = {
     widgetId: '6361553f9d5e1509ceb57fcd',
     widgetVersion: 'legacy',
     clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/'
+  },
+  'loisir': {
+    id: 'loisir',
+    title: "Loisir",
+    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
+    trainerPic: pnfTrainerPic, // TODO: Remplacer par la vraie image
+    trainerName: 'Nom Entraîneur', // À remplacer
+    schedule: [
+      { day: 'Mercredi', time: '19h00 – 20h45', location: 'Salle Pacome' },
+      { day: 'Mercredi', time: '20h45 – 22h30', location: 'Salle Pacome' },
+      { day: 'Samedi', time: '15h00 – 17h30', location: 'Salle Lestiboudois' }
+    ]
   }
 }
