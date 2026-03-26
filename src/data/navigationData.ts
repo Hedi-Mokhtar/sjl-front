@@ -49,6 +49,12 @@ export const teamCategories: TeamCategory[] = [
       { label: "Compet'lib D", path: '/teams/competlib-d' },
     ],
   },
+  {
+    title: "Loisir",
+    teams: [
+      { label: "Loisir", path: '/teams/loisir' },
+    ],
+  },
 ]
 
 export const volunteersMenuItems: NavItem[] = [
