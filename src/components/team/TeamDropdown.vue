@@ -2,7 +2,7 @@
   <li class="relative group">
     <span
       class="cursor-pointer px-4 py-2 rounded-md border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-200 font-semibold inline-flex items-center gap-1">
-      <span>Équipe</span>
+      <span>Équipes</span>
       <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor"
         viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
