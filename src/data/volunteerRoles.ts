@@ -12,8 +12,10 @@ export interface VolunteerCategory {
   id: string
   label: string
   icon: string // emoji ou nom d'icône
-  color: string // classe Tailwind pour la couleur accent
+  color: string // classe Tailwind pour la couleur accent (texte)
   bgColor: string // classe bg pour le header accordéon
+  contentBorder: string // classe border pour le panneau ouvert
+  accentBg: string // classe bg pour les puces de liste
   roles: VolunteerRole[]
 }
 
@@ -24,6 +26,8 @@ export const volunteerCategories: VolunteerCategory[] = [
     icon: '🏐',
     color: 'text-red-600',
     bgColor: 'bg-red-50 border-red-200',
+    contentBorder: 'border-red-200',
+    accentBg: 'bg-red-500',
     roles: [
       {
         id: 'coach',
@@ -54,6 +58,20 @@ export const volunteerCategories: VolunteerCategory[] = [
         ideal: 'Toute personne aimant travailler avec les enfants et adolescents, passionné(e) de volley.',
       },
       {
+        id: 'responsable-equipe',
+        title: 'Responsable d\'équipe',
+        description:
+          'Un rôle clé souvent dans l\'ombre : le responsable d\'équipe fait le lien entre les joueurs, le coach et le bureau. Il assure la bonne organisation du groupe au quotidien, sans forcément être sur le terrain.',
+        missions: [
+          'Gestion des convocations et feuilles de match',
+          'Coordination des déplacements et covoiturages',
+          'Relais d\'information entre le club et les joueurs',
+          'Suivi des licences et disponibilités des joueurs',
+          'Point de contact pour les questions pratiques de l\'équipe',
+        ],
+        ideal: 'Joueur(se) ou parent organisé(e), à l\'aise avec la communication. Rôle compatible avec une activité sportive dans le club.',
+      },
+      {
         id: 'arbitre',
         title: 'Arbitre',
         description:
@@ -74,6 +92,8 @@ export const volunteerCategories: VolunteerCategory[] = [
     icon: '📣',
     color: 'text-blue-600',
     bgColor: 'bg-blue-50 border-blue-200',
+    contentBorder: 'border-blue-200',
+    accentBg: 'bg-blue-500',
     roles: [
       {
         id: 'photographe',
@@ -137,6 +157,8 @@ export const volunteerCategories: VolunteerCategory[] = [
     icon: '⚙️',
     color: 'text-green-600',
     bgColor: 'bg-green-50 border-green-200',
+    contentBorder: 'border-green-200',
+    accentBg: 'bg-green-500',
     roles: [
       {
         id: 'gestion-club',
@@ -199,6 +221,8 @@ export const volunteerCategories: VolunteerCategory[] = [
     icon: '💻',
     color: 'text-indigo-600',
     bgColor: 'bg-indigo-50 border-indigo-200',
+    contentBorder: 'border-indigo-200',
+    accentBg: 'bg-indigo-500',
     roles: [
       {
         id: 'dev-web',
@@ -250,6 +274,8 @@ export const volunteerCategories: VolunteerCategory[] = [
     icon: '🤝',
     color: 'text-purple-600',
     bgColor: 'bg-purple-50 border-purple-200',
+    contentBorder: 'border-purple-200',
+    accentBg: 'bg-purple-500',
     roles: [
       {
         id: 'buvette',
