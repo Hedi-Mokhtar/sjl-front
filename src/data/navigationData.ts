@@ -58,7 +58,8 @@ export const teamCategories: TeamCategory[] = [
 
 export const volunteersMenuItems: NavItem[] = [
   { label: 'Nos bénévoles', path: '/volunteers' },
-  { label: 'Devenir bénévole', path: '/volunteers#join' }
+  { label: 'Devenir bénévole', path: '/volunteers#join' },
+  { label: 'Rôles bénévoles', path: '/volunteer-roles' }
 ]
 
 export const partnersMenuItems: NavItem[] = [

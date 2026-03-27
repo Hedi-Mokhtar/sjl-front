@@ -8,6 +8,7 @@ import SubscriptionView from '@/views/SubscriptionView.vue'
 import TeamPage from '@/views/TeamPage.vue'
 import PartnersView from '@/views/PartnersView.vue'
 import VolunteersView from '@/views/VolunteersView.vue'
+import VolunteerRolesView from '@/views/VolunteerRolesView.vue'
 import ShopView from '@/views/ShopView.vue'
 
 
@@ -23,6 +24,7 @@ const router = createRouter({
     { path: '/contact', name: 'contact', component: ContactView },
     { path: '/partners', name: 'partners', component: PartnersView },
     { path: '/volunteers', name: 'volunteers', component: VolunteersView },
+    { path: '/volunteer-roles', name: 'volunteerRoles', component: VolunteerRolesView },
     { path: '/teams/:teamId', name: 'Team', component: TeamPage }
   ],
 
