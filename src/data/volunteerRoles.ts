@@ -1,3 +1,5 @@
+// src/data/volunteerRoles.ts
+
 export interface VolunteerRole {
   id: string
   title: string
@@ -9,11 +11,9 @@ export interface VolunteerRole {
 export interface VolunteerCategory {
   id: string
   label: string
-  icon: string
-  color: string
-  bgColor: string
-  accentBg: string
-  contentBorder: string
+  icon: string // emoji ou nom d'icône
+  color: string // classe Tailwind pour la couleur accent
+  bgColor: string // classe bg pour le header accordéon
   roles: VolunteerRole[]
 }
 
@@ -24,53 +24,40 @@ export const volunteerCategories: VolunteerCategory[] = [
     icon: '🏐',
     color: 'text-red-600',
     bgColor: 'bg-red-50 border-red-200',
-    accentBg: 'bg-red-600',
-    contentBorder: 'border-red-200',
     roles: [
       {
-        id: 'coach-adjoint',
-        title: 'Entraîneur adjoint',
+        id: 'coach',
+        title: 'Entraîneur',
         description:
-          "Tu veux te lancer dans l'encadrement sportif ? Le rôle d'adjoint est la porte d'entrée idéale pour apprendre aux côtés d'un coach expérimenté.",
+          'Tu veux encadrer une équipe et transmettre ta passion du volley ? Le rôle d\'entraîneur peut prendre différentes formes selon ton expérience et ta disponibilité : entraîneur principal avec pleine responsabilité d\'un groupe, adjoint aux côtés d\'un coach expérimenté, ou simple observateur/participant pour découvrir le coaching progressivement. L\'important, c\'est de se lancer !',
         missions: [
-          "Assister l'entraîneur principal lors des séances",
-          'Préparer les exercices et ateliers techniques',
-          'Observer et donner des retours aux joueurs',
+          'Animer ou co-animer les séances d\'entraînement',
+          'Préparer les exercices, ateliers techniques et plans de jeu',
+          'Suivre la progression individuelle et collective des joueurs',
           'Participer aux réunions de préparation des matchs',
+          'Accompagner l\'équipe en compétition',
+          'Monter en compétences via les formations proposées par le club',
         ],
-        ideal: "Joueur(se) souhaitant se former à l'encadrement, pas de diplôme requis pour commencer.",
+        ideal: 'Tout niveau de départ accepté — du joueur souhaitant se former au coach expérimenté. Aucun diplôme requis pour commencer.',
       },
       {
         id: 'coach-jeunes',
         title: 'Entraîneur jeunes',
         description:
-          "Transmettre le goût du volley aux plus jeunes, c'est une aventure unique. Tu encadres une catégorie d'âge et construis les bases techniques et humaines des futures générations.",
+          'Transmettre le goût du volley aux plus jeunes, c\'est une aventure unique. Tu encadres une catégorie d\'âge et construis les bases techniques et humaines des futures générations.',
         missions: [
-          "Animer les entraînements de la catégorie choisie (U9 à U18)",
+          'Animer les entraînements de la catégorie choisie (U9 à U18)',
           'Suivi de la progression individuelle des jeunes',
           'Accompagnement lors des compétitions',
           'Communication avec les parents',
         ],
-        ideal: "Toute personne aimant travailler avec les enfants et adolescents, passionné(e) de volley.",
-      },
-      {
-        id: 'benevole-apprendre-coach',
-        title: 'Bénévole en formation coaching',
-        description:
-          "Pas encore prêt(e) à prendre une équipe seul(e) ? Rejoins-nous en observateur/participant pour découvrir le métier de coach progressivement.",
-        missions: [
-          "Observer des séances d'entraînement",
-          'Aider à l\'animation sous supervision',
-          'Participer aux formations proposées par le club',
-          'Monter en compétences à ton rythme',
-        ],
-        ideal: "Idéal pour les joueurs en fin de carrière ou toute personne curieuse de l'encadrement.",
+        ideal: 'Toute personne aimant travailler avec les enfants et adolescents, passionné(e) de volley.',
       },
       {
         id: 'arbitre',
         title: 'Arbitre',
         description:
-          "Garantir le fair-play et le bon déroulement des matchs, c'est un rôle essentiel et valorisant. Le club accompagne la formation.",
+          'Garantir le fair-play et le bon déroulement des matchs, c\'est un rôle essentiel et valorisant. Le club accompagne la formation.',
         missions: [
           'Arbitrer les matchs de championnat (jeunes et/ou séniors)',
           'Suivre les formations arbitrage proposées par le comité',
@@ -87,8 +74,6 @@ export const volunteerCategories: VolunteerCategory[] = [
     icon: '📣',
     color: 'text-blue-600',
     bgColor: 'bg-blue-50 border-blue-200',
-    accentBg: 'bg-blue-600',
-    contentBorder: 'border-blue-200',
     roles: [
       {
         id: 'photographe',
@@ -101,24 +86,24 @@ export const volunteerCategories: VolunteerCategory[] = [
           'Alimenter les réseaux sociaux avec du contenu visuel',
           'Constituer une photothèque du club',
         ],
-        ideal: "Amateur(e) ou professionnel(le) de photo/vidéo passionné(e) de sport.",
+        ideal: 'Amateur(e) ou professionnel(le) de photo/vidéo passionné(e) de sport.',
       },
       {
         id: 'communication',
         title: 'Chargé(e) de communication',
         description:
-          "Gère la présence digitale du club : réseaux sociaux, site web, visuels. Tu es la voix de Sport Joie Lille auprès du public et des partenaires.",
+          'Gère la présence digitale du club : réseaux sociaux, site web, visuels. Tu es la voix de Sport Joie Lille auprès du public et des partenaires.',
         missions: [
           'Animation des réseaux sociaux (Instagram, Facebook…)',
           'Création de visuels et affiches (Canva, Photoshop…)',
           'Rédaction de newsletters et communiqués',
           'Mise à jour du site web',
         ],
-        ideal: "Toute personne créative à l'aise avec les outils digitaux.",
+        ideal: 'Toute personne créative à l\'aise avec les outils digitaux.',
       },
       {
         id: 'evenementiel-interne',
-        title: "Organisation d'événements internes",
+        title: 'Organisation d\'événements internes',
         description:
           'Crée du lien au sein du club en organisant les moments conviviaux : soirées, repas de fin de saison, challenges entre équipes.',
         missions: [
@@ -131,14 +116,16 @@ export const volunteerCategories: VolunteerCategory[] = [
       },
       {
         id: 'tournois',
-        title: 'Organisation de tournois',
+        title: 'Organisation de tournois & stages',
         description:
-          'Participe à l\'organisation des tournois accueillis par le club : un vrai projet collectif qui met en valeur Sport Joie Lille.',
+          'Participe à l\'organisation des tournois et stages accueillis par le club : un vrai projet collectif qui met en valeur Sport Joie Lille et enrichit la vie sportive des licenciés.',
         missions: [
           'Préparation logistique (planning, salles, terrains)',
           'Accueil des équipes participantes',
           'Gestion des tableaux de compétition',
           'Tenue de la buvette et animation',
+          'Organisation des stages volley (planification, inscription des participants, encadrement logistique)',
+          'Recherche d\'intervenants extérieurs pour les stages',
         ],
         ideal: 'Disponible le week-end pour des événements ponctuels, aucune compétence particulière requise.',
       },
@@ -150,8 +137,6 @@ export const volunteerCategories: VolunteerCategory[] = [
     icon: '⚙️',
     color: 'text-green-600',
     bgColor: 'bg-green-50 border-green-200',
-    accentBg: 'bg-green-600',
-    contentBorder: 'border-green-200',
     roles: [
       {
         id: 'gestion-club',
@@ -164,7 +149,7 @@ export const volunteerCategories: VolunteerCategory[] = [
           'Correspondance avec le comité régional',
           'Organisation des assemblées générales',
         ],
-        ideal: "Personnes organisées avec des notions d'administration ou de comptabilité.",
+        ideal: 'Personnes organisées avec des notions d\'administration ou de comptabilité.',
       },
       {
         id: 'local-materiel',
@@ -178,6 +163,20 @@ export const volunteerCategories: VolunteerCategory[] = [
           'Sortie / rentrée du matériel lors des tournois',
         ],
         ideal: 'Tout le monde peut aider ! Idéal pour les parents ou licenciés disponibles.',
+      },
+      {
+        id: 'securite-secourisme',
+        title: 'Sécurité & Secourisme',
+        description:
+          'Un rôle essentiel souvent méconnu : chaque compétition et événement nécessite une personne formée aux premiers secours. Le club prend en charge les formations si besoin.',
+        missions: [
+          'Présence lors des matchs et tournois à domicile',
+          'Application des procédures de sécurité en salle',
+          'Premiers secours en cas d\'accident ou blessure',
+          'Vérification du matériel de secours (trousse, défibrillateur…)',
+          'Référent sécurité pour les événements du club',
+        ],
+        ideal: 'Titulaire du PSC1/PSE1 ou volontaire pour se former — formation prise en charge par le club.',
       },
       {
         id: 'partenariat',
@@ -195,19 +194,68 @@ export const volunteerCategories: VolunteerCategory[] = [
     ],
   },
   {
+    id: 'web-informatique',
+    label: 'Web & Informatique',
+    icon: '💻',
+    color: 'text-indigo-600',
+    bgColor: 'bg-indigo-50 border-indigo-200',
+    roles: [
+      {
+        id: 'dev-web',
+        title: 'Développeur(se) web',
+        description:
+          'Le site de Sport Joie Lille est un projet vivant qui évolue avec le club. Que tu sois développeur confirmé ou étudiant en informatique, tu peux contribuer à l\'améliorer, le maintenir et y ajouter de nouvelles fonctionnalités.',
+        missions: [
+          'Maintenance et évolution du site web du club',
+          'Développement de nouvelles pages ou fonctionnalités',
+          'Optimisation des performances et de l\'accessibilité',
+          'Intégration des contenus fournis par l\'équipe communication',
+          'Veille technique et proposition d\'améliorations',
+        ],
+        ideal: 'Développeur(se) web, étudiant(e) en informatique ou toute personne à l\'aise avec le code. Stack actuelle : Vue.js / TypeScript.',
+      },
+      {
+        id: 'dev-outils',
+        title: 'Développeur(se) d\'outils club',
+        description:
+          'Au-delà du site vitrine, le club a besoin d\'outils internes pour simplifier sa gestion au quotidien. C\'est l\'occasion de porter de vrais projets de A à Z, avec un impact concret sur la vie du club.',
+        missions: [
+          'Développement d\'un outil de gestion des licenciés',
+          'Création d\'interfaces de suivi des plannings d\'entraînement',
+          'Automatisation de tâches administratives (convocations, feuilles de match…)',
+          'Mise en place d\'un espace membre sécurisé',
+          'Proposition et développement de tout nouvel outil utile au club',
+        ],
+        ideal: 'Développeur(se) passionné(e) voulant construire des projets concrets et utiles. Liberté totale sur les technos — React, Vue, Node, Python, Supabase, et tout ce qui vous fait envie !',
+      },
+      {
+        id: 'infra-donnees',
+        title: 'Référent(e) infrastructure & données',
+        description:
+          'Assure la fiabilité, la sécurité et la disponibilité des outils numériques du club : hébergement, bases de données, sauvegardes et confidentialité des données membres.',
+        missions: [
+          'Gestion de l\'hébergement et des noms de domaine',
+          'Mise en place et suivi des sauvegardes',
+          'Sécurisation des données des licenciés (RGPD)',
+          'Monitoring des services en ligne du club',
+          'Support technique pour les bénévoles et le bureau',
+        ],
+        ideal: 'Profil DevOps, sysadmin ou étudiant(e) en infrastructure. Quelques heures par mois suffisent.',
+      },
+    ],
+  },
+  {
     id: 'ponctuel',
     label: 'Bénévolat ponctuel',
     icon: '🤝',
     color: 'text-purple-600',
     bgColor: 'bg-purple-50 border-purple-200',
-    accentBg: 'bg-purple-600',
-    contentBorder: 'border-purple-200',
     roles: [
       {
         id: 'buvette',
         title: 'Buvette & Accueil matchs',
         description:
-          "Le jour de match, la buvette c'est le cœur battant du gymnase. Viens créer de l'ambiance et accueillir les visiteurs !",
+          'Le jour de match, la buvette c\'est le cœur battant du gymnase. Viens créer de l\'ambiance et accueillir les visiteurs !',
         missions: [
           'Tenue de la buvette lors des matchs à domicile',
           'Préparation et service des boissons/snacks',
@@ -231,7 +279,7 @@ export const volunteerCategories: VolunteerCategory[] = [
         id: 'soutien-general',
         title: 'Coup de main général',
         description:
-          "Pas d'engagement particulier mais envie d'aider quand le besoin se présente ? C'est parfait, le club a toujours besoin de bras !",
+          'Pas d\'engagement particulier mais envie d\'aider quand le besoin se présente ? C\'est parfait, le club a toujours besoin de bras !',
         missions: [
           'Installation / démontage pour les événements',
           'Aide logistique ponctuelle',
