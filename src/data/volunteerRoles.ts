@@ -16,6 +16,7 @@ export interface VolunteerCategory {
   bgColor: string // classe bg pour le header accordéon
   contentBorder: string // classe border pour le panneau ouvert
   accentBg: string // classe bg pour les puces de liste
+  image: string // URL de l'image de la carte
   roles: VolunteerRole[]
 }
 
@@ -28,6 +29,7 @@ export const volunteerCategories: VolunteerCategory[] = [
     bgColor: 'bg-red-50 border-red-200',
     contentBorder: 'border-red-200',
     accentBg: 'bg-red-500',
+    image: 'https://github.com/user-attachments/assets/9e011b23-7f07-4bc7-9843-d5c2dbe50089',
     roles: [
       {
         id: 'coach',
@@ -94,6 +96,7 @@ export const volunteerCategories: VolunteerCategory[] = [
     bgColor: 'bg-blue-50 border-blue-200',
     contentBorder: 'border-blue-200',
     accentBg: 'bg-blue-500',
+    image: 'https://github.com/user-attachments/assets/55d41773-9c59-40a8-b5f2-f30ea974a2fb',
     roles: [
       {
         id: 'photographe',
@@ -159,6 +162,7 @@ export const volunteerCategories: VolunteerCategory[] = [
     bgColor: 'bg-green-50 border-green-200',
     contentBorder: 'border-green-200',
     accentBg: 'bg-green-500',
+    image: 'https://github.com/user-attachments/assets/5079ac3d-db21-4973-adc7-afbf58682942',
     roles: [
       {
         id: 'gestion-club',
@@ -223,6 +227,7 @@ export const volunteerCategories: VolunteerCategory[] = [
     bgColor: 'bg-indigo-50 border-indigo-200',
     contentBorder: 'border-indigo-200',
     accentBg: 'bg-indigo-500',
+    image: 'https://github.com/user-attachments/assets/d69daf67-0da7-4eef-9eab-2a8815414283',
     roles: [
       {
         id: 'dev-web',
@@ -276,6 +281,7 @@ export const volunteerCategories: VolunteerCategory[] = [
     bgColor: 'bg-purple-50 border-purple-200',
     contentBorder: 'border-purple-200',
     accentBg: 'bg-purple-500',
+    image: 'https://github.com/user-attachments/assets/a8b2a9e8-6728-4eda-9f54-56db8ccd32a3',
     roles: [
       {
         id: 'buvette',
