@@ -164,10 +164,12 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 import clubPic1 from '@/assets/images/clubpic1.jpg'
 import clubPic2 from '@/assets/images/clubpic2.jpg'
+import clubPic3 from '@/assets/images/clubpic3.jpg'
+import clubPic4 from '@/assets/images/clubpic4.jpg'
 
 import LocationMap from '@/components/common/LocationMap.vue'
 
-const images = [clubPic1, clubPic2]
+const images = [clubPic1, clubPic2, clubPic3, clubPic4]
 
 const currentIndex = ref(0)
 const currentImage = ref(images[currentIndex.value])

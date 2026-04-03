@@ -4,9 +4,9 @@ import r1fTeamPic from '@/assets/images/teams/r1f/teampic.jpg'
 import dmTeamPic from '@/assets/images/teams/dm/teampic.jpg'
 import m13mTeamPic from '@/assets/images/teams/m13m/teampic.jpg'
 import m18mTeamPic from '@/assets/images/teams/m18m/teampic.jpg'
+import competlibATeamPic from '@/assets/images/teams/competliba/teampic.jpg'
 
 // TrainerPics
-
 import pnfTrainerPic from '@/assets/images/teams/pnf/trainer.jpg'
 import r1mTrainerPic from '@/assets/images/teams/r1m/trainer.jpg'
 import dmTrainerPic from '@/assets/images/teams/dm/trainer.jpg'
@@ -16,6 +16,14 @@ import m18fTrainerPic from '@/assets/images/teams/m18f/trainer.jpg'
 import m18mTrainerPic from '@/assets/images/teams/m18m/trainer.jpg'
 import m21fTrainerPic from '@/assets/images/teams/m21f/trainer.jpg'
 import r1fTrainerPic from '@/assets/images/teams/r1f/trainer.jpg'
+import loisirTrainerPic from '@/assets/images/teams/loisir/trainer.jpg'
+
+//CoTrainerPics
+import m21fcoTrainerPic from '@/assets/images/teams/m21f/cotrainer.jpg'
+import m18fcoTrainerPic from '@/assets/images/teams/m18f/cotrainer.jpg'
+
+//LeaderPics
+import competlibALeaderPic from '@/assets/images/teams/competliba/leaderpic.jpg'
 
 export interface TeamSchedule {
   day: string
@@ -27,8 +35,12 @@ export interface TeamData {
   id: string
   title: string
   teamPic: string
-  trainerPic: string
-  trainerName: string
+  trainerPic?: string
+  trainerName?: string
+  subTrainerPic?: string
+  subTrainerName?: string
+  leaderPic?: string
+  leaderName?: string
   schedule: TeamSchedule[]
   widgetVersion?: 'modern' | 'legacy'
   widgetId?: string
@@ -96,8 +108,10 @@ export const teamsData: Record<string, TeamData> = {
     id: 'm21-fem',
     title: 'M21 Féminine',
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
-    trainerPic: m21fTrainerPic, // TODO: Remplacer par la vraie image
+    trainerPic: m21fTrainerPic,
     trainerName: 'Aude',
+    subTrainerPic: m21fcoTrainerPic,
+    subTrainerName: 'Soraya',
     schedule: [
       { day: 'Mardi', time: '19h00 – 20h45', location: 'Salle Pacome' },
       { day: 'Jeudi', time: '18h00 – 19h15', location: 'Salle Pacome' }
@@ -122,8 +136,10 @@ export const teamsData: Record<string, TeamData> = {
     id: 'm18-fem',
     title: 'M18 Féminine',
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
-    trainerPic: m18fTrainerPic, // TODO: Remplacer par la vraie image
+    trainerPic: m18fTrainerPic,
     trainerName: 'Aude',
+    subTrainerPic: m18fcoTrainerPic,
+    subTrainerName: 'Hedi ',
     schedule: [
       { day: 'Mardi', time: '19h00 – 20h45', location: 'Salle Pacome' },
       { day: 'Jeudi', time: '18h00 – 19h15', location: 'Salle Pacome' }
@@ -160,13 +176,13 @@ export const teamsData: Record<string, TeamData> = {
   'competlib-a': {
     id: 'competlib-a',
     title: "Compet'lib A",
-    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
-    trainerPic: pnfTrainerPic, // TODO: Remplacer par la vraie image
-    trainerName: 'Nom Entraîneur', // À remplacer
+    teamPic: competlibATeamPic,
     schedule: [
       { day: 'Lundi', time: '20h00 – 22h00', location: 'Salle Pacome' },
       { day: 'Jeudi', time: '20h45 – 22h30', location: 'Salle Pacome' }
     ],
+    leaderPic: competlibALeaderPic,
+    leaderName: 'Marion',
     widgetId: '5dce96e6e3f1b20a1c1b92dd',
     widgetVersion: 'legacy',
     clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/'
@@ -217,8 +233,8 @@ export const teamsData: Record<string, TeamData> = {
     id: 'loisir',
     title: "Loisir",
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
-    trainerPic: pnfTrainerPic, // TODO: Remplacer par la vraie image
-    trainerName: 'Nom Entraîneur', // À remplacer
+    trainerPic: loisirTrainerPic,
+    trainerName: 'Pierre Miellot',
     schedule: [
       { day: 'Mercredi', time: '19h00 – 20h45', location: 'Salle Pacome' },
       { day: 'Mercredi', time: '20h45 – 22h30', location: 'Salle Pacome' },

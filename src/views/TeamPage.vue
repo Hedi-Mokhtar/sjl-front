@@ -48,7 +48,7 @@
     </section>
 
     <!-- ENTRAÎNEUR -->
-    <section>
+    <section v-if="teamData.trainerName && teamData.trainerPic">
       <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-gray-800">
         Entraîneur
       </h2>
@@ -58,6 +58,36 @@
         <div>
           <p class="text-base sm:text-lg font-bold text-gray-800">{{ teamData.trainerName }}</p>
           <p class="text-sm sm:text-base text-gray-600">Entraîneur principal</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENTRAÎNEUR ADJOINT -->
+    <section v-if="teamData.subTrainerName && teamData.subTrainerPic">
+      <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-gray-800">
+        Entraîneur adjoint
+      </h2>
+      <div class="flex items-center gap-3 sm:gap-4 bg-white p-4 sm:p-6 rounded-lg shadow-md">
+        <img :src="teamData.subTrainerPic" alt="Photo entraîneur adjoint"
+          class="w-14 h-14 sm:w-20 sm:h-20 rounded-full object-cover shadow-md flex-shrink-0" />
+        <div>
+          <p class="text-base sm:text-lg font-bold text-gray-800">{{ teamData.subTrainerName }}</p>
+          <p class="text-sm sm:text-base text-gray-600">Entraîneur adjoint</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEADER -->
+    <section v-if="teamData.leaderName && teamData.leaderPic">
+      <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-gray-800">
+        Responsable d'équipe
+      </h2>
+      <div class="flex items-center gap-3 sm:gap-4 bg-white p-4 sm:p-6 rounded-lg shadow-md">
+        <img :src="teamData.leaderPic" alt="Photo responsable d'équipe"
+          class="w-14 h-14 sm:w-20 sm:h-20 rounded-full object-cover shadow-md flex-shrink-0" />
+        <div>
+          <p class="text-base sm:text-lg font-bold text-gray-800">{{ teamData.leaderName }}</p>
+          <p class="text-sm sm:text-base text-gray-600">Responsable d'équipe</p>
         </div>
       </div>
     </section>
