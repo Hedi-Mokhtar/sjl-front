@@ -139,7 +139,7 @@ export const teamsData: Record<string, TeamData> = {
     trainerPic: m18fTrainerPic,
     trainerName: 'Aude',
     subTrainerPic: m18fcoTrainerPic,
-    subTrainerName: 'Hedi ',
+    subTrainerName: 'Hedi',
     schedule: [
       { day: 'Mardi', time: '19h00 – 20h45', location: 'Salle Pacome' },
       { day: 'Jeudi', time: '18h00 – 19h15', location: 'Salle Pacome' }
