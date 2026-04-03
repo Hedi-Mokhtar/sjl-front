@@ -24,6 +24,8 @@ import m18fcoTrainerPic from '@/assets/images/teams/m18f/cotrainer.jpg'
 
 //LeaderPics
 import competlibALeaderPic from '@/assets/images/teams/competliba/leaderpic.jpg'
+import competlibBLeaderPic from '@/assets/images/teams/competlibb/leaderpic.jpg'
+import competlibCLeaderPic from '@/assets/images/teams/competlibc/leaderpic.jpg'
 
 export interface TeamSchedule {
   day: string
@@ -191,8 +193,8 @@ export const teamsData: Record<string, TeamData> = {
     id: 'competlib-b',
     title: "Compet'lib B",
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
-    trainerPic: pnfTrainerPic, // TODO: Remplacer par la vraie image
-    trainerName: 'Nom Entraîneur', // À remplacer
+    leaderPic: competlibBLeaderPic,
+    leaderName: 'Yseult',
     schedule: [
       { day: 'Lundi', time: '20h00 – 22h00', location: 'Salle Pacome' },
       { day: 'Jeudi', time: '20h45 – 22h30', location: 'Salle Pacome' }
@@ -205,8 +207,8 @@ export const teamsData: Record<string, TeamData> = {
     id: 'competlib-c',
     title: "Compet'lib C",
     teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
-    trainerPic: pnfTrainerPic, // TODO: Remplacer par la vraie image
-    trainerName: 'Nom Entraîneur', // À remplacer
+    leaderPic: competlibCLeaderPic,
+    leaderName: 'Jonathan',
     schedule: [
       { day: 'Lundi', time: '20h00 – 22h00', location: 'Salle Pacome' },
       { day: 'Jeudi', time: '20h45 – 22h30', location: 'Salle Pacome' }
