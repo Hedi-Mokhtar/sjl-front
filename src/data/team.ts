@@ -6,6 +6,8 @@ import m13mTeamPic from '@/assets/images/teams/m13m/teampic.jpg'
 import m18mTeamPic from '@/assets/images/teams/m18m/teampic.jpg'
 import competlibATeamPic from '@/assets/images/teams/competliba/teampic.jpg'
 
+import defaultTeamPic from '@/assets/images/teams/default-teampic.jpg'
+
 // TrainerPics
 import pnfTrainerPic from '@/assets/images/teams/pnf/trainer.jpg'
 import r1mTrainerPic from '@/assets/images/teams/r1m/trainer.jpg'
@@ -67,7 +69,7 @@ export const teamsData: Record<string, TeamData> = {
   'regional-masc': {
     id: 'regional-masc',
     title: 'Régionale Masculine',
-    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
+    teamPic: defaultTeamPic, // TODO: Remplacer par la vraie image
     trainerPic: r1mTrainerPic,
     trainerName: 'Fred',
     schedule: [
@@ -109,7 +111,7 @@ export const teamsData: Record<string, TeamData> = {
   'm21-fem': {
     id: 'm21-fem',
     title: 'M21 Féminine',
-    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
+    teamPic: defaultTeamPic, // TODO: Remplacer par la vraie image
     trainerPic: m21fTrainerPic,
     trainerName: 'Aude',
     subTrainerPic: m21fcoTrainerPic,
@@ -137,7 +139,7 @@ export const teamsData: Record<string, TeamData> = {
   'm18-fem': {
     id: 'm18-fem',
     title: 'M18 Féminine',
-    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
+    teamPic: defaultTeamPic, // TODO: Remplacer par la vraie image
     trainerPic: m18fTrainerPic,
     trainerName: 'Aude',
     subTrainerPic: m18fcoTrainerPic,
@@ -152,7 +154,7 @@ export const teamsData: Record<string, TeamData> = {
   'm15-fem': {
     id: 'm15-fem',
     title: 'M15 Féminine',
-    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
+    teamPic: defaultTeamPic, // TODO: Remplacer par la vraie image
     trainerPic: m15fTrainerPic, // TODO: Remplacer par la vraie image
     trainerName: 'Marion',
     schedule: [
@@ -192,7 +194,7 @@ export const teamsData: Record<string, TeamData> = {
   'competlib-b': {
     id: 'competlib-b',
     title: "Compet'lib B",
-    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
+    teamPic: defaultTeamPic, // TODO: Remplacer par la vraie image
     leaderPic: competlibBLeaderPic,
     leaderName: 'Yseult',
     schedule: [
@@ -206,7 +208,7 @@ export const teamsData: Record<string, TeamData> = {
   'competlib-c': {
     id: 'competlib-c',
     title: "Compet'lib C",
-    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
+    teamPic: defaultTeamPic, // TODO: Remplacer par la vraie image
     leaderPic: competlibCLeaderPic,
     leaderName: 'Jonathan',
     schedule: [
@@ -220,7 +222,7 @@ export const teamsData: Record<string, TeamData> = {
   'competlib-d': {
     id: 'competlib-d',
     title: "Compet'lib D",
-    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
+    teamPic: defaultTeamPic, // TODO: Remplacer par la vraie image
     trainerPic: pnfTrainerPic, // TODO: Remplacer par la vraie image
     trainerName: 'Nom Entraîneur', // À remplacer
     schedule: [
@@ -234,7 +236,7 @@ export const teamsData: Record<string, TeamData> = {
   'loisir': {
     id: 'loisir',
     title: "Loisir",
-    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
+    teamPic: defaultTeamPic, // TODO: Remplacer par la vraie image
     trainerPic: loisirTrainerPic,
     trainerName: 'Pierre Miellot',
     schedule: [
