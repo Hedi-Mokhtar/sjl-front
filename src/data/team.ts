@@ -55,7 +55,7 @@ export const teamsData: Record<string, TeamData> = {
   'prenational-fem': {
     id: 'prenational-fem',
     title: 'Pré-Nationale Féminine',
-    teamPic: defaultTeamPic,
+    teamPic: pnfTeamPic,
     trainerPic: pnfTrainerPic,
     trainerName: 'Wail',
     schedule: [
