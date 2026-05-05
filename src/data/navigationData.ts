@@ -15,7 +15,7 @@ export const mainNavItems: NavItem[] = [
 
 export const clubMenuItems: NavItem[] = [
   { label: 'Accueil', path: '/' },
-  { label: 'Horaires et tarifs', path: '/schedule' },
+  { label: 'Horaires et tarifs', path: '/infos-inscriptions' },
   { label: 'Boutique', path: '/shop' },
 ]
 
