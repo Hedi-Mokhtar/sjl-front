@@ -18,7 +18,7 @@ const router = createRouter({
   routes: [
     { path: '/', name: 'home', component: HomeView },
     { path: '/teams', name: 'teams', component: TeamsView },
-    { path: '/schedule', name: 'schedule', component: ScheduleView },
+    { path: '/infos-inscriptions', name: 'schedule', component: ScheduleView },
     { path: '/shop', name: 'shop', component: ShopView },
     { path: '/subscription', name: 'subscription', component: SubscriptionView },
     { path: '/contact', name: 'contact', component: ContactView },
