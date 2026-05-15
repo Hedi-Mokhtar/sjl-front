@@ -1,10 +1,12 @@
 // TeamPics
-import pnfTeamPic from '@/assets/images/teams/pnf/teampic.jpg'
 import r1fTeamPic from '@/assets/images/teams/r1f/teampic.jpg'
 import dmTeamPic from '@/assets/images/teams/dm/teampic.jpg'
 import m13mTeamPic from '@/assets/images/teams/m13m/teampic.jpg'
 import m18mTeamPic from '@/assets/images/teams/m18m/teampic.jpg'
 import competlibATeamPic from '@/assets/images/teams/competliba/teampic.jpg'
+import competlibDTeamPic from '@/assets/images/teams/competlibd/teampic.jpg'
+
+import defaultTeamPic from '@/assets/images/teams/default-teampic.jpg'
 
 // TrainerPics
 import pnfTrainerPic from '@/assets/images/teams/pnf/trainer.jpg'
@@ -26,6 +28,7 @@ import m18fcoTrainerPic from '@/assets/images/teams/m18f/cotrainer.jpg'
 import competlibALeaderPic from '@/assets/images/teams/competliba/leaderpic.jpg'
 import competlibBLeaderPic from '@/assets/images/teams/competlibb/leaderpic.jpg'
 import competlibCLeaderPic from '@/assets/images/teams/competlibc/leaderpic.jpg'
+import competlibDLeaderPic from '@/assets/images/teams/competlibd/leaderpic.jpg'
 
 export interface TeamSchedule {
   day: string
@@ -53,7 +56,7 @@ export const teamsData: Record<string, TeamData> = {
   'prenational-fem': {
     id: 'prenational-fem',
     title: 'Pré-Nationale Féminine',
-    teamPic: pnfTeamPic,
+    teamPic: defaultTeamPic,
     trainerPic: pnfTrainerPic,
     trainerName: 'Wail',
     schedule: [
@@ -67,7 +70,7 @@ export const teamsData: Record<string, TeamData> = {
   'regional-masc': {
     id: 'regional-masc',
     title: 'Régionale Masculine',
-    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
+    teamPic: defaultTeamPic, // TODO: Remplacer par la vraie image
     trainerPic: r1mTrainerPic,
     trainerName: 'Fred',
     schedule: [
@@ -109,7 +112,7 @@ export const teamsData: Record<string, TeamData> = {
   'm21-fem': {
     id: 'm21-fem',
     title: 'M21 Féminine',
-    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
+    teamPic: defaultTeamPic, // TODO: Remplacer par la vraie image
     trainerPic: m21fTrainerPic,
     trainerName: 'Aude',
     subTrainerPic: m21fcoTrainerPic,
@@ -137,7 +140,7 @@ export const teamsData: Record<string, TeamData> = {
   'm18-fem': {
     id: 'm18-fem',
     title: 'M18 Féminine',
-    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
+    teamPic: defaultTeamPic, // TODO: Remplacer par la vraie image
     trainerPic: m18fTrainerPic,
     trainerName: 'Aude',
     subTrainerPic: m18fcoTrainerPic,
@@ -152,7 +155,7 @@ export const teamsData: Record<string, TeamData> = {
   'm15-fem': {
     id: 'm15-fem',
     title: 'M15 Féminine',
-    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
+    teamPic: defaultTeamPic, // TODO: Remplacer par la vraie image
     trainerPic: m15fTrainerPic, // TODO: Remplacer par la vraie image
     trainerName: 'Marion',
     schedule: [
@@ -192,7 +195,7 @@ export const teamsData: Record<string, TeamData> = {
   'competlib-b': {
     id: 'competlib-b',
     title: "Compet'lib B",
-    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
+    teamPic: defaultTeamPic, // TODO: Remplacer par la vraie image
     leaderPic: competlibBLeaderPic,
     leaderName: 'Yseult',
     schedule: [
@@ -206,7 +209,7 @@ export const teamsData: Record<string, TeamData> = {
   'competlib-c': {
     id: 'competlib-c',
     title: "Compet'lib C",
-    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
+    teamPic: defaultTeamPic, // TODO: Remplacer par la vraie image
     leaderPic: competlibCLeaderPic,
     leaderName: 'Jonathan',
     schedule: [
@@ -220,9 +223,9 @@ export const teamsData: Record<string, TeamData> = {
   'competlib-d': {
     id: 'competlib-d',
     title: "Compet'lib D",
-    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
-    trainerPic: pnfTrainerPic, // TODO: Remplacer par la vraie image
-    trainerName: 'Nom Entraîneur', // À remplacer
+    teamPic: competlibDTeamPic,
+    leaderPic: competlibDLeaderPic,
+    leaderName: 'Jeanne',
     schedule: [
       { day: 'Lundi', time: '20h00 – 22h00', location: 'Salle Pacome' },
       { day: 'Jeudi', time: '20h45 – 22h30', location: 'Salle Pacome' }
@@ -234,9 +237,9 @@ export const teamsData: Record<string, TeamData> = {
   'loisir': {
     id: 'loisir',
     title: "Loisir",
-    teamPic: pnfTeamPic, // TODO: Remplacer par la vraie image
-    trainerPic: loisirTrainerPic,
-    trainerName: 'Pierre Miellot',
+    teamPic: defaultTeamPic,
+    leaderPic: loisirTrainerPic,
+    leaderName: 'Pierre Miellot',
     schedule: [
       { day: 'Mercredi', time: '19h00 – 20h45', location: 'Salle Pacome' },
       { day: 'Mercredi', time: '20h45 – 22h30', location: 'Salle Pacome' },

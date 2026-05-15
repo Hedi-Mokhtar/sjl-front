@@ -283,7 +283,7 @@
               <RouterLink to="/subscription" class="block hover:underline">
                 → Page inscriptions
               </RouterLink>
-              <RouterLink to="/schedule" class="block hover:underline">
+              <RouterLink to="/infos-inscriptions" class="block hover:underline">
                 → Horaires des entraînements
               </RouterLink>
             </div>
