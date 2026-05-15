@@ -5,6 +5,7 @@ import m13mTeamPic from '@/assets/images/teams/m13m/teampic.jpg'
 import m18mTeamPic from '@/assets/images/teams/m18m/teampic.jpg'
 import competlibATeamPic from '@/assets/images/teams/competliba/teampic.jpg'
 import competlibDTeamPic from '@/assets/images/teams/competlibd/teampic.jpg'
+import loisirTeamPic from '@/assets/images/teams/loisir/teampic.jpg'
 
 import defaultTeamPic from '@/assets/images/teams/default-teampic.jpg'
 
@@ -237,7 +238,7 @@ export const teamsData: Record<string, TeamData> = {
   'loisir': {
     id: 'loisir',
     title: "Loisir",
-    teamPic: defaultTeamPic,
+    teamPic: loisirTeamPic,
     leaderPic: loisirTrainerPic,
     leaderName: 'Pierre Miellot',
     schedule: [
