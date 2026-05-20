@@ -9,7 +9,7 @@
     <!-- PHOTO D'ÉQUIPE -->
     <div class="w-full">
       <img :src="teamData.teamPic" :alt="`Photo équipe ${teamData.title}`"
-        class="rounded-lg sm:rounded-xl shadow-lg w-full object-cover max-h-96 sm:max-h-[500px]" />
+        class="rounded-lg sm:rounded-xl shadow-lg w-full object-cover object-[center_20%] max-h-96 sm:max-h-[500px]" />
     </div>
 
     <!-- HORAIRES D'ENTRAÎNEMENT -->
@@ -104,8 +104,8 @@
     </section>
 
     <!-- LIEN VERS FFVB -->
-    <div class="text-center pt-4">
-      <a href="https://www.ffvb.org" target="_blank" rel="noopener noreferrer"
+    <div v-if="teamData.ffvbUrl" class="text-center pt-4">
+      <a :href="teamData.ffvbUrl" target="_blank" rel="noopener noreferrer"
         class="inline-block bg-red-600 text-white px-5 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold shadow-lg hover:bg-red-700 hover:shadow-xl transition-all duration-200 text-sm sm:text-base">
         Voir le tableau complet sur FFVB →
       </a>
