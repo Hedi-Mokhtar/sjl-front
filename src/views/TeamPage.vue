@@ -9,7 +9,7 @@
     <!-- PHOTO D'ÉQUIPE -->
     <div class="w-full">
       <img :src="teamData.teamPic" :alt="`Photo équipe ${teamData.title}`"
-        class="rounded-lg sm:rounded-xl shadow-lg w-full object-cover max-h-96 sm:max-h-[500px]" />
+        class="rounded-lg sm:rounded-xl shadow-lg w-full object-cover object-[center_20%] max-h-96 sm:max-h-[500px]" />
     </div>
 
     <!-- HORAIRES D'ENTRAÎNEMENT -->
