@@ -30,6 +30,12 @@ import competlibBLeaderPic from '@/assets/images/teams/competlibb/leaderpic.jpg'
 import competlibCLeaderPic from '@/assets/images/teams/competlibc/leaderpic.jpg'
 import competlibDLeaderPic from '@/assets/images/teams/competlibd/leaderpic.jpg'
 
+// LoisirTrainerPics (from volunteer photos)
+import loisirPierrePic from '@/assets/images/volunteers/pierre.jpg'
+import loisirLudivinePic from '@/assets/images/volunteers/ludivine.jpg'
+import loisirVincentPic from '@/assets/images/volunteers/vincent.jpg'
+import loisirQuentinPic from '@/assets/images/volunteers/quentin.jpg'
+
 export interface TeamSchedule {
   day: string
   time: string
@@ -46,7 +52,7 @@ export interface TeamData {
   subTrainerName?: string
   leaderPic?: string
   leaderName?: string
-  trainers?: string[]
+  trainers?: { name: string; pic: string }[]
   schedule: TeamSchedule[]
   widgetVersion?: 'modern' | 'legacy'
   widgetId?: string
@@ -264,7 +270,12 @@ export const teamsData: Record<string, TeamData> = {
     id: 'loisir',
     title: "Loisir",
     teamPic: loisirTeamPic,
-    trainers: ['Pierre', 'Ludivine', 'Vincent', 'Quentin'],
+    trainers: [
+      { name: 'Pierre', pic: loisirPierrePic },
+      { name: 'Ludivine', pic: loisirLudivinePic },
+      { name: 'Vincent', pic: loisirVincentPic },
+      { name: 'Quentin', pic: loisirQuentinPic }
+    ],
     schedule: [
       { day: 'Mercredi', time: '19h00 – 20h45', location: 'Salle Pacome' },
       { day: 'Mercredi', time: '20h45 – 22h30', location: 'Salle Pacome' },
