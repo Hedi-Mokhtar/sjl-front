@@ -19,7 +19,6 @@ import m18fTrainerPic from '@/assets/images/teams/m18f/trainer.jpg'
 import m18mTrainerPic from '@/assets/images/teams/m18m/trainer.jpg'
 import m21fTrainerPic from '@/assets/images/teams/m21f/trainer.jpg'
 import r1fTrainerPic from '@/assets/images/teams/r1f/trainer.jpg'
-import loisirTrainerPic from '@/assets/images/teams/loisir/trainer.jpg'
 
 //CoTrainerPics
 import m21fcoTrainerPic from '@/assets/images/teams/m21f/cotrainer.jpg'
@@ -47,6 +46,7 @@ export interface TeamData {
   subTrainerName?: string
   leaderPic?: string
   leaderName?: string
+  trainers?: string[]
   schedule: TeamSchedule[]
   widgetVersion?: 'modern' | 'legacy'
   widgetId?: string
@@ -126,7 +126,7 @@ export const teamsData: Record<string, TeamData> = {
     trainerPic: m21fTrainerPic,
     trainerName: 'Aude',
     subTrainerPic: m21fcoTrainerPic,
-    subTrainerName: 'Soraya',
+    subTrainerName: 'Sorayah',
     schedule: [
       { day: 'Mardi', time: '19h00 – 20h45', location: 'Salle Pacome' },
       { day: 'Jeudi', time: '18h00 – 19h15', location: 'Salle Pacome' }
@@ -264,8 +264,7 @@ export const teamsData: Record<string, TeamData> = {
     id: 'loisir',
     title: "Loisir",
     teamPic: loisirTeamPic,
-    leaderPic: loisirTrainerPic,
-    leaderName: 'Pierre Miellot',
+    trainers: ['Pierre', 'Ludivine', 'Vincent', 'Quentin'],
     schedule: [
       { day: 'Mercredi', time: '19h00 – 20h45', location: 'Salle Pacome' },
       { day: 'Mercredi', time: '20h45 – 22h30', location: 'Salle Pacome' },

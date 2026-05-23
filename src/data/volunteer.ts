@@ -152,7 +152,7 @@ export const volunteers: Volunteer[] = [
   },
   {
     id: '12',
-    name: 'Soraya',
+    name: 'Sorayah',
     picture: sorayaPicture,
     executive: false,
     referee: false,
