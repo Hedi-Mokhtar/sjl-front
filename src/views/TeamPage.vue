@@ -62,6 +62,24 @@
       </div>
     </section>
 
+    <!-- ENTRAÎNEURS (liste) -->
+    <section v-else-if="teamData.trainers && teamData.trainers.length > 0">
+      <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-gray-800">
+        Entraîneurs
+      </h2>
+      <div class="space-y-3 sm:space-y-4">
+        <div v-for="trainer in teamData.trainers" :key="trainer.name"
+          class="flex items-center gap-3 sm:gap-4 bg-white p-4 sm:p-6 rounded-lg shadow-md">
+          <img :src="trainer.pic" :alt="`Photo ${trainer.name}`"
+            class="w-14 h-14 sm:w-20 sm:h-20 rounded-full object-cover shadow-md flex-shrink-0" />
+          <div>
+            <p class="text-base sm:text-lg font-bold text-gray-800">{{ trainer.name }}</p>
+            <p class="text-sm sm:text-base text-gray-600">Entraîneur</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ENTRAÎNEUR ADJOINT -->
     <section v-if="teamData.subTrainerName && teamData.subTrainerPic">
       <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-gray-800">
