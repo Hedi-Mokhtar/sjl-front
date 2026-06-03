@@ -79,7 +79,7 @@ export const volunteers: Volunteer[] = [
     referee: false,
     coach: false,
     volunteerExtra: true,
-    volunteerExtraDescription: "Responsable de la section compet'libre A"
+    volunteerExtraDescription: "Responsable de la section compet'lib A"
   },
   {
     id: '5',
@@ -99,7 +99,7 @@ export const volunteers: Volunteer[] = [
     referee: false,
     coach: false,
     volunteerExtra: true,
-    volunteerExtraDescription: "Responsable de la section compet'libre"
+    volunteerExtraDescription: "Responsable de la section compet'lib"
   },
   {
     id: '7',
@@ -270,7 +270,7 @@ export const volunteers: Volunteer[] = [
     referee: false,
     coach: false,
     volunteerExtra: true,
-    volunteerExtraDescription: "Responsable de la section compet'libre B"
+    volunteerExtraDescription: "Responsable de la section compet'lib B"
   },
   {
     id: '24',
@@ -280,7 +280,7 @@ export const volunteers: Volunteer[] = [
     referee: false,
     coach: false,
     volunteerExtra: true,
-    volunteerExtraDescription: "Responsable de la section compet'libre C"
+    volunteerExtraDescription: "Responsable de la section compet'lib C"
   },
   {
     id: '25',
@@ -290,6 +290,6 @@ export const volunteers: Volunteer[] = [
     referee: false,
     coach: false,
     volunteerExtra: true,
-    volunteerExtraDescription: "Responsable de la section compet'libre D"
+    volunteerExtraDescription: "Responsable de la section compet'lib D"
   }
 ]
