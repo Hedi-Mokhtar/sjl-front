@@ -202,6 +202,14 @@ export const teamsData: Record<string, TeamData> = {
     ffvbUrl:
       'https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2025/2026&codent=PTFL59&poule=BMI'
   },
+  'ecole-volley': {
+    id: 'ecole-volley',
+    title: 'Ecole de volley',
+    teamPic: defaultTeamPic,
+    trainerPic: loisirVincentPic,
+    trainerName: 'Vincent',
+    schedule: [{ day: 'Mercredi', time: '18h00 – 19h00', location: 'Salle Pacôme' }]
+  },
   'competlib-a': {
     id: 'competlib-a',
     title: "Compet'lib A",

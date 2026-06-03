@@ -37,6 +37,7 @@ export const teamCategories: TeamCategory[] = [
       { label: 'M18 Féminine', path: '/teams/m18-fem' },
       { label: 'M15 Féminine', path: '/teams/m15-fem' },
       { label: 'M13 Masculin', path: '/teams/m13-masc' },
+      { label: 'Ecole de volley', path: '/teams/ecole-volley' },
     ],
   },
   {
