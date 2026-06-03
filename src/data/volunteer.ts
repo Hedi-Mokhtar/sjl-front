@@ -20,6 +20,7 @@ import quentinPicture from '@/assets/images/volunteers/quentin.jpg'
 import ludivinePicture from '@/assets/images/volunteers/ludivine.jpg'
 import jeanYvesPicture from '@/assets/images/volunteers/jeanyves.jpg'
 import marionRPicture from '@/assets/images/volunteers/marionR.jpg'
+import yseultPicture from '@/assets/images/volunteers/yseult.jpg'
 
 export interface Volunteer {
   id: string
@@ -257,5 +258,15 @@ export const volunteers: Volunteer[] = [
     coachDescription: 'Entraîneur M18 féminine',
     volunteerExtra: true,
     volunteerExtraDescription: 'Développeur site web'
+  },
+  {
+    id: '23',
+    name: 'Yseult',
+    picture: yseultPicture,
+    executive: false,
+    referee: false,
+    coach: false,
+    volunteerExtra: true,
+    volunteerExtraDescription: "Responsable de la section compet'libre B"
   }
 ]
