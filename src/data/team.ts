@@ -1,10 +1,17 @@
 // TeamPics
+import pnfTeamPic from '@/assets/images/teams/pnf/teampic.jpg'
+import r1mTeamPic from '@/assets/images/teams/r1m/teampic.jpg'
 import r1fTeamPic from '@/assets/images/teams/r1f/teampic.jpg'
 import dmTeamPic from '@/assets/images/teams/dm/teampic.jpg'
 import m13mTeamPic from '@/assets/images/teams/m13m/teampic.jpg'
 import m18mTeamPic from '@/assets/images/teams/m18m/teampic.jpg'
+import m18fTeamPic from '@/assets/images/teams/m18f/teampic.jpg'
+import m21fTeamPic from '@/assets/images/teams/m21f/teampic.jpg'
 import competlibATeamPic from '@/assets/images/teams/competliba/teampic.jpg'
+import competlibBTeamPic from '@/assets/images/teams/competlibb/teampic.jpg'
+import competlibCTeamPic from '@/assets/images/teams/competlibc/teampic.jpg'
 import competlibDTeamPic from '@/assets/images/teams/competlibd/teampic.jpg'
+import ecoleVolleyTeamPic from '@/assets/images/teams/ecole-volley/teampic.jpg'
 import loisirTeamPic from '@/assets/images/teams/loisir/teampic.jpg'
 
 import defaultTeamPic from '@/assets/images/teams/default-teampic.jpg'
@@ -64,7 +71,7 @@ export const teamsData: Record<string, TeamData> = {
   'prenational-fem': {
     id: 'prenational-fem',
     title: 'Pré-Nationale Féminine',
-    teamPic: defaultTeamPic,
+    teamPic: pnfTeamPic,
     trainerPic: pnfTrainerPic,
     trainerName: 'Wail',
     schedule: [
@@ -80,7 +87,7 @@ export const teamsData: Record<string, TeamData> = {
   'regional-masc': {
     id: 'regional-masc',
     title: 'Régionale Masculine',
-    teamPic: defaultTeamPic, // TODO: Remplacer par la vraie image
+    teamPic: r1mTeamPic,
     trainerPic: r1mTrainerPic,
     trainerName: 'Fred',
     schedule: [
@@ -128,7 +135,7 @@ export const teamsData: Record<string, TeamData> = {
   'm21-fem': {
     id: 'm21-fem',
     title: 'M21 Féminine',
-    teamPic: defaultTeamPic, // TODO: Remplacer par la vraie image
+    teamPic: m21fTeamPic,
     trainerPic: m21fTrainerPic,
     trainerName: 'Aude',
     subTrainerPic: m21fcoTrainerPic,
@@ -160,7 +167,7 @@ export const teamsData: Record<string, TeamData> = {
   'm18-fem': {
     id: 'm18-fem',
     title: 'M18 Féminine',
-    teamPic: defaultTeamPic, // TODO: Remplacer par la vraie image
+    teamPic: m18fTeamPic,
     trainerPic: m18fTrainerPic,
     trainerName: 'Aude',
     subTrainerPic: m18fcoTrainerPic,
@@ -205,7 +212,7 @@ export const teamsData: Record<string, TeamData> = {
   'ecole-volley': {
     id: 'ecole-volley',
     title: 'Ecole de volley',
-    teamPic: defaultTeamPic,
+    teamPic: ecoleVolleyTeamPic,
     trainerPic: loisirVincentPic,
     trainerName: 'Vincent',
     schedule: [{ day: 'Mercredi', time: '18h00 – 19h00', location: 'Salle Pacôme' }]
@@ -229,7 +236,7 @@ export const teamsData: Record<string, TeamData> = {
   'competlib-b': {
     id: 'competlib-b',
     title: "Compet'lib B",
-    teamPic: defaultTeamPic, // TODO: Remplacer par la vraie image
+    teamPic: competlibBTeamPic,
     leaderPic: competlibBLeaderPic,
     leaderName: 'Yseult',
     schedule: [
@@ -245,7 +252,7 @@ export const teamsData: Record<string, TeamData> = {
   'competlib-c': {
     id: 'competlib-c',
     title: "Compet'lib C",
-    teamPic: defaultTeamPic, // TODO: Remplacer par la vraie image
+    teamPic: competlibCTeamPic,
     leaderPic: competlibCLeaderPic,
     leaderName: 'Jonathan',
     schedule: [
