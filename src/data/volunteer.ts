@@ -21,6 +21,8 @@ import ludivinePicture from '@/assets/images/volunteers/ludivine.jpg'
 import jeanYvesPicture from '@/assets/images/volunteers/jeanyves.jpg'
 import marionRPicture from '@/assets/images/volunteers/marionR.jpg'
 import yseultPicture from '@/assets/images/volunteers/yseult.jpg'
+import jonathanPicture from '@/assets/images/volunteers/jonathan.jpg'
+import jeannePicture from '@/assets/images/teams/competlibd/leaderpic.jpg'
 
 export interface Volunteer {
   id: string
@@ -76,7 +78,8 @@ export const volunteers: Volunteer[] = [
     executiveDescription: 'Secrétaire',
     referee: false,
     coach: false,
-    volunteerExtra: false
+    volunteerExtra: true,
+    volunteerExtraDescription: "Responsable de la section compet'libre A"
   },
   {
     id: '5',
@@ -268,5 +271,25 @@ export const volunteers: Volunteer[] = [
     coach: false,
     volunteerExtra: true,
     volunteerExtraDescription: "Responsable de la section compet'libre B"
+  },
+  {
+    id: '24',
+    name: 'Jonathan',
+    picture: jonathanPicture,
+    executive: false,
+    referee: false,
+    coach: false,
+    volunteerExtra: true,
+    volunteerExtraDescription: "Responsable de la section compet'libre C"
+  },
+  {
+    id: '25',
+    name: 'Jeanne',
+    picture: jeannePicture,
+    executive: false,
+    referee: false,
+    coach: false,
+    volunteerExtra: true,
+    volunteerExtraDescription: "Responsable de la section compet'libre D"
   }
 ]
