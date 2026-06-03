@@ -208,9 +208,7 @@ export const teamsData: Record<string, TeamData> = {
     teamPic: defaultTeamPic,
     trainerPic: loisirVincentPic,
     trainerName: 'Vincent',
-    schedule: [
-      { day: 'À définir', time: 'À définir', location: 'À définir' }
-    ]
+    schedule: [{ day: 'Mercredi', time: '18h00 – 19h00', location: 'À définir' }]
   },
   'competlib-a': {
     id: 'competlib-a',
