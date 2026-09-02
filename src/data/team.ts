@@ -2,11 +2,9 @@
 import pnfTeamPic from '@/assets/images/teams/pnf/teampic.jpg'
 import r1mTeamPic from '@/assets/images/teams/r1m/teampic.jpg'
 import r1fTeamPic from '@/assets/images/teams/r1f/teampic.jpg'
-import dmTeamPic from '@/assets/images/teams/dm/teampic.jpg'
 import m13mTeamPic from '@/assets/images/teams/m13m/teampic.jpg'
 import m18mTeamPic from '@/assets/images/teams/m18m/teampic.jpg'
 import m18fTeamPic from '@/assets/images/teams/m18f/teampic.jpg'
-import m21fTeamPic from '@/assets/images/teams/m21f/teampic.jpg'
 import competlibATeamPic from '@/assets/images/teams/competliba/teampic.jpg'
 import competlibBTeamPic from '@/assets/images/teams/competlibb/teampic.jpg'
 import competlibCTeamPic from '@/assets/images/teams/competlibc/teampic.jpg'
@@ -19,16 +17,13 @@ import defaultTeamPic from '@/assets/images/teams/default-teampic.jpg'
 // TrainerPics
 import pnfTrainerPic from '@/assets/images/teams/pnf/trainer.jpg'
 import r1mTrainerPic from '@/assets/images/teams/r1m/trainer.jpg'
-import dmTrainerPic from '@/assets/images/teams/dm/trainer.jpg'
 import m13mTrainerPic from '@/assets/images/teams/m13m/trainer.jpg'
 import m15fTrainerPic from '@/assets/images/teams/m15f/trainer.jpg'
 import m18fTrainerPic from '@/assets/images/teams/m18f/trainer.jpg'
 import m18mTrainerPic from '@/assets/images/teams/m18m/trainer.jpg'
-import m21fTrainerPic from '@/assets/images/teams/m21f/trainer.jpg'
 import r1fTrainerPic from '@/assets/images/teams/r1f/trainer.jpg'
 
 //CoTrainerPics
-import m21fcoTrainerPic from '@/assets/images/teams/m21f/cotrainer.jpg'
 import m18fcoTrainerPic from '@/assets/images/teams/m18f/cotrainer.jpg'
 
 //LeaderPics
@@ -65,6 +60,7 @@ export interface TeamData {
   widgetId?: string
   clubUrl?: string
   ffvbUrl?: string
+  recruitmentStatus?: 'full' | 'forming'
 }
 
 export const teamsData: Record<string, TeamData> = {
@@ -82,7 +78,8 @@ export const teamsData: Record<string, TeamData> = {
     widgetVersion: 'legacy',
     clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/',
     ffvbUrl:
-      'https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2025/2026&codent=LIFL&poule=PFA'
+      'https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2025/2026&codent=LIFL&poule=PFA',
+    recruitmentStatus: 'forming'
   },
   'regional-masc': {
     id: 'regional-masc',
@@ -98,7 +95,8 @@ export const teamsData: Record<string, TeamData> = {
     widgetVersion: 'legacy',
     clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/',
     ffvbUrl:
-      'https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2025/2026&codent=LIFL&poule=1MB'
+      'https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2025/2026&codent=LIFL&poule=1MB',
+    recruitmentStatus: 'full'
   },
   'regional-fem': {
     id: 'regional-fem',
@@ -114,40 +112,8 @@ export const teamsData: Record<string, TeamData> = {
     widgetVersion: 'modern',
     clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/',
     ffvbUrl:
-      'https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2025/2026&codent=LIFL&poule=1FA'
-  },
-  'departemental-masc': {
-    id: 'departemental-masc',
-    title: 'Départementale Masculine',
-    teamPic: dmTeamPic,
-    trainerPic: dmTrainerPic,
-    trainerName: 'Claire',
-    schedule: [
-      { day: 'Mardi', time: '19h00 – 20h45', location: 'Salle Pacome' },
-      { day: 'Jeudi', time: '19h00 – 20h45', location: 'Salle Pacome' }
-    ],
-    widgetId: '5dce969e5841e10a2a76aea0',
-    widgetVersion: 'legacy',
-    clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/',
-    ffvbUrl:
-      'https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2025/2026&codent=PTFL59&poule=DMA'
-  },
-  'm21-fem': {
-    id: 'm21-fem',
-    title: 'M21 Féminine',
-    teamPic: m21fTeamPic,
-    trainerPic: m21fTrainerPic,
-    trainerName: 'Aude',
-    subTrainerPic: m21fcoTrainerPic,
-    subTrainerName: 'Sorayah',
-    schedule: [
-      { day: 'Mardi', time: '19h00 – 20h45', location: 'Salle Pacome' },
-      { day: 'Jeudi', time: '18h00 – 19h15', location: 'Salle Pacome' }
-    ],
-    widgetId: '5dcdb79ed0bf830a19fa30f7',
-    clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/',
-    ffvbUrl:
-      'https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2025/2026&codent=LIFL&poule=JFE'
+      'https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2025/2026&codent=LIFL&poule=1FA',
+    recruitmentStatus: 'full'
   },
   'm18-masc': {
     id: 'm18-masc',
@@ -162,7 +128,8 @@ export const teamsData: Record<string, TeamData> = {
     widgetId: '5dcdb79ed0bf830a19fa30f7',
     clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/',
     ffvbUrl:
-      'https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2025/2026&codent=LIFL&poule=CMI'
+      'https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2025/2026&codent=LIFL&poule=CMI',
+    recruitmentStatus: 'forming'
   },
   'm18-fem': {
     id: 'm18-fem',
@@ -177,11 +144,12 @@ export const teamsData: Record<string, TeamData> = {
       { day: 'Jeudi', time: '18h00 – 19h15', location: 'Salle Pacome' }
     ],
     widgetId: '5dcdb79ed0bf830a19fa30f7',
-    clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/'
+    clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/',
+    recruitmentStatus: 'full'
   },
-  'm15-fem': {
-    id: 'm15-fem',
-    title: 'M15 Féminine',
+  'm13-m15-fem': {
+    id: 'm13-m15-fem',
+    title: 'M13 - M15 Féminine',
     teamPic: defaultTeamPic, // TODO: Remplacer par la vraie image
     trainerPic: m15fTrainerPic, // TODO: Remplacer par la vraie image
     trainerName: 'Marion',
@@ -191,12 +159,13 @@ export const teamsData: Record<string, TeamData> = {
     ],
     widgetId: '5dcdb79ed0bf830a19fa30f7',
     clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/',
+    recruitmentStatus: 'forming',
     ffvbUrl:
       'https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2025/2026&codent=PTFL59&poule=MFY'
   },
-  'm13-masc': {
-    id: 'm13-masc',
-    title: 'M13 Masculin',
+  'm15-masc': {
+    id: 'm15-masc',
+    title: 'M15 Masculin',
     teamPic: m13mTeamPic, // TODO: Remplacer par la vraie image
     trainerPic: m13mTrainerPic,
     trainerName: 'Aymeric',
@@ -215,7 +184,8 @@ export const teamsData: Record<string, TeamData> = {
     teamPic: ecoleVolleyTeamPic,
     trainerPic: loisirVincentPic,
     trainerName: 'Vincent',
-    schedule: [{ day: 'Mercredi', time: '18h00 – 19h00', location: 'Salle Pacôme' }]
+    schedule: [{ day: 'Mercredi', time: '18h00 – 19h00', location: 'Salle Pacôme' }],
+    recruitmentStatus: 'full'
   },
   'competlib-a': {
     id: 'competlib-a',
@@ -231,7 +201,8 @@ export const teamsData: Record<string, TeamData> = {
     widgetVersion: 'legacy',
     clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/',
     ffvbUrl:
-      'https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2025/2026&codent=LIFL&poule=RC1'
+      'https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2025/2026&codent=LIFL&poule=RC1',
+    recruitmentStatus: 'full'
   },
   'competlib-b': {
     id: 'competlib-b',
@@ -247,7 +218,8 @@ export const teamsData: Record<string, TeamData> = {
     widgetVersion: 'modern',
     clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/',
     ffvbUrl:
-      'https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2025/2026&codent=PTFL59&poule=DLB'
+      'https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2025/2026&codent=PTFL59&poule=DLB',
+    recruitmentStatus: 'full'
   },
   'competlib-c': {
     id: 'competlib-c',
@@ -263,7 +235,8 @@ export const teamsData: Record<string, TeamData> = {
     widgetVersion: 'modern',
     clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/',
     ffvbUrl:
-      'https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2025/2026&codent=LIFL&poule=RC1'
+      'https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2025/2026&codent=LIFL&poule=RC1',
+    recruitmentStatus: 'full'
   },
   'competlib-d': {
     id: 'competlib-d',
@@ -279,7 +252,8 @@ export const teamsData: Record<string, TeamData> = {
     widgetVersion: 'legacy',
     clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/',
     ffvbUrl:
-      'https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2025/2026&codent=PTFL59&poule=DLA'
+      'https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2025/2026&codent=PTFL59&poule=DLA',
+    recruitmentStatus: 'full'
   },
   'loisir': {
     id: 'loisir',
@@ -295,6 +269,7 @@ export const teamsData: Record<string, TeamData> = {
       { day: 'Mercredi', time: '19h00 – 20h45', location: 'Salle Pacome' },
       { day: 'Mercredi', time: '20h45 – 22h30', location: 'Salle Pacome' },
       { day: 'Samedi', time: '15h00 – 17h30', location: 'Salle Lestiboudois' }
-    ]
+    ],
+    recruitmentStatus: 'full'
   }
 }

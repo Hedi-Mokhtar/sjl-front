@@ -169,12 +169,6 @@ const teams = [
     price: '80€',
   },
   {
-    name: 'Juniors Féminines',
-    details: 'M21 (nées entre 2005 et 2007)',
-    schedules: ['Mardi 19h00 - 20h45', 'Jeudi 18h00 - 19h15'],
-    price: '80€',
-  },
-  {
     name: 'Section Loisir',
     details: '',
     schedules: ['Mercredi 19h00 - 20h45 (encadré)', 'Mercredi 20h45 - 22h30 (jeu libre)'],
@@ -211,16 +205,6 @@ const teams = [
     name: 'Seniors 1 masculins',
     details: 'Régionale',
     schedules: ['Mardi 20h45 - 22h30', 'Jeudi 20h45 - 22h30', 'Matchs le week-end'],
-    price: '125€',
-  },
-  {
-    name: 'Seniors 2 masculins',
-    details: 'Départementale',
-    schedules: [
-      'Mardi 19h00 - 20h45',
-      'Jeudi 19h00 - 20h45 (une semaine sur deux)',
-      'Matchs le week-end',
-    ],
     price: '125€',
   },
 ]

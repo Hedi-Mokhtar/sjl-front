@@ -63,6 +63,21 @@
       </div>
     </section>
 
+    <!-- Informations sur les inscriptions -->
+    <section class="mt-8 w-full max-w-4xl px-4 sm:px-6 lg:px-8">
+      <div class="rounded-xl border-2 border-red-600 bg-red-50 p-6 text-center shadow-md">
+        <h2 class="text-xl font-bold text-red-700 sm:text-2xl">Inscriptions</h2>
+        <p class="mt-2 text-gray-700">
+          Les équipes suivantes sont complètes et ne recrutent plus :
+        </p>
+        <p class="mt-2 font-semibold text-gray-800">{{ fullTeamNames.join(' · ') }}</p>
+        <p class="mt-3 text-gray-700">
+          Les équipes suivantes sont encore en cours de formation :
+        </p>
+        <p class="mt-2 font-semibold text-gray-800">{{ formingTeamNames.join(' · ') }}</p>
+      </div>
+    </section>
+
 
     <!-- Section des cartes - Responsive -->
     <section class="mt-8 sm:mt-12 md:mt-16 w-full max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -168,8 +183,15 @@ import clubPic3 from '@/assets/images/clubpic3.jpg'
 import clubPic4 from '@/assets/images/clubpic4.jpg'
 
 import LocationMap from '@/components/common/LocationMap.vue'
+import { teamsData } from '@/data/team'
 
 const images = [clubPic1, clubPic2, clubPic3, clubPic4]
+const fullTeamNames = Object.values(teamsData)
+  .filter((team) => team.recruitmentStatus === 'full')
+  .map((team) => team.title)
+const formingTeamNames = Object.values(teamsData)
+  .filter((team) => team.recruitmentStatus === 'forming')
+  .map((team) => team.title)
 
 const currentIndex = ref(0)
 const currentImage = ref(images[currentIndex.value])

@@ -46,7 +46,7 @@ export const volunteers: Volunteer[] = [
     executiveDescription: 'Présidente',
     referee: false,
     coach: true,
-    coachDescription: 'Entraîneur de la Départementale Masculine',
+    coachDescription: 'Entraîneur bénévole',
     volunteerExtra: false
   },
   {
@@ -140,7 +140,7 @@ export const volunteers: Volunteer[] = [
     executive: false,
     referee: false,
     coach: true,
-    coachDescription: 'Coach et Entraîneur des m21 et m18 féminine',
+    coachDescription: 'Coach et Entraîneur de la M18 féminine',
     volunteerExtra: true,
     volunteerExtraDescription: 'Responsable de la section jeune féminine'
   },
@@ -161,7 +161,7 @@ export const volunteers: Volunteer[] = [
     executive: false,
     referee: false,
     coach: true,
-    coachDescription: 'Coach & Entraîneur de la M21 féminine',
+    coachDescription: 'Coach bénévole',
     volunteerExtra: false
   },
   {
