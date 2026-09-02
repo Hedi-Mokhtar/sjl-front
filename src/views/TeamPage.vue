@@ -6,6 +6,16 @@
       {{ teamData.title }}
     </h1>
 
+    <div v-if="teamData.recruitmentStatus" class="rounded-lg p-4 text-center shadow-md"
+      :class="teamData.recruitmentStatus === 'full' ? 'bg-red-50 text-red-700' : 'bg-yellow-50 text-yellow-800'">
+      <p v-if="teamData.recruitmentStatus === 'full'" class="font-semibold">
+        Cette équipe est complète et ne recrute plus.
+      </p>
+      <p v-else class="font-semibold">
+        Cette équipe est encore en cours de formation.
+      </p>
+    </div>
+
     <!-- PHOTO D'ÉQUIPE -->
     <div class="w-full">
       <img :src="teamData.teamPic" :alt="`Photo équipe ${teamData.title}`"

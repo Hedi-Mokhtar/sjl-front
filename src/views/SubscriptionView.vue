@@ -201,12 +201,12 @@
           <h2 class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
             👦👧 Jeunes
           </h2>
-          <p class="text-green-50 text-sm mt-2">M13, M15, M18, M21</p>
+          <p class="text-green-50 text-sm mt-2">M13, M15 et M18</p>
         </div>
 
         <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col">
           <p class="text-gray-700 leading-relaxed">
-            Catégories M13, M15, M18 et M21 ! Nous formons les <strong>champions de demain</strong> dans un cadre
+            Catégories M13, M15 et M18 ! Nous formons les <strong>champions de demain</strong> dans un cadre
             éducatif et sportif. Initiation, perfectionnement et compétition adaptés à chaque âge.
           </p>
 
