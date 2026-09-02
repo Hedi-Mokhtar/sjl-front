@@ -91,7 +91,6 @@ Static data modules exporting TypeScript-typed information:
 - `partners/`: Partner organization logos
 - `logo.png`, `logo.jpg`: Club branding
 - `clubpic1.jpg`, `clubpic2.jpg`: General club photos
-- `schedule.png`: Training schedule overview image
 
 **styles/**:
 - `main.css`: Global styles and Tailwind directives
