@@ -72,8 +72,9 @@
         </p>
         <p class="mt-2 font-semibold text-gray-800">{{ fullTeamNames.join(' · ') }}</p>
         <p class="mt-3 text-gray-700">
-          Les équipes M15 masculine et M13 - M15 féminine sont encore en cours de formation.
+          Les équipes suivantes sont encore en cours de formation :
         </p>
+        <p class="mt-2 font-semibold text-gray-800">{{ formingTeamNames.join(' · ') }}</p>
       </div>
     </section>
 
@@ -187,6 +188,9 @@ import { teamsData } from '@/data/team'
 const images = [clubPic1, clubPic2, clubPic3, clubPic4]
 const fullTeamNames = Object.values(teamsData)
   .filter((team) => team.recruitmentStatus === 'full')
+  .map((team) => team.title)
+const formingTeamNames = Object.values(teamsData)
+  .filter((team) => team.recruitmentStatus === 'forming')
   .map((team) => team.title)
 
 const currentIndex = ref(0)
