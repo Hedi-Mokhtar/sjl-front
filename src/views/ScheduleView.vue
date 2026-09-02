@@ -93,19 +93,6 @@
         </div>
       </div>
 
-      <!-- Image des horaires -->
-      <section class="mb-12">
-        <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
-          <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">
-            Planning complet
-          </h2>
-          <div class="rounded-xl overflow-hidden border border-gray-200">
-            <img src="/src/assets/images/schedule.png" alt="Horaires d'entraînement"
-              class="w-full h-auto object-contain" />
-          </div>
-        </div>
-      </section>
-
       <!-- Section Contact -->
       <section class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 text-center">
         <div class="max-w-2xl mx-auto">
@@ -146,32 +133,36 @@ const teams = [
   },
   {
     name: 'Minimes Filles',
-    details: 'M13-M15 (né(e)s entre 2011 et 2014)',
-    schedules: ['Mercredi 18h00 - 19h00', 'Jeudi 18h00 - 19h15'],
+    details: 'M15 (né(e)s entre 2011 et 2014)',
+    schedules: ['Mercredi 18h00 - 19h00', 'Jeudi 18h00 - 19h30'],
     price: '55€',
   },
   {
     name: 'Minimes Garçons',
-    details: 'M13-M15 (né(e)s entre 2011 et 2014)',
-    schedules: ['Mercredi 18h00 - 19h00', 'Jeudi 18h00 - 19h15'],
+    details: 'M15 (né(e)s entre 2011 et 2014)',
+    schedules: ['Mercredi 18h00 - 19h00', 'Jeudi 18h00 - 19h30'],
     price: '55€',
   },
   {
     name: 'Cadets Masculins',
     details: 'M18 (nés en 2008, 2009, 2010)',
-    schedules: ['Mardi 19h00 - 20h45', 'Jeudi 19h15 - 20h45 (une semaine sur deux)'],
+    schedules: ['Mardi 19h30 - 21h00', 'Jeudi 18h00 - 19h30 (une semaine sur deux)'],
     price: '80€',
   },
   {
     name: 'Cadettes Féminines',
     details: 'M18 (nées en 2008, 2009, 2010)',
-    schedules: ['Mardi 19h00 - 20h45', 'Jeudi 19h15 - 20h45 (une semaine sur deux)'],
+    schedules: ['Mardi 19h00 - 20h30', 'Jeudi 18h00 - 19h30 (une semaine sur deux)'],
     price: '80€',
   },
   {
     name: 'Section Loisir',
     details: '',
-    schedules: ['Mercredi 19h00 - 20h45 (encadré)', 'Mercredi 20h45 - 22h30 (jeu libre)'],
+    schedules: [
+      'Mercredi 19h00 - 20h45 (encadré)',
+      'Mercredi 20h45 - 22h30',
+      'Samedi (Lestiboudois) 15h00 - 17h30 (jeu libre)',
+    ],
     price: '90€',
   },
   {
@@ -179,7 +170,7 @@ const teams = [
     details: 'Mixte, 4 équipes',
     schedules: [
       'Lundi 20h00 - 22h30',
-      'Jeudi 20h45 - 22h30 (2 terrains)',
+      'Jeudi 21h00 - 22h30 (2 terrains)',
       'Matchs à domicile le lundi',
       "Matchs à l'extérieur en semaine",
     ],
@@ -187,24 +178,20 @@ const teams = [
   },
   {
     name: 'Seniors 1 féminines',
-    details: 'Régionale',
-    schedules: ['Mardi 20h45 - 22h30', 'Jeudi 19h15 - 20h45', 'Matchs le week-end'],
+    details: 'Prénationale',
+    schedules: ['Mardi 21h00 - 22h30', 'Jeudi 19h30 - 20h30', 'Matchs le week-end'],
     price: '125€',
   },
   {
     name: 'Seniors 2 féminines',
-    details: 'Départementale',
-    schedules: [
-      'Mardi 20h45 - 22h30',
-      'Jeudi 19h15 - 20h45 (une semaine sur deux)',
-      'Matchs le week-end',
-    ],
+    details: 'Régionale',
+    schedules: ['Mardi 19h30 - 21h00', 'Jeudi 21h00 - 22h30', 'Matchs le week-end'],
     price: '125€',
   },
   {
     name: 'Seniors 1 masculins',
     details: 'Régionale',
-    schedules: ['Mardi 20h45 - 22h30', 'Jeudi 20h45 - 22h30', 'Matchs le week-end'],
+    schedules: ['Mardi 21h00 - 22h30', 'Jeudi 19h30 - 20h30', 'Matchs le week-end'],
     price: '125€',
   },
 ]
