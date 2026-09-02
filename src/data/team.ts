@@ -78,7 +78,8 @@ export const teamsData: Record<string, TeamData> = {
     widgetVersion: 'legacy',
     clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/',
     ffvbUrl:
-      'https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2025/2026&codent=LIFL&poule=PFA'
+      'https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2025/2026&codent=LIFL&poule=PFA',
+    recruitmentStatus: 'forming'
   },
   'regional-masc': {
     id: 'regional-masc',
@@ -127,7 +128,8 @@ export const teamsData: Record<string, TeamData> = {
     widgetId: '5dcdb79ed0bf830a19fa30f7',
     clubUrl: 'https://scorenco.com/volley/clubs/as-sport-et-joie-lille/',
     ffvbUrl:
-      'https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2025/2026&codent=LIFL&poule=CMI'
+      'https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2025/2026&codent=LIFL&poule=CMI',
+    recruitmentStatus: 'forming'
   },
   'm18-fem': {
     id: 'm18-fem',
