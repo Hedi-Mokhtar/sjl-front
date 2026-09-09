@@ -339,19 +339,6 @@ onMounted(() => {
   }
 })
 
-async function submitToGoogleSheets(payload: FormData): Promise<boolean> {
-  const APPS_SCRIPT_URL = import.meta.env.VITE_APPS_SCRIPT_URL
-  if (!APPS_SCRIPT_URL) return false
-
-  const response = await fetch(APPS_SCRIPT_URL, {
-    method: 'POST',
-    body: JSON.stringify(payload),
-  })
-
-  const data = await response.json()
-  return data.success === true
-}
-
 async function submitToWeb3Forms(payload: object): Promise<boolean> {
   const response = await fetch('https://api.web3forms.com/submit', {
     method: 'POST',
@@ -397,15 +384,11 @@ async function handleSubmit() {
   try {
     let success = false
 
-    if (formData.value.requestType === 'loisir') {
-      success = await submitToGoogleSheets(payload)
-    } else {
-      if (import.meta.env.VITE_WEB3FORMS_KEY) {
-        success = await submitToWeb3Forms(payload)
-      }
-      if (!success) {
-        success = await submitToFormspree(payload)
-      }
+    if (import.meta.env.VITE_WEB3FORMS_KEY) {
+      success = await submitToWeb3Forms(payload)
+    }
+    if (!success) {
+      success = await submitToFormspree(payload)
     }
 
     if (success) {
