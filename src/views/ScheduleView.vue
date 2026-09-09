@@ -93,6 +93,11 @@
         </div>
       </div>
 
+      <section class="mb-12">
+        <img src="https://github.com/user-attachments/assets/59f83651-5eda-4f0d-a0b5-49d8cfa9846c"
+          alt="Planning Sport Joie Lille saison 2026 / 2027" class="w-full rounded-2xl shadow-xl border border-gray-200" />
+      </section>
+
       <!-- Section Contact -->
       <section class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 text-center">
         <div class="max-w-2xl mx-auto">
@@ -146,20 +151,21 @@ const teams = [
   {
     name: 'Cadets Masculins',
     details: 'M18 (nés en 2008, 2009, 2010)',
-    schedules: ['Mardi 19h00 - 20h30', 'Jeudi 18h00 - 19h30'],
+    schedules: ['Mardi 19h30 - 21h00', 'Jeudi 18h00 - 19h30 (une semaine sur deux)'],
     price: '80€',
   },
   {
     name: 'Cadettes Féminines',
     details: 'M18 (nées en 2008, 2009, 2010)',
-    schedules: ['Mardi 19h00 - 20h30', 'Jeudi 18h00 - 19h30'],
+    schedules: ['Mardi 19h00 - 20h30', 'Jeudi 18h00 - 19h30 (une semaine sur deux)'],
     price: '80€',
   },
   {
     name: 'Section Loisir',
     details: '',
     schedules: [
-      'Mercredi 19h00 - 22h00',
+      'Mercredi 19h00 - 20h45 (encadré)',
+      'Mercredi 20h45 - 22h30',
       'Samedi (Lestiboudois) 15h00 - 17h30 (jeu libre)',
     ],
     price: '90€',
@@ -168,8 +174,8 @@ const teams = [
     name: "Section Compet'Lib",
     details: 'Mixte, 4 équipes',
     schedules: [
-      'Lundi 20h00 - 22h00',
-      'Jeudi 20h30 - 22h00 (2 terrains)',
+      'Lundi 20h00 - 22h30',
+      'Jeudi 21h00 - 22h30 (2 terrains)',
       'Matchs à domicile le lundi',
       "Matchs à l'extérieur en semaine",
     ],
@@ -178,19 +184,19 @@ const teams = [
   {
     name: 'Seniors 1 féminines',
     details: 'Prénationale',
-    schedules: ['Mardi 20h30 - 22h00', 'Jeudi 19h30 - 20h30', 'Matchs le week-end'],
+    schedules: ['Mardi 21h00 - 22h30', 'Jeudi 19h30 - 20h30', 'Matchs le week-end'],
     price: '125€',
   },
   {
     name: 'Seniors 2 féminines',
     details: 'Régionale',
-    schedules: ['Mardi 19h00 - 20h30', 'Jeudi 20h30 - 22h00', 'Matchs le week-end'],
+    schedules: ['Mardi 19h30 - 21h00', 'Jeudi 21h00 - 22h30', 'Matchs le week-end'],
     price: '125€',
   },
   {
     name: 'Seniors 1 masculins',
     details: 'Régionale',
-    schedules: ['Mardi 20h30 - 22h00', 'Jeudi 19h30 - 20h30', 'Matchs le week-end'],
+    schedules: ['Mardi 21h00 - 22h30', 'Jeudi 19h30 - 20h30', 'Matchs le week-end'],
     price: '125€',
   },
 ]
