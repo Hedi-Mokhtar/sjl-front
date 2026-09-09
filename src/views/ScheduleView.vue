@@ -93,6 +93,11 @@
         </div>
       </div>
 
+      <section class="mb-12">
+        <img src="https://github.com/user-attachments/assets/59f83651-5eda-4f0d-a0b5-49d8cfa9846c"
+          alt="Planning Sport Joie Lille saison 2026 / 2027" class="w-full rounded-2xl shadow-xl border border-gray-200" />
+      </section>
+
       <!-- Section Contact -->
       <section class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 text-center">
         <div class="max-w-2xl mx-auto">
